@@ -11,8 +11,8 @@ export default function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/todo">
-              Todo
+            <NavLink exact to="/projects">
+              Projects
             </NavLink>
           </li>
           <li>
