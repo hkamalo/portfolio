@@ -1,7 +1,7 @@
-import { Switch, Route } from "react-router";
-import HomePage from "../screens/HomePage";
-import ContactPage from "../screens/ContactPage";
-import ProjectsPage from "../screens/ProjectsPage";
+import { Switch, Route } from 'react-router';
+import HomePage from '../screens/HomePage';
+import ContactPage from '../screens/ContactPage';
+import ProjectsPage from '../screens/ProjectsPage';
 
 export default function Main() {
   return (
