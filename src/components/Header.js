@@ -27,18 +27,21 @@ const useStyles = makeStyles({
   },
   header: {
     margin: 0,
-    display: 'flex',
-    justifyContent: 'flex-end',
     height: 250,
     width: 'auto',
     backgroundColor: 'black',
   },
   menu: {
-    margin: 20,
-    height: 30,
-    padding: 5,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    height: 50,
+    width: 'auto',
+    margin: 5,
+    padding: 2,
   },
   title: {
+    display: 'flex',
+    justifyContent: 'center',
     color: 'white',
   },
 });
