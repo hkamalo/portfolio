@@ -1,19 +1,19 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { NavLink } from 'react-router-dom';
-import React from 'react';
-import Button from '@material-ui/core/Button';
+import { NavLink } from "react-router-dom";
+import React from "react";
+import Button from "@material-ui/core/Button";
 import {
   makeStyles,
   createMuiTheme,
   MuiThemeProvider,
-} from '@material-ui/core/styles';
+} from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       label: {
-        color: '#f1f1f1',
+        color: "#f1f1f1",
       },
     },
   },
@@ -21,17 +21,17 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
   root: {
-    '& > *': {
+    "& > *": {
       margin: 10,
     },
   },
   header: {
     margin: 0,
-    display: 'flex',
-    justifyContent: 'flex-end',
+    display: "flex",
+    justifyContent: "flex-end",
     height: 250,
-    width: 'auto',
-    background: 'black',
+    width: "auto",
+    background: "black",
   },
   menu: {
     margin: 20,
