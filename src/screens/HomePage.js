@@ -44,18 +44,24 @@ const useStyles = makeStyles({
   },
   skills: {
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
     width: '100%',
     height: '60%',
     background: '#FFFFFF',
     boxShadow:
       '0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05)',
-    borderRadius: '3px',
+    borderRadius: 20,
   },
   image: {
     width: 300,
     height: 170,
+  },
+  skillsElements: {
+    width: '70%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 });
 
@@ -69,7 +75,7 @@ export default function HomePage() {
           <div className={classes.text}>text</div>
           <img
             className={classes.image}
-            src="https:// -content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2F438112d08852a5cf64fb668899b62a1c6abcfadb%2Fc%3D0-104-5312-3105%26r%3Dx1683%26c%3D3200x1680%2Flocal%2F-%2Fmedia%2F2017%2F05%2F23%2FWIGroup%2FAppleton%2F636311326049773956-UC.jpg&f=1&nofb=1"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2F438112d08852a5cf64fb668899b62a1c6abcfadb%2Fc%3D0-104-5312-3105%26r%3Dx1683%26c%3D3200x1680%2Flocal%2F-%2Fmedia%2F2017%2F05%2F23%2FWIGroup%2FAppleton%2F636311326049773956-UC.jpg&f=1&nofb=1"
             alt=""
           />
         </div>
@@ -82,7 +88,15 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className={classes.content}>Background</div>
+        <div className={classes.content}>
+          <div className={classes.skills}>
+            <div className={classes.skillsElements}>
+              <p>Diplome</p>
+              <p>Profesionnel</p>
+              <p>Skills</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
