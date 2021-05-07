@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     border: 'solid 1px',
     margin: 20,
     paddingTop: 50,
-    paddingBottom: 50
+    paddingBottom: 50,
   },
   skills: {
     display: 'flex',
@@ -49,13 +49,14 @@ const useStyles = makeStyles({
     width: '100%',
     height: '60%',
     background: '#FFFFFF',
-    boxShadow: '0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05)',
-    borderRadius: '3px'
+    boxShadow:
+      '0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05)',
+    borderRadius: '3px',
   },
   image: {
     width: 300,
-    height: 170
-  }
+    height: 170,
+  },
 });
 
 export default function HomePage() {
@@ -66,7 +67,11 @@ export default function HomePage() {
       <div className={classes.home}>
         <div className={classes.content}>
           <div className={classes.text}>text</div>
-          <img className={classes.image} src="https:// -content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2F438112d08852a5cf64fb668899b62a1c6abcfadb%2Fc%3D0-104-5312-3105%26r%3Dx1683%26c%3D3200x1680%2Flocal%2F-%2Fmedia%2F2017%2F05%2F23%2FWIGroup%2FAppleton%2F636311326049773956-UC.jpg&f=1&nofb=1" alt="" />
+          <img
+            className={classes.image}
+            src="https:// -content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2F438112d08852a5cf64fb668899b62a1c6abcfadb%2Fc%3D0-104-5312-3105%26r%3Dx1683%26c%3D3200x1680%2Flocal%2F-%2Fmedia%2F2017%2F05%2F23%2FWIGroup%2FAppleton%2F636311326049773956-UC.jpg&f=1&nofb=1"
+            alt=""
+          />
         </div>
         <div className={classes.content}>
           <div className={classes.skills}>
