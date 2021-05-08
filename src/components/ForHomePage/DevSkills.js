@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    border: '1px solid green'
+    border: '1px solid green',
   },
   front: {
     display: 'flex',
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     mawHeight: '100%',
     border: '1px solid blue',
-    width: 180
+    width: 180,
   },
   picture: {
     widht: 50,
