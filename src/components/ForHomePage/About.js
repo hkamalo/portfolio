@@ -1,8 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import About from '../components/ForHomePage/About';
-import DevSkills from '../components/ForHomePage/DevSkills';
-import Background from '../components/ForHomePage/Background';
 
 const useStyles = makeStyles({
   root: {
@@ -68,26 +65,17 @@ const useStyles = makeStyles({
   },
 });
 
-export default function HomePage() {
+export default function About() {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.home}>
-        <div className={classes.content}>
-          <About />
-        </div>
-        <div className={classes.content}>
-          <div className={classes.skills}>
-            <DevSkills />
-          </div>
-        </div>
-        <div className={classes.content}>
-          <div className={classes.skills}>
-            <Background />
-          </div>
-        </div>
-      </div>
+      <div className={classes.text}>text</div>
+      <img
+        className={classes.image}
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2F438112d08852a5cf64fb668899b62a1c6abcfadb%2Fc%3D0-104-5312-3105%26r%3Dx1683%26c%3D3200x1680%2Flocal%2F-%2Fmedia%2F2017%2F05%2F23%2FWIGroup%2FAppleton%2F636311326049773956-UC.jpg&f=1&nofb=1"
+        alt=""
+      />
     </>
   );
 }

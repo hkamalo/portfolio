@@ -1,8 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import About from '../components/ForHomePage/About';
-import DevSkills from '../components/ForHomePage/DevSkills';
-import Background from '../components/ForHomePage/Background';
 
 const useStyles = makeStyles({
   root: {
@@ -68,25 +65,15 @@ const useStyles = makeStyles({
   },
 });
 
-export default function HomePage() {
+export default function DevSkills() {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.home}>
-        <div className={classes.content}>
-          <About />
-        </div>
-        <div className={classes.content}>
-          <div className={classes.skills}>
-            <DevSkills />
-          </div>
-        </div>
-        <div className={classes.content}>
-          <div className={classes.skills}>
-            <Background />
-          </div>
-        </div>
+      <div className={classes.skillsElements}>
+        <p>Interface</p>
+        <p>Serveur</p>
+        <p>Générale</p>
       </div>
     </>
   );
