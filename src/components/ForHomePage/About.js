@@ -9,9 +9,7 @@ const useStyles = makeStyles({
     border: '1px solid',
     width: '50%',
     MaxWidth: '100%',
-    textAlign: 'justify'
-    
-
+    textAlign: 'justify',
   },
   image: {
     width: 300,
@@ -26,8 +24,14 @@ export default function About() {
     <>
       <div className={classes.text}>
         <h2>About</h2>
-        <p>J’ai décidé d’évoluer dans l’univers tech après un parcours axé sur le business et le management.</p>
-        <p>Ce qui m’a motivé dans cette décision est la liberté de création offert par le métier de développeur.</p>
+        <p>
+          J’ai décidé d’évoluer dans l’univers tech après un parcours axé sur le
+          business et le management.
+        </p>
+        <p>
+          Ce qui m’a motivé dans cette décision est la liberté de création
+          offert par le métier de développeur.
+        </p>
       </div>
       <img
         className={classes.image}
