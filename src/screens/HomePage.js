@@ -37,13 +37,14 @@ const useStyles = makeStyles({
   },
   content: {
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     width: '50%',
     height: '20%',
     border: 'solid 1px',
     margin: 20,
     paddingTop: 50,
     paddingBottom: 50,
+    paddingLeft : 0
   },
   skills: {
     display: 'flex',
