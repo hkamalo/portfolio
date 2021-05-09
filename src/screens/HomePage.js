@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    border: 'solid 1px',
+    border: 'solid 1px red',
   },
   menu: {
     display: 'flex',
@@ -46,12 +46,26 @@ const useStyles = makeStyles({
     paddingBottom: 50,
     paddingLeft: 0,
   },
+  skillsContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    width: '50%',
+    height: 'auto',
+    maxHeight: '100%',
+    border: 'solid 1px yellow',
+    margin: 20,
+    paddingTop: 50,
+    paddingBottom: 50,
+  },
   skills: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-start',
+    maxHeight: '100%',
+    maxWidth: '100%',
     width: '100%',
-    height: '60%',
+    height: '100%',
     background: '#FFFFFF',
     boxShadow:
       '0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05)',
@@ -78,7 +92,8 @@ export default function HomePage() {
         <div className={classes.content}>
           <About />
         </div>
-        <div className={classes.content}>
+        <div className={classes.skillsContent}>
+          <h2>#Developper</h2>
           <div className={classes.skills}>
             <DevSkills />
           </div>
