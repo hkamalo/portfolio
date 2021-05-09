@@ -71,7 +71,6 @@ export default function Background() {
   return (
     <>
       <div className={classes.skillsElements}>
-        
         <div>
           <h4>Diplome</h4>
           <div>
@@ -81,8 +80,12 @@ export default function Background() {
         <div>
           <h4>Professional</h4>
           <div>
-            <p><strong>Business Developer</strong> - 2 ans</p>
-            <p><strong>Commercial Itinérant</strong> - 1 an</p>
+            <p>
+              <strong>Business Developer</strong> - 2 ans
+            </p>
+            <p>
+              <strong>Commercial Itinérant</strong> - 1 an
+            </p>
           </div>
         </div>
         <div>
