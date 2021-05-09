@@ -3,11 +3,32 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   skillsElements: {
-    width: '70%',
+    MaxWidth: '100%',
+    maxHeight: '100%',
+    height: '100%',
+    width: '100%',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    border: '1px solid green',
   },
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    mawHeight: '100%',
+    border: '1px solid blue',
+    width: 180,
+    height: 250,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  backgroundSkills: {
+    display: 'flex',
+  },
+  unstyle: {
+    listStyle: 'none',
+  }
 });
 
 export default function Background() {
@@ -16,13 +37,13 @@ export default function Background() {
   return (
     <>
       <div className={classes.skillsElements}>
-        <div>
+        <div className={classes.content}>
           <h4>Diplome</h4>
           <div>
-            <p>Master Management & Stratégie d’Entreprise</p>
+            <p><strong>Master</strong> Management & Stratégie d’Entreprise</p>
           </div>
         </div>
-        <div>
+        <div className={classes.content}>
           <h4>Professional</h4>
           <div>
             <p>
@@ -33,24 +54,30 @@ export default function Background() {
             </p>
           </div>
         </div>
-        <div>
+        <div className={classes.content}>
           <h4>Acquis</h4>
-          <div className={classes.hardSKills}>
-            <h5>Savoir faire</h5>
-            <ul>
-              <li>Pilotage d’un projet</li>
-              <li>Relationnelle client</li>
-              <li>Travail en équipe</li>
-              <li>Maîtrise de l’anglais</li>
-            </ul>
-          </div>
-          <div className={classes.softSkills}>
-            <h5>Savoir être</h5>
-            <ul>
-              <li>Entrepreneur</li>
-              <li>Rigoureux</li>
-              <li>Sociable</li>
-            </ul>
+          <div className={classes.backgroundSkills}>
+            <div className={classes.hardSKills}>
+              <p>
+                <strong>Savoir faire</strong>
+              </p>
+              <ul className={classes.unstyle}>
+                <li>Pilotage d’un projet</li>
+                <li>Relationnelle client</li>
+                <li>Travail en équipe</li>
+                <li>Maîtrise de l’anglais</li>
+              </ul>
+            </div>
+            <div className={classes.softSkills}>
+              <p>
+                <strong>Savoir être</strong>
+              </p>
+              <ul className={classes.unstyle}>
+                <li>Entrepreneur</li>
+                <li>Rigoureux</li>
+                <li>Sociable</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
