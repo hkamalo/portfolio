@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   },
   unstyle: {
     listStyle: 'none',
-  }
+  },
 });
 
 export default function Background() {
@@ -40,7 +40,9 @@ export default function Background() {
         <div className={classes.content}>
           <h4>Diplome</h4>
           <div>
-            <p><strong>Master</strong> Management & Stratégie d’Entreprise</p>
+            <p>
+              <strong>Master</strong> Management & Stratégie d’Entreprise
+            </p>
           </div>
         </div>
         <div className={classes.content}>
