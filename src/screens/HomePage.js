@@ -44,7 +44,6 @@ const useStyles = makeStyles({
     margin: 20,
     paddingTop: 50,
     paddingBottom: 50,
-    paddingLeft: 0,
   },
   skillsContent: {
     display: 'flex',

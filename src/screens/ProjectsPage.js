@@ -20,6 +20,9 @@ const useStyles = makeStyles({
     height: '20%',
     display: 'flex',
     flexDirection: 'column',
+    margin: 20,
+    paddingTop: 50,
+    paddingBottom: 50,
   },
   projectsDisplay: {
     display: 'flex',
@@ -42,7 +45,7 @@ export default function ProjectsPage() {
     <div className={classes.projetBackground}>
       <div className={classes.backgroundProjet}>
         <div className={classes.projectsHeader}>
-          <h4>Projets</h4>
+          <h2>Projets</h2>
         </div>
         <div className={classes.projectsDisplay}>
           <div>
