@@ -98,7 +98,8 @@ export default function HomePage() {
             <DevSkills />
           </div>
         </div>
-        <div className={classes.content}>
+        <div className={classes.skillsContent}>
+          <h2>#Background</h2>
           <div className={classes.skills}>
             <Background />
           </div>
