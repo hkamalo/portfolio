@@ -15,7 +15,6 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": ["error"],
     "react/jsx-filename-extension": "off",
     "no-console": "warn",
     "no-debugger": "warn",
@@ -23,7 +22,8 @@
     "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
     "react/jsx-curly-newline": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "no-unused-vars": "off"
   },
   "parser": "babel-eslint"
 }
