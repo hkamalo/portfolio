@@ -4,7 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   projetBackground: {
-    backgroundColor: 'radial-gradient(52.52% 39.17% at 50% 66.95%, #F3F3F3 0%, #FFFFFF 100%)',
+    backgroundColor:
+      'radial-gradient(52.52% 39.17% at 50% 66.95%, #F3F3F3 0%, #FFFFFF 100%)',
     position: 'relative',
     height: 'auto',
     width: 'auto',
@@ -19,22 +20,19 @@ const useStyles = makeStyles({
     height: '20%',
     display: 'flex',
     flexDirection: 'column',
-    
-    
   },
   projectsDisplay: {
     display: 'flex',
     width: '100%',
     justifyContent: 'space-around',
-    height: 500
+    height: 500,
   },
   backDetailsProjet: {
     background: '#FFFFFF',
     height: '100%',
     display: 'flex',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
-  
 });
 
 export default function ProjectsPage() {
