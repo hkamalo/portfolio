@@ -82,9 +82,7 @@ export default function ContactPage() {
   return (
     <>
       <h2 className={message}>Contact</h2>
-      <p className={message}>
-        (mettre photo + descriptif personnel)
-      </p>
+      <p className={message}>(mettre photo + descriptif personnel)</p>
       <form
         className={form}
         // onSubmit={handleSubmit(onSubmit)}
