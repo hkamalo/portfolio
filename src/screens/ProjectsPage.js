@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     margin: 20,
     paddingTop: 50,
     paddingBottom: 50,
-    borderRadius: 10
+    borderRadius: 10,
   },
   projectsDisplay: {
     display: 'flex',
