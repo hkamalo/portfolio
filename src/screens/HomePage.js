@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
   home: {
     position: 'relative',
-    height: 1500,
+    height: 'auto',
     width: 'auto',
     background:
       'radial-gradient(52.52% 39.17% at 50% 66.95%, #F3F3F3 0%, #FFFFFF 100%)',
@@ -44,7 +44,6 @@ const useStyles = makeStyles({
     margin: 20,
     paddingTop: 50,
     paddingBottom: 50,
-    paddingLeft: 0,
   },
   skillsContent: {
     display: 'flex',
