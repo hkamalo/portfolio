@@ -61,7 +61,7 @@ export default function Header() {
               <Button>Projects</Button>
             </NavLink>
             <NavLink exact to="/contact">
-              <Button color="primary">Contract</Button>
+              <Button color="primary">Contact</Button>
             </NavLink>
           </MuiThemeProvider>
         </div>

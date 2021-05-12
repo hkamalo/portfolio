@@ -23,12 +23,14 @@ const useStyles = makeStyles({
     margin: 20,
     paddingTop: 50,
     paddingBottom: 50,
+    borderRadius: 10
   },
   projectsDisplay: {
     display: 'flex',
     width: '100%',
     justifyContent: 'space-around',
-    height: 500,
+    alignItems: 'center',
+    height: 300,
   },
   backDetailsProjet: {
     background: '#FFFFFF',
