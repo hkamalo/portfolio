@@ -8,6 +8,7 @@ import {
   createMuiTheme,
   MuiThemeProvider,
 } from '@material-ui/core/styles';
+import logo from '../../logo/logo_white_large.png';
 
 const theme = createMuiTheme({
   overrides: {
@@ -46,8 +47,17 @@ const useStyles = makeStyles({
   title: {
     display: 'flex',
     justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
     color: 'white',
     fontSize: 50,
+    margin: 0,
+  },
+  image: {
+    margin: 0,
+    padding: 0,
+    width: 150,
+    height: 28.9,
   },
 });
 
@@ -58,6 +68,7 @@ export default function Header() {
     <>
       <div className={classes.header}>
         <div className={classes.title}>
+          <img className={classes.image} src={logo} alt="" />
           <h1>Développeur Web</h1>
         </div>
         <div className={classes.menu}>
