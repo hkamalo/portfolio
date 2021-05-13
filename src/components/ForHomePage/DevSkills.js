@@ -21,9 +21,8 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    mawHeight: '100%',
     width: 180,
-    height: 250,
+    maxHeight: 400,
     paddingTop: 10,
     paddingBottom: 10,
     margin: 20,
@@ -32,6 +31,16 @@ const useStyles = makeStyles({
     widht: 50,
     height: 50,
   },
+  skillsList: {
+    margin: 0,
+    listStyle: 'none',
+    padding: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
+  }
 });
 
 export default function DevSkills() {
@@ -52,7 +61,7 @@ export default function DevSkills() {
         <div className={classes.front}>
           <div>{iconFront}</div>
           <h4>Interface</h4>
-          <ul>
+          <ul className={classes.skillsList}>
             <li>Html</li>
             <li>CSS</li>
             <li>Material UI</li>
@@ -63,7 +72,7 @@ export default function DevSkills() {
         <div className={classes.front}>
           <div>{iconServer}</div>
           <h4>Serveur</h4>
-          <ul>
+          <ul className={classes.skillsList}>
             <li>Node</li>
             <li>Express</li>
             <li>SQL</li>
@@ -74,7 +83,7 @@ export default function DevSkills() {
         <div className={classes.front}>
           <div>{iconGenerale}</div>
           <h4>Generale</h4>
-          <ul>
+          <ul className={classes.skillsList}>
             <li>Git</li>
             <li>Git hub</li>
             <li>Figma</li>
