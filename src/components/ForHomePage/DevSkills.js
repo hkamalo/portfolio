@@ -39,8 +39,8 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 });
 
 export default function DevSkills() {
