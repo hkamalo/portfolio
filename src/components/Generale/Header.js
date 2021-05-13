@@ -27,9 +27,13 @@ const useStyles = makeStyles({
   },
   header: {
     margin: 0,
-    height: 250,
-    width: 'auto',
-    backgroundColor: 'black',
+    height: '100vh',
+    width: '100vw',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: 'rgba(0, 0, 0, 0.81)'
   },
   menu: {
     display: 'flex',
@@ -43,6 +47,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     color: 'white',
+    fontSize: 50
   },
 });
 
@@ -52,6 +57,9 @@ export default function Header() {
   return (
     <>
       <div className={classes.header}>
+        <div className={classes.title}>
+          <h1>Développeur Web</h1>
+        </div>
         <div className={classes.menu}>
           <MuiThemeProvider theme={theme}>
             <NavLink exact to="/">
@@ -64,9 +72,6 @@ export default function Header() {
               <Button color="primary">Contact</Button>
             </NavLink>
           </MuiThemeProvider>
-        </div>
-        <div className={classes.title}>
-          <h1>Développeur Web</h1>
         </div>
       </div>
     </>

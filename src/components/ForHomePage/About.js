@@ -1,7 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import logo from '../../logo/logo_small.png';
 
 const useStyles = makeStyles({
+  aboutSection: {
+    display: 'flex',
+    alignItems: 'center'
+  },
   text: {
     display: 'flex',
     flexDirection: 'column',
@@ -10,10 +15,13 @@ const useStyles = makeStyles({
     width: '50%',
     MaxWidth: '100%',
     textAlign: 'justify',
+    
   },
   image: {
-    width: 300,
-    height: 170,
+    margin: 10,
+  padding: 10,
+    width: 500,
+    height: 96,
   },
 });
 
@@ -21,7 +29,7 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <>
+    <div className={classes.aboutSection}>
       <div className={classes.text}>
         <h2>About</h2>
         <p>
@@ -35,9 +43,9 @@ export default function About() {
       </div>
       <img
         className={classes.image}
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2F438112d08852a5cf64fb668899b62a1c6abcfadb%2Fc%3D0-104-5312-3105%26r%3Dx1683%26c%3D3200x1680%2Flocal%2F-%2Fmedia%2F2017%2F05%2F23%2FWIGroup%2FAppleton%2F636311326049773956-UC.jpg&f=1&nofb=1"
+        src={logo}
         alt=""
       />
-    </>
+    </div>
   );
 }

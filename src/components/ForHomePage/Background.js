@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles (() => ({
   skillsElements: {
     MaxWidth: '100%',
     maxHeight: '100%',
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
     mawHeight: '100%',
     border: '1px solid blue',
     width: 180,
-    height: 250,
+    MaxHeight: 250,
     paddingTop: 10,
     paddingBottom: 10,
   },
@@ -29,14 +30,14 @@ const useStyles = makeStyles({
   unstyle: {
     listStyle: 'none',
   },
-});
+}));
 
 export default function Background() {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.skillsElements}>
+      <Paper className={classes.skillsElements}>
         <div className={classes.content}>
           <h4>Diplome</h4>
           <div>
@@ -82,7 +83,7 @@ export default function Background() {
             </div>
           </div>
         </div>
-      </div>
+      </Paper>
     </>
   );
 }
