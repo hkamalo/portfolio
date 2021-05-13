@@ -43,7 +43,7 @@ export default function DevSkills() {
     <FontAwesomeIcon icon={faServer} size="3x" color="#FFD700" />
   );
   const iconGenerale = (
-    <FontAwesomeIcon icon={faUncharted} size="3x" color="black" />
+    <FontAwesomeIcon icon={faUncharted} size="3x" color="rgba(0, 0, 0, 0.81)" />
   );
 
   return (
