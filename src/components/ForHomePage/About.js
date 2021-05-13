@@ -26,8 +26,6 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   image: {
-    
-   
     margin: 10,
     padding: 10,
     width: 150,

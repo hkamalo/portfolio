@@ -4,7 +4,6 @@ import About from '../components/ForHomePage/About';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
 
-
 const useStyles = makeStyles({
   root: {
     '& > *': {
