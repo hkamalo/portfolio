@@ -20,7 +20,6 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    border: 'solid 1px red',
   },
   menu: {
     display: 'flex',
@@ -41,8 +40,8 @@ const useStyles = makeStyles({
     width: '50%',
     height: '20%',
     margin: 20,
-    paddingTop: 50,
-    paddingBottom: 50,
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   skillsContent: {
     display: 'flex',
@@ -51,10 +50,9 @@ const useStyles = makeStyles({
     width: '50%',
     height: 'auto',
     maxHeight: '100%',
-    border: 'solid 1px yellow',
     margin: 20,
-    paddingTop: 50,
-    paddingBottom: 50,
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   skills: {
     display: 'flex',
@@ -64,10 +62,6 @@ const useStyles = makeStyles({
     maxWidth: '100%',
     width: '100%',
     height: '100%',
-    background: '#FFFFFF',
-    boxShadow:
-      '0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05)',
-    borderRadius: 20,
   },
   image: {
     width: 300,

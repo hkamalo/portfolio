@@ -11,14 +11,13 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    border: '1px solid green',
+    borderRadius: '35px'
   },
   content: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     mawHeight: '100%',
-    border: '1px solid blue',
     width: 180,
     MaxHeight: 250,
     paddingTop: 10,
@@ -37,7 +36,7 @@ export default function Background() {
 
   return (
     <>
-      <Paper className={classes.skillsElements}>
+      <Paper elevation={3} className={classes.skillsElements}>
         <div className={classes.content}>
           <h4>Diplome</h4>
           <div>

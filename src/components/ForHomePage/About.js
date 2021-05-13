@@ -19,8 +19,8 @@ const useStyles = makeStyles({
   },
   imageBg: {
     borderRadius: '50%',
-    maxWidth: 150,
-    maxHeight: 150,
+    maxWidth: 149,
+    maxHeight: 149,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -49,7 +49,7 @@ export default function About() {
           offert par le métier de développeur.
         </p>
       </div>
-      <Paper elevation={5} className={classes.imageBg}>
+      <Paper elevation={7} className={classes.imageBg}>
         <img className={classes.image} src={logo} alt="" />
       </Paper>
     </div>
