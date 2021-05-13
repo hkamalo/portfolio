@@ -4,7 +4,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUncharted } from '@fortawesome/free-brands-svg-icons'
+import { faUncharted } from '@fortawesome/free-brands-svg-icons';
 import { faServer, faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles({
@@ -36,9 +36,15 @@ const useStyles = makeStyles({
 
 export default function DevSkills() {
   const classes = useStyles();
-  const iconFront = <FontAwesomeIcon icon={faWindowRestore} size="3x" color="#87CEFA" />;
-  const iconServer = <FontAwesomeIcon icon={faServer} size="3x" color="#FFD700" />;
-  const iconGenerale = <FontAwesomeIcon icon={faUncharted} size="3x" color="black" />;
+  const iconFront = (
+    <FontAwesomeIcon icon={faWindowRestore} size="3x" color="#87CEFA" />
+  );
+  const iconServer = (
+    <FontAwesomeIcon icon={faServer} size="3x" color="#FFD700" />
+  );
+  const iconGenerale = (
+    <FontAwesomeIcon icon={faUncharted} size="3x" color="black" />
+  );
 
   return (
     <>
