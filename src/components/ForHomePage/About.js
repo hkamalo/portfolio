@@ -5,7 +5,7 @@ import logo from '../../logo/logo_small.png';
 const useStyles = makeStyles({
   aboutSection: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   text: {
     display: 'flex',
@@ -15,11 +15,10 @@ const useStyles = makeStyles({
     width: '50%',
     MaxWidth: '100%',
     textAlign: 'justify',
-    
   },
   image: {
     margin: 10,
-  padding: 10,
+    padding: 10,
     width: 500,
     height: 96,
   },
@@ -41,11 +40,7 @@ export default function About() {
           offert par le métier de développeur.
         </p>
       </div>
-      <img
-        className={classes.image}
-        src={logo}
-        alt=""
-      />
+      <img className={classes.image} src={logo} alt="" />
     </div>
   );
 }

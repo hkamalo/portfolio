@@ -33,7 +33,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgba(0, 0, 0, 0.81)'
+    background: 'rgba(0, 0, 0, 0.81)',
   },
   menu: {
     display: 'flex',
@@ -47,7 +47,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     color: 'white',
-    fontSize: 50
+    fontSize: 50,
   },
 });
 
