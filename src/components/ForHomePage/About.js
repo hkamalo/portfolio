@@ -1,26 +1,37 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import logo from '../../logo/logo_small.png';
+import Paper from '@material-ui/core/Paper';
+import logo from '../../logo/logo_small_icon_only_inverted.png';
 
 const useStyles = makeStyles({
   aboutSection: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
   text: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    border: '1px solid',
     width: '50%',
     MaxWidth: '100%',
     textAlign: 'justify',
   },
+  imageBg: {
+    borderRadius: '50%',
+    maxWidth: 150,
+    maxHeight: 150,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   image: {
+    
+   
     margin: 10,
     padding: 10,
-    width: 500,
-    height: 96,
+    width: 150,
+    height: 150,
   },
 });
 
@@ -40,7 +51,9 @@ export default function About() {
           offert par le métier de développeur.
         </p>
       </div>
-      <img className={classes.image} src={logo} alt="" />
+      <Paper elevation={5} className={classes.imageBg}>
+        <img className={classes.image} src={logo} alt="" />
+      </Paper>
     </div>
   );
 }

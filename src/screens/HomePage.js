@@ -4,6 +4,7 @@ import About from '../components/ForHomePage/About';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
 
+
 const useStyles = makeStyles({
   root: {
     '& > *': {
@@ -40,7 +41,6 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     width: '50%',
     height: '20%',
-    border: 'solid 1px',
     margin: 20,
     paddingTop: 50,
     paddingBottom: 50,
