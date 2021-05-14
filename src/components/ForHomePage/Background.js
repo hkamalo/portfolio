@@ -16,7 +16,6 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    border: '1px solid blue',
     width: 230,
     height: 300,
     paddingTop: 10,
@@ -65,14 +64,22 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-between',
     width: 'calc(100% - 10px)',
+    alignItems: 'center',
   },
   proUnstyle: {
     marginLeft: 10,
     padding: 0,
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'flex-end',
     fontSize: '12px',
+  },
+  proTitle: {
+    marginLeft: 10,
+    padding: 0,
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
   },
 }));
 
@@ -84,9 +91,10 @@ export default function Background() {
       <Paper elevation={3} className={classes.skillsElements}>
         <div className={classes.content}>
           <h4>Diplome</h4>
-          <div>
-            <p>
-              <strong>Master</strong> Management & Stratégie d’Entreprise
+          <div className={classes.proDetail}>
+            <p className={classes.proTitle}>Master</p>
+            <p className={classes.proUnstyle}>
+              Management & Stratégie d’Entreprise
             </p>
           </div>
         </div>
@@ -94,11 +102,11 @@ export default function Background() {
           <h4>Professional</h4>
           <div className={classes.proBackground}>
             <div className={classes.proDetail}>
-              <p>Business Developer </p>
+              <p className={classes.proTitle}>Business Developer </p>
               <p className={classes.proUnstyle}>2 ans</p>
             </div>
             <div className={classes.proDetail}>
-              <p>Commercial Itinérant</p>
+              <p className={classes.proTitle}>Commercial Itinérant</p>
               <p className={classes.proUnstyle}>1 an</p>
             </div>
           </div>

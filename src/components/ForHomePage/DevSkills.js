@@ -21,15 +21,14 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: 200,
+    width: 230,
     height: 300,
     paddingTop: 10,
     paddingBottom: 10,
     margin: 20,
   },
   picture: {
-    widht: 50,
-    height: 50,
+    marginTop: '20px'
   },
   skillsList: {
     margin: 0,
@@ -59,7 +58,7 @@ export default function DevSkills() {
     <>
       <Paper elevation={3} className={classes.skillsElements}>
         <div className={classes.front}>
-          <div>{iconFront}</div>
+          <div className={classes.picture}>{iconFront}</div>
           <h4>Interface</h4>
           <ul className={classes.skillsList}>
             <li>Html</li>
@@ -70,7 +69,7 @@ export default function DevSkills() {
           </ul>
         </div>
         <div className={classes.front}>
-          <div>{iconServer}</div>
+          <div className={classes.picture}>{iconServer}</div>
           <h4>Serveur</h4>
           <ul className={classes.skillsList}>
             <li>Node</li>
@@ -81,7 +80,7 @@ export default function DevSkills() {
           </ul>
         </div>
         <div className={classes.front}>
-          <div>{iconGenerale}</div>
+          <div className={classes.picture}>{iconGenerale}</div>
           <h4>Generale</h4>
           <ul className={classes.skillsList}>
             <li>Git</li>
