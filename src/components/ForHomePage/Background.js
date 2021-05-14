@@ -51,11 +51,13 @@ const useStyles = makeStyles(() => ({
   },
   hardSkills: {
     textAlign: 'start',
-    marginLeft: 10,
+    marginLeft: '15px',
+    width: 'calc(100% / 2)',
   },
   softSkills: {
     textAlign: 'start',
-    marginLeft: 10,
+    marginLeft: '15px',
+    width: 'calc(100% / 2)',
   },
   proDetail: {
     textAlign: 'start',
