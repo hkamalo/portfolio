@@ -71,7 +71,6 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     fontSize: '12px',
-
   },
 }));
 
