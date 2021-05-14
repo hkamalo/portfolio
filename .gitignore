@@ -6,7 +6,10 @@
 .pnp.js
 
 # logo
-/src/logo
+/src/logo_all
+
+# images
+/src/images
 
 # testing
 /coverage
