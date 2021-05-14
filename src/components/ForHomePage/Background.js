@@ -41,11 +41,11 @@ const useStyles = makeStyles(() => ({
     fontSize: '12px',
   },
   hardSkills: {
-    textAlign: 'left',
+    textAlign: 'center',
     marginRight: 10,
   },
   softSkills: {
-    textAlign: 'left',
+    textAlign: 'center',
     marginLeft: 10,
   },
 }));
@@ -66,13 +66,19 @@ export default function Background() {
         </div>
         <div className={classes.content}>
           <h4>Professional</h4>
-          <div>
-            <p>
-              <strong>Business Developer</strong> - 2 ans
-            </p>
-            <p>
-              <strong>Commercial Itinérant</strong> - 1 an
-            </p>
+          <div className={classes.backgroundSkills}>
+            <div className={classes.hardSkills}>
+              <p>Business Developer </p>
+              <ul className={classes.unstyle}>
+                <li>2 ans</li>
+              </ul>
+            </div>
+            <div className={classes.softSkills}>
+              <p>Commercial Itinérant</p>
+              <ul className={classes.unstyle}>
+                <li>1 an</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className={classes.content}>

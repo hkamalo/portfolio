@@ -11,9 +11,7 @@ const useStyles = makeStyles({
     },
   },
   home: {
-    position: 'relative',
-    height: 'auto',
-    width: 'auto',
+    width: '100vw',
     background: '#f5f5f5',
     display: 'flex',
     flexDirection: 'column',
