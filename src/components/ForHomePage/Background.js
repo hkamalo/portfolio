@@ -29,6 +29,15 @@ const useStyles = makeStyles(() => ({
     overflow: 'hidden',
     textAlign: 'center',
   },
+
+  proBackground: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    MaxHeight: '100%',
+    overflow: 'hidden',
+    textAlign: 'center',
+  },
   unstyle: {
     marginLeft: 20,
     padding: 0,
@@ -41,12 +50,28 @@ const useStyles = makeStyles(() => ({
     fontSize: '12px',
   },
   hardSkills: {
-    textAlign: 'center',
-    marginRight: 10,
+    textAlign: 'start',
+    marginLeft: 10,
   },
   softSkills: {
-    textAlign: 'center',
+    textAlign: 'start',
     marginLeft: 10,
+  },
+  proDetail: {
+    textAlign: 'start',
+    marginLeft: 10,
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: 'calc(100% - 10px)',
+  },
+  proUnstyle: {
+    marginLeft: 10,
+    padding: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    fontSize: '12px',
+
   },
 }));
 
@@ -66,18 +91,14 @@ export default function Background() {
         </div>
         <div className={classes.content}>
           <h4>Professional</h4>
-          <div className={classes.backgroundSkills}>
-            <div className={classes.hardSkills}>
+          <div className={classes.proBackground}>
+            <div className={classes.proDetail}>
               <p>Business Developer </p>
-              <ul className={classes.unstyle}>
-                <li>2 ans</li>
-              </ul>
+              <p className={classes.proUnstyle}>2 ans</p>
             </div>
-            <div className={classes.softSkills}>
+            <div className={classes.proDetail}>
               <p>Commercial Itinérant</p>
-              <ul className={classes.unstyle}>
-                <li>1 an</li>
-              </ul>
+              <p className={classes.proUnstyle}>1 an</p>
             </div>
           </div>
         </div>
