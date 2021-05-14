@@ -35,21 +35,19 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    alignItems:'stretch',
+    alignItems: 'stretch',
     textAlign: 'left',
     minHeight: '100%',
-    fontSize: '12px'
+    fontSize: '12px',
   },
   hardSkills: {
     textAlign: 'left',
-    marginRight: 10
+    marginRight: 10,
   },
   softSkills: {
     textAlign: 'left',
-    marginLeft: 10
-
+    marginLeft: 10,
   },
-
 }));
 
 export default function Background() {
@@ -81,9 +79,7 @@ export default function Background() {
           <h4>Acquis</h4>
           <div className={classes.backgroundSkills}>
             <div className={classes.hardSkills}>
-              <p>
-                Savoir faire
-              </p>
+              <p>Savoir faire</p>
               <ul className={classes.unstyle}>
                 <li>Pilotage d’un projet</li>
                 <li>Relationnelle client</li>
@@ -92,9 +88,7 @@ export default function Background() {
               </ul>
             </div>
             <div className={classes.softSkills}>
-              <p>
-                Savoir être
-              </p>
+              <p>Savoir être</p>
               <ul className={classes.unstyle}>
                 <li>Entrepreneur</li>
                 <li>Rigoureux</li>
