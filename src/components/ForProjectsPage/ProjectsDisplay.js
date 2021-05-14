@@ -30,8 +30,8 @@ const useStyles = makeStyles({
     margin: 5,
     transition: 'flex-grow 0.5s',
     '&:hover': {
-       flexGrow: '1',
-      }
+      flexGrow: '1',
+    },
   },
   media: {
     width: '100%',
