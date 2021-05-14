@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     margin: 20,
   },
   picture: {
-    marginTop: '20px'
+    marginTop: '20px',
   },
   skillsList: {
     margin: 0,
