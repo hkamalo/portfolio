@@ -1,6 +1,8 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import ProjectsDisplay from '../components/ForProjectsPage/ProjectsDisplay';
+import ProjectsDetails from '../components/ForProjectsPage/ProjectsDetails';
 
 const useStyles = makeStyles({
   projetBackground: {
@@ -49,20 +51,9 @@ export default function ProjectsPage() {
         <div className={classes.projectsHeader}>
           <h2>Projets</h2>
         </div>
-        <div className={classes.projectsDisplay}>
-          <div>
-            <p>Site vitrine</p>
-            <p>P2 - Dolly</p>
-          </div>
-          <div>
-            <p>Hackathon</p>
-            <p>P3</p>
-          </div>
-        </div>
+        <ProjectsDisplay />
       </div>
-      <div className={classes.backDetailsProjet}>
-        <h4> Details Technique</h4>
-      </div>
+      <ProjectsDetails />
     </div>
   );
 }
