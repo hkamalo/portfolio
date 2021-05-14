@@ -6,7 +6,6 @@ const useStyles = makeStyles(() => ({
   skillsElements: {
     MaxWidth: '100%',
     maxHeight: '100%',
-    height: '100%',
     width: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -17,18 +16,40 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    mawHeight: '100%',
-    width: 180,
-    MaxHeight: 250,
+    border: '1px solid blue',
+    width: 230,
+    height: 300,
     paddingTop: 10,
     paddingBottom: 10,
+    margin: 20,
   },
   backgroundSkills: {
     display: 'flex',
+    MaxHeight: '100%',
+    overflow: 'hidden',
+    textAlign: 'center',
   },
   unstyle: {
-    listStyle: 'none',
+    marginLeft: 20,
+    padding: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems:'stretch',
+    textAlign: 'left',
+    minHeight: '100%',
+    fontSize: '12px'
   },
+  hardSkills: {
+    textAlign: 'left',
+    marginRight: 10
+  },
+  softSkills: {
+    textAlign: 'left',
+    marginLeft: 10
+
+  },
+
 }));
 
 export default function Background() {
@@ -59,9 +80,9 @@ export default function Background() {
         <div className={classes.content}>
           <h4>Acquis</h4>
           <div className={classes.backgroundSkills}>
-            <div className={classes.hardSKills}>
+            <div className={classes.hardSkills}>
               <p>
-                <strong>Savoir faire</strong>
+                Savoir faire
               </p>
               <ul className={classes.unstyle}>
                 <li>Pilotage d’un projet</li>
@@ -72,7 +93,7 @@ export default function Background() {
             </div>
             <div className={classes.softSkills}>
               <p>
-                <strong>Savoir être</strong>
+                Savoir être
               </p>
               <ul className={classes.unstyle}>
                 <li>Entrepreneur</li>
