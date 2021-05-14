@@ -30,9 +30,9 @@ const useStyles = makeStyles({
   },
   media: {
     width: '100%',
-    height: '60%',
-    paddingBottom: '56.25%',
-    clipPath: 'polygon(0 0, 100% 0%, 100% 84%, 0% 100%)',
+    height: 0,
+    paddingBottom: 190,
+    clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
     backgroundColor: 'rgba(0, 0, 0, 0.08)',
   },
 });
