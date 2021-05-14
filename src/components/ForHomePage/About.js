@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import logo from '../../logo/logo_small_icon_only_inverted.png';
+// import logo from '../../logo_all/logo-proto-2/v1/logo_small_icon_only_inverted.png';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 
 const useStyles = makeStyles({
   aboutSection: {
@@ -17,19 +18,20 @@ const useStyles = makeStyles({
     MaxWidth: '100%',
     textAlign: 'justify',
   },
-  imageBg: {
-    borderRadius: '50%',
-    maxWidth: 149,
-    maxHeight: 149,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  // imageBg: {
+  //   borderRadius: '50%',
+  //   width: 50,
+  //   height: 50,
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  // },
   image: {
     margin: 10,
     padding: 10,
-    width: 150,
-    height: 150,
+    width: '1em',
+    height: '1em',
+    borderRadius: '50%',
   },
 });
 
@@ -49,9 +51,7 @@ export default function About() {
           offert par le métier de développeur.
         </p>
       </div>
-      <Paper elevation={7} className={classes.imageBg}>
-        <img className={classes.image} src={logo} alt="" />
-      </Paper>
+      <ContactSupportIcon style={{ fontSize: 100 }} outlined />
     </div>
   );
 }
