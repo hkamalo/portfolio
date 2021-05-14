@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg'
 
 const useStyles = makeStyles({
   projectsDisplay: {
@@ -31,10 +32,12 @@ const useStyles = makeStyles({
   media: {
     width: '100%',
     height: 0,
-    paddingBottom: 190,
-    clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
-    backgroundColor: 'rgba(0, 0, 0, 0.08)',
-  },
+    paddingBottom: 191,
+    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
+    transition: 'clip-path 0.5s',
+    '&:hover': {
+        clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
+      }  },
 });
 
 export default function ProjectsDisplay() {
@@ -44,7 +47,7 @@ export default function ProjectsDisplay() {
       <div className={classes.projectsDisplay}>
         <div className={classes.projects}>
           <Card className={classes.projectCardA}>
-            <CardMedia className={classes.media} />
+            <CardMedia className={classes.media} image={p1Screenshoot} />
             <CardContent>Site vitrine</CardContent>
           </Card>
           <Card className={classes.projectCardB}>
