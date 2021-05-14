@@ -8,7 +8,7 @@ import {
   createMuiTheme,
   MuiThemeProvider,
 } from '@material-ui/core/styles';
-import logo from '../../logo_all/logo-proto-2/v2/logo_white_large.png'
+import logo from '../../logo_all/logo-proto-2/v2/logo_white_large.png';
 
 const theme = createMuiTheme({
   overrides: {
