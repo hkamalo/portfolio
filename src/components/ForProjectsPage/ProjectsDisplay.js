@@ -12,21 +12,21 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   projects: {
-      display: 'flex',
-      paddingLeft: 20, 
-      paddingRight: 20, 
-      width: 'calc(100% - 40px)',
-      height: 200,
-      justifyContent: 'center',
-      marginTop: 20,
+    display: 'flex',
+    paddingLeft: 20,
+    paddingRight: 20,
+    width: 'calc(100% - 40px)',
+    height: 200,
+    justifyContent: 'center',
+    marginTop: 20,
   },
   projectCardA: {
-      flexGrow: '0.7',
-      margin: 5
+    flexGrow: '0.7',
+    margin: 5,
   },
   projectCardB: {
-      flexGrow: '0.3',
-      margin: 5
+    flexGrow: '0.3',
+    margin: 5,
   },
   media: {
     width: '100%',
