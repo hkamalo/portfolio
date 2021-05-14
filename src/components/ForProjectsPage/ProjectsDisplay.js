@@ -28,6 +28,10 @@ const useStyles = makeStyles({
   projectCardB: {
     flexGrow: '0.3',
     margin: 5,
+    transition: 'flex-grow 0.5s',
+    '&:hover': {
+       flexGrow: '1',
+      }
   },
   media: {
     width: '100%',
@@ -49,11 +53,11 @@ export default function ProjectsDisplay() {
         <div className={classes.projects}>
           <Card className={classes.projectCardA}>
             <CardMedia className={classes.media} image={p1Screenshoot} />
-            <CardContent>Site vitrine</CardContent>
+            <CardContent>P2 - Dolly</CardContent>
           </Card>
           <Card className={classes.projectCardB}>
             <CardMedia className={classes.media} />
-            <CardContent>P2 - Dolly</CardContent>
+            <CardContent>Site vitrine</CardContent>
           </Card>
         </div>
         <div className={classes.projects}>
