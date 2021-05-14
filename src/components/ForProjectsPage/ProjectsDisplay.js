@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg'
+import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
 
 const useStyles = makeStyles({
   projectsDisplay: {
@@ -36,8 +36,9 @@ const useStyles = makeStyles({
     clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
     transition: 'clip-path 0.5s',
     '&:hover': {
-        clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
-      }  },
+      clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
+    },
+  },
 });
 
 export default function ProjectsDisplay() {
