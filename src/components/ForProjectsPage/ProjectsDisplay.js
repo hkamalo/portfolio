@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     height: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   projectCardB: {
     flexGrow: '0.3',
@@ -63,12 +63,12 @@ const useStyles = makeStyles({
     paddingBottom: 0,
     clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
     transition: 'clip-path 0.5s',
-        '&:hover': {
-          clipPath: 'polygon(0 0, 100% 0%, 100% 75%, 0% 100%)',
-      },
+    '&:hover': {
+      clipPath: 'polygon(0 0, 100% 0%, 100% 75%, 0% 100%)',
+    },
   },
   content: {
-    background: "white",
+    background: 'white',
     width: '50%',
     padding: 5,
     textAlign: 'end',
@@ -76,8 +76,8 @@ const useStyles = makeStyles({
     transition: 'opacity 0.5s ease',
   },
   text: {
-    margin: 0
-  }
+    margin: 0,
+  },
 });
 
 export default function ProjectsDisplay() {
