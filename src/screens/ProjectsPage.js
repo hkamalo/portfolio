@@ -40,6 +40,10 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-around',
   },
+  details: {
+    width: '50%',
+    height: '20%',
+  }
 });
 
 export default function ProjectsPage() {
@@ -53,7 +57,9 @@ export default function ProjectsPage() {
         </div>
         <ProjectsDisplay />
       </div>
-      <ProjectsDetails />
+      <div className={classes.details}>
+        <ProjectsDetails />
+      </div>
     </div>
   );
 }
