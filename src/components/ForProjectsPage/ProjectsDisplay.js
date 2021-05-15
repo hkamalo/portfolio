@@ -27,10 +27,10 @@ const useStyles = makeStyles({
     width: 'calc(35vw - 40px)',
     height: 200,
     justifyContent: 'center',
-    marginTop: 20,
+    marginTop: 5,
   },
   projectCardA: {
-    flexGrow: '0.7',
+    flexGrow: '0.6',
     margin: 2,
     height: '100%',
   },
@@ -43,13 +43,13 @@ const useStyles = makeStyles({
     alignItems: 'flex-end',
   },
   projectCardB: {
-    flexGrow: '0.3',
+    flexGrow: '0.4',
     transition: 'flex-grow 0.5s',
     margin: 2,
     height: '100%',
     '&:hover': {
-      flexGrow: '1.2',
-      transition: 'flex-grow 0.5s',
+      flexGrow: '3',
+      transition: 'flex-grow 1.5s',
     },
   },
   media: {
