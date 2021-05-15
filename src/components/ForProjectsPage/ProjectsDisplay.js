@@ -2,6 +2,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import {
+  Info,
+  InfoCaption,
+  InfoSubtitle,
+  InfoTitle,
+} from '@mui-treasury/components/info';
+import Box from '@material-ui/core/Box';
 import TextInfoContent from '@mui-treasury/components/content/textInfo';
 import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
 
@@ -32,17 +39,7 @@ const useStyles = makeStyles({
     position: 'relative',
     minWidth: '100%',
     height: '100%',
-    // '&:after': {
-    //   content: '""',
-    //   display: 'block',
-    //   position: 'absolute',
-    //   width: '100%',
-    //   height: '64%',
-    //   bottom: 0,
-    //   zIndex: 1,
-    //   background: 'linear-gradient(to top, #000, rgba(0,0,0,0))',
-    // }
-  },
+    },
   projectCardB: {
     flexGrow: '0.3',
     transition: 'flex-grow 0.5s',
@@ -61,20 +58,14 @@ const useStyles = makeStyles({
     left: 0,
     zIndex: 0,
     backgroundPosition: 'center',
-    // paddingBottom: 191,
-    // clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
-    // transition: 'clip-path 0.5s',
-    // '&:hover': {
-    //   clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
-    // },
+    paddingBottom: 0,
+    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
+    transition: 'clip-path 0.5s',
+    '&:hover': {
+      clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
+    },
   },
   content: {
-    height: '100%',
-    width: '100%',
-    position: 'absolute',
-    zIndex: 2,
-    bottom: 0,
-    padding: '1em',
   },
 });
 
@@ -87,9 +78,6 @@ export default function ProjectsDisplay() {
           <div className={classes.projectCardA}>
             <Card className={classes.cards}>
               <CardMedia className={classes.media} image={p1Screenshoot} />
-              <CardContent className={classes.content}>
-                <TextInfoContent>P2 Dolly</TextInfoContent>
-              </CardContent>
             </Card>
           </div>
           <div className={classes.projectCardB}>
