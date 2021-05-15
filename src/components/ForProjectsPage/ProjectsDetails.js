@@ -13,7 +13,6 @@ const useStyles = makeStyles({
     display: 'flex',
     width: 400,
     justifyContent: 'space-between',
-
   },
   stacksList: {
     width: '80%',
@@ -21,8 +20,8 @@ const useStyles = makeStyles({
     display: 'flex',
     listStyle: 'none',
     justifyContent: 'space-between',
-    padding: 0
-  }
+    padding: 0,
+  },
 });
 
 export default function ProjectsDetails({ projectName, projectText, stacks }) {
@@ -34,9 +33,7 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
         <h4>{projectName}</h4>
         <p>{projectText}</p>
         <div className={classes.stacks}>
-          <p>
-            Stack :
-          </p>
+          <p>Stack :</p>
           <ul className={classes.stacksList}>
             <li>{html}</li>
             <li>{css}</li>

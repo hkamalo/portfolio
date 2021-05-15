@@ -3,7 +3,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3, faReact, faNode} from '@fortawesome/free-brands-svg-icons';
+import {
+  faHtml5,
+  faCss3,
+  faReact,
+  faNode,
+} from '@fortawesome/free-brands-svg-icons';
 import ProjectsDisplay from '../components/ForProjectsPage/ProjectsDisplay';
 import ProjectsDetails from '../components/ForProjectsPage/ProjectsDetails';
 // import { faServer, faWindowRestore } from '@fortawesome/free-solid-svg-icons';
@@ -47,33 +52,28 @@ const useStyles = makeStyles({
   details: {
     width: '50%',
     height: '20%',
-    marginBottom: 50
+    marginBottom: 50,
   },
 });
 
 export default function ProjectsPage() {
   const classes = useStyles();
-  const iconHtml = (
-    <FontAwesomeIcon icon={faHtml5} size="3x" color="#FF5722" />
-  );
-  const iconCss = (
-    <FontAwesomeIcon icon={faCss3} size="3x" color="#2979FF" />
-  );
+  const iconHtml = <FontAwesomeIcon icon={faHtml5} size="3x" color="#FF5722" />;
+  const iconCss = <FontAwesomeIcon icon={faCss3} size="3x" color="#2979FF" />;
   const iconReact = (
     <FontAwesomeIcon icon={faReact} size="3x" color="#00E5FF" />
   );
-  const iconNode = (
-    <FontAwesomeIcon icon={faNode} size="3x" color="#4CAF50" />
-  );
-  
+  const iconNode = <FontAwesomeIcon icon={faNode} size="3x" color="#4CAF50" />;
+
   const project = {
-    name : 'Dolly',
-    text : 'Dolly est une application web qui offre au client de pouvoir consulter les informations concernants ses films favoris',
-    stack : {
+    name: 'Dolly',
+    text:
+      'Dolly est une application web qui offre au client de pouvoir consulter les informations concernants ses films favoris',
+    stack: {
       html: iconHtml,
       css: iconCss,
       react: iconReact,
-      node: iconNode
+      node: iconNode,
     },
   };
   return (
@@ -85,7 +85,11 @@ export default function ProjectsPage() {
         <ProjectsDisplay />
       </div>
       <div className={classes.details}>
-        <ProjectsDetails projectName={project.name} projectText={project.text} stacks={project.stack} />
+        <ProjectsDetails
+          projectName={project.name}
+          projectText={project.text}
+          stacks={project.stack}
+        />
       </div>
     </div>
   );
