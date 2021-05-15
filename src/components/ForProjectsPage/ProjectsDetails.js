@@ -9,27 +9,39 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'flex-start',
   },
+  stacks: {
+    display: 'flex',
+    width: 400,
+    justifyContent: 'space-between',
+
+  },
+  stacksList: {
+    width: '80%',
+    marginLeft: 20,
+    display: 'flex',
+    listStyle: 'none',
+    justifyContent: 'space-between',
+    padding: 0
+  }
 });
 
-export default function ProjectsDetails() {
+export default function ProjectsDetails({ projectName, projectText, stacks }) {
   const classes = useStyles();
-
+  const { html, css, react, node } = stacks;
   return (
     <>
       <div className={classes.backDetailsProjet}>
-        <h4> Details Technique</h4>
-        <p>
-          Dolly est une application web qui offre au client de pouvoir consulter
-          les informations concernants ses films favoris
-        </p>
-        <div>
-          Stack :
-          <ul>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>Material Ui</li>
-            <li>React</li>
-            <li>Express Js</li>
+        <h4>{projectName}</h4>
+        <p>{projectText}</p>
+        <div className={classes.stacks}>
+          <p>
+            Stack :
+          </p>
+          <ul className={classes.stacksList}>
+            <li>{html}</li>
+            <li>{css}</li>
+            <li>{react}</li>
+            <li>{node}</li>
           </ul>
         </div>
       </div>
