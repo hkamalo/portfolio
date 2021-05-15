@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-    borderRadius: 0
+    borderRadius: 0,
   },
   projectCardB: {
     flexGrow: '0.4',
