@@ -38,6 +38,9 @@ const useStyles = makeStyles({
     position: 'relative',
     minWidth: '100%',
     height: '100%',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end'
   },
   projectCardB: {
     flexGrow: '0.3',
@@ -60,17 +63,21 @@ const useStyles = makeStyles({
     paddingBottom: 0,
     clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
     transition: 'clip-path 0.5s',
-    '&:hover': {
-      clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
-      content: '""',
-    },
+        '&:hover': {
+          clipPath: 'polygon(0 0, 100% 0%, 100% 75%, 0% 100%)',
+      },
   },
   content: {
-    position: 'absolute',
-    bottom: 0,
-    marginLeft: 10,
-    right: '10px',
+    background: "white",
+    width: '50%',
+    padding: 5,
+    textAlign: 'end',
+    height: 'calc(100% - 90%)',
+    transition: 'opacity 0.5s ease',
   },
+  text: {
+    margin: 0
+  }
 });
 
 export default function ProjectsDisplay() {
@@ -81,18 +88,18 @@ export default function ProjectsDisplay() {
         <div className={classes.projects}>
           <div className={classes.projectCardA}>
             <Card className={classes.cards}>
-              <CardMedia className={classes.media} image={p1Screenshoot} />
               <Box className={classes.content}>
-                <p>P2 - projets Dolly</p>
+                <p className={classes.text}>P2 - projets Dolly</p>
               </Box>
+              <CardMedia className={classes.media} image={p1Screenshoot} />
             </Card>
           </div>
           <div className={classes.projectCardB}>
             <Card className={classes.cards}>
-              <CardMedia className={classes.media} />
               <Box className={classes.content}>
-                <p>Projets 2</p>
+                <p className={classes.text}>Projets 2</p>
               </Box>
+              <CardMedia className={classes.media} />
             </Card>
           </div>
         </div>
@@ -101,7 +108,7 @@ export default function ProjectsDisplay() {
             <Card className={classes.cards}>
               <CardMedia className={classes.media} />
               <Box className={classes.content}>
-                <p>Projets 2</p>
+                <p className={classes.text}>Projets 2</p>
               </Box>
             </Card>
           </div>
@@ -109,7 +116,7 @@ export default function ProjectsDisplay() {
             <Card className={classes.cards}>
               <CardMedia className={classes.media} image={p1Screenshoot} />
               <Box className={classes.content}>
-                <p>P2 - projets Dolly</p>
+                <p className={classes.text}>P2 - projets Dolly</p>
               </Box>
             </Card>
           </div>
