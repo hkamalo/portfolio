@@ -62,6 +62,7 @@ const useStyles = makeStyles({
     transition: 'clip-path 0.5s',
     '&:hover': {
       clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
+      content: '""',
     },
   },
   content: {
@@ -69,7 +70,6 @@ const useStyles = makeStyles({
     bottom: 0,
     marginLeft: 10,
     right: '10px',
-    opacity: 1,
   },
 });
 
@@ -90,22 +90,30 @@ export default function ProjectsDisplay() {
           <div className={classes.projectCardB}>
             <Card className={classes.cards}>
               <CardMedia className={classes.media} />
-              <CardContent className={classes.content}>
-                <TextInfoContent>site vitrine</TextInfoContent>
-              </CardContent>
+              <Box className={classes.content}>
+                <p>Projets 2</p>
+              </Box>
             </Card>
           </div>
         </div>
-        {/* <div className={classes.projects}>
-          <Card className={classes.projectCardB}>
-            <CardMedia className={classes.media} />
-            <CardContent>Hackathon</CardContent>
-          </Card>
-          <Card className={classes.projectCardA}>
-            <CardMedia className={classes.media} />
-            <CardContent>P3</CardContent>
-          </Card>
-        </div> */}
+        <div className={classes.projects}>
+          <div className={classes.projectCardB}>
+            <Card className={classes.cards}>
+              <CardMedia className={classes.media} />
+              <Box className={classes.content}>
+                <p>Projets 2</p>
+              </Box>
+            </Card>
+          </div>
+          <div className={classes.projectCardA}>
+            <Card className={classes.cards}>
+              <CardMedia className={classes.media} image={p1Screenshoot} />
+              <Box className={classes.content}>
+                <p>P2 - projets Dolly</p>
+              </Box>
+            </Card>
+          </div>
+        </div>
       </div>
     </>
   );
