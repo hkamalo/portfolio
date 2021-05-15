@@ -27,7 +27,6 @@ const useStyles = makeStyles({
     width: 'calc(35vw - 40px)',
     height: 200,
     justifyContent: 'center',
-    alignItems: 'baseline',
     marginTop: 20,
   },
   projectCardA: {
@@ -63,9 +62,15 @@ const useStyles = makeStyles({
     transition: 'clip-path 0.5s',
     '&:hover': {
       clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
-    },
   },
-  content: {},
+},
+  content: {
+    position: 'absolute',
+    bottom: 0,
+    marginLeft: 10,
+    right: '10px',
+    opacity: 1,
+  },
 });
 
 export default function ProjectsDisplay() {
@@ -77,6 +82,9 @@ export default function ProjectsDisplay() {
           <div className={classes.projectCardA}>
             <Card className={classes.cards}>
               <CardMedia className={classes.media} image={p1Screenshoot} />
+              <Box className={classes.content}>
+                <p>P2 - projets Dolly</p>
+              </Box>
             </Card>
           </div>
           <div className={classes.projectCardB}>
