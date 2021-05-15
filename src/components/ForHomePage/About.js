@@ -43,8 +43,9 @@ export default function About() {
       <div className={classes.text}>
         <h2>About</h2>
         <p>
-          Après un parcours en centré sur le business et le management j’ai décidé d’évoluer dans le numérique, poussé par l'envie d'entreprendre et la liberté de création
-          du métier de développeur.
+          Après un parcours en centré sur le business et le management j’ai
+          décidé d’évoluer dans le numérique, poussé par l'envie d'entreprendre
+          et la liberté de création du métier de développeur.
         </p>
       </div>
       <ContactSupportIcon style={{ fontSize: 100 }} outlined />
