@@ -62,8 +62,8 @@ const useStyles = makeStyles({
     transition: 'clip-path 0.5s',
     '&:hover': {
       clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
+    },
   },
-},
   content: {
     position: 'absolute',
     bottom: 0,
