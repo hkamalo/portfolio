@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-around',
     flexDirection: 'column',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   },
 });
 

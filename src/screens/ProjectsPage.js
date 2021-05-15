@@ -43,7 +43,7 @@ const useStyles = makeStyles({
   details: {
     width: '50%',
     height: '20%',
-  }
+  },
 });
 
 export default function ProjectsPage() {
