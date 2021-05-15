@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     position: 'relative',
     minWidth: '100%',
     height: '100%',
-    },
+  },
   projectCardB: {
     flexGrow: '0.3',
     transition: 'flex-grow 0.5s',
@@ -65,8 +65,7 @@ const useStyles = makeStyles({
       clipPath: 'polygon(0 0, 100% 0%, 100% 50%, 0% 100%)',
     },
   },
-  content: {
-  },
+  content: {},
 });
 
 export default function ProjectsDisplay() {
