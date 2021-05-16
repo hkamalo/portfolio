@@ -1,8 +1,12 @@
-import React from 'react';
+/* eslint-disable import/no-named-as-default */
+import React, { useContext, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import About from '../components/ForHomePage/About';
+
+import { Slide } from '@material-ui/core';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
+import ScrollHandlerContext from '../contexts/ScrollHandler';
+import About from '../components/ForHomePage/About';
 
 const useStyles = makeStyles({
   root: {
@@ -74,12 +78,13 @@ const useStyles = makeStyles({
 
 export default function HomePage() {
   const classes = useStyles();
+  const { checked } = useContext(ScrollHandlerContext);
 
   return (
     <>
       <div className={classes.home}>
         <div className={classes.content}>
-          <About />
+          <About show={checked} />
         </div>
         <div className={classes.skillsContent}>
           <h2>#Developper</h2>

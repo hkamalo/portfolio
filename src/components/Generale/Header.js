@@ -1,7 +1,13 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
+/* eslint-disable consistent-return */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/no-this-in-sfc */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { NavLink } from 'react-router-dom';
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import {
   makeStyles,
@@ -9,6 +15,7 @@ import {
   MuiThemeProvider,
 } from '@material-ui/core/styles';
 import logo from '../../logo_all/logo-proto-2/v2/logo_white_large.png';
+import ScrollHandlerContext from '../../contexts/ScrollHandler';
 
 const theme = createMuiTheme({
   overrides: {
@@ -63,6 +70,9 @@ const useStyles = makeStyles({
 
 export default function Header() {
   const classes = useStyles();
+  const { handleScroll } = useContext(ScrollHandlerContext);
+  
+  window.addEventListener('scroll', handleScroll);
 
   return (
     <>
