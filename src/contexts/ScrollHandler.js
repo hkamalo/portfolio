@@ -27,7 +27,9 @@ export const ScrollHandlerContextProvider = ({ children }) => {
   console.log(checked);
 
   return (
-    <ScrollHandlerContext.Provider value={{ handleScroll, checked, checked2, checked3 }}>
+    <ScrollHandlerContext.Provider
+      value={{ handleScroll, checked, checked2, checked3 }}
+    >
       {children}
     </ScrollHandlerContext.Provider>
   );
