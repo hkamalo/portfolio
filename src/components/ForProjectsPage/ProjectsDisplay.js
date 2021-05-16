@@ -49,7 +49,7 @@ const useStyles = makeStyles({
     margin: 2,
     height: '100%',
     '&:hover': {
-      flexGrow: '3',
+      flexGrow: '2.8',
       transition: 'flex-grow 1s',
     },
   },
