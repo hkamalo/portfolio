@@ -9,7 +9,7 @@ const ScrollHandlerContext = createContext(null);
 export const ScrollHandlerContextProvider = ({ children }) => {
   const [checked, setChecked] = useState(false);
   const [checked2, setChecked2] = useState(false);
-
+  const [checked3, setChecked3] = useState(false);
 
   const handleScroll = () => {
     console.log(window.scrollY);
@@ -19,12 +19,15 @@ export const ScrollHandlerContextProvider = ({ children }) => {
     if (window.scrollY >= 350) {
       setChecked2(true); // do something at end of scroll
     }
+    if (window.scrollY >= 700) {
+      setChecked3(true); // do something at end of scroll
+    }
   };
 
   console.log(checked);
 
   return (
-    <ScrollHandlerContext.Provider value={{ handleScroll, checked, checked2 }}>
+    <ScrollHandlerContext.Provider value={{ handleScroll, checked, checked2, checked3 }}>
       {children}
     </ScrollHandlerContext.Provider>
   );
