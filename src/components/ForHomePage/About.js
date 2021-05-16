@@ -31,7 +31,7 @@ export default function About({ show }) {
   const classes = useStyles();
 
   return (
-    <Slide direction="left" in={show} mountOnEnter timeout={2000}>
+    <Slide direction="left" in={show} mountOnEnter timeout={1500}>
       <div className={classes.aboutSection}>
         <div className={classes.text}>
           <h2>About</h2>

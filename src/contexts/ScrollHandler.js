@@ -10,8 +10,11 @@ export const ScrollHandlerContextProvider = ({ children }) => {
   const [checked, setChecked] = useState(false);
 
   const handleScroll = () => {
-    return setChecked(true); // do something at end of scroll
+    if (window.scrollY >= 150) {
+      setChecked(true); // do something at end of scroll
+    }
   };
+
   console.log(checked);
 
   return (
