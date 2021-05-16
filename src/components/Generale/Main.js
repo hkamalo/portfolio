@@ -3,7 +3,6 @@ import HomePage from '../../screens/HomePage';
 import ContactPage from '../../screens/ContactPage';
 import ProjectsPage from '../../screens/ProjectsPage';
 
-
 export default function Main() {
   return (
     <main>

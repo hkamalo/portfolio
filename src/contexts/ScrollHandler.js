@@ -10,7 +10,7 @@ export const ScrollHandlerContextProvider = ({ children }) => {
   const [checked, setChecked] = useState(false);
 
   const handleScroll = () => {
-   return setChecked(true); // do something at end of scroll
+    return setChecked(true); // do something at end of scroll
   };
   console.log(checked);
 

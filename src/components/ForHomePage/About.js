@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function About({show}) {
+export default function About({ show }) {
   const classes = useStyles();
 
   return (

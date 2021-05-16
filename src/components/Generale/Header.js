@@ -71,7 +71,7 @@ const useStyles = makeStyles({
 export default function Header() {
   const classes = useStyles();
   const { handleScroll } = useContext(ScrollHandlerContext);
-  
+
   window.addEventListener('scroll', handleScroll);
 
   return (
