@@ -31,18 +31,16 @@ export default function About({ show }) {
   const classes = useStyles();
 
   return (
-    <Slide direction="left" in={show} mountOnEnter timeout={1500}>
-      <div className={classes.aboutSection}>
-        <div className={classes.text}>
-          <h2>About</h2>
-          <p>
-            Après un parcours en centré sur le business et le management j’ai
-            décidé d’évoluer dans le numérique, poussé par l'envie
-            d'entreprendre et la liberté de création du métier de développeur.
-          </p>
-        </div>
-        <ContactSupportIcon style={{ fontSize: 100 }} outlined />
+    <div className={classes.aboutSection}>
+      <div className={classes.text}>
+        <h2>About</h2>
+        <p>
+          Après un parcours en centré sur le business et le management j’ai
+          décidé d’évoluer dans le numérique, poussé par l'envie d'entreprendre
+          et la liberté de création du métier de développeur.
+        </p>
       </div>
-    </Slide>
+      <ContactSupportIcon style={{ fontSize: 100 }} outlined />
+    </div>
   );
 }

@@ -2,7 +2,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Slide } from '@material-ui/core';
+import { Slide, Zoom } from '@material-ui/core';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
 import ScrollHandlerContext from '../contexts/ScrollHandler';
@@ -78,20 +78,28 @@ const useStyles = makeStyles({
 
 export default function HomePage() {
   const classes = useStyles();
-  const { checked } = useContext(ScrollHandlerContext);
+  const { checked, checked2 } = useContext(ScrollHandlerContext);
 
   return (
     <>
       <div className={classes.home}>
-        <div className={classes.content}>
-          <About show={checked} />
-        </div>
-        <div className={classes.skillsContent}>
-          <h2>#Developper</h2>
-          <div className={classes.skills}>
-            <DevSkills />
+        <Slide direction="left" in={checked} mountOnEnter timeout={1700}>
+          <div className={classes.content}>
+            <About />
           </div>
-        </div>
+        </Slide>
+        <Zoom
+          in={checked2}
+          timeout={1300}
+          style={{ transitionDelay: '1000ms' }}
+        >
+          <div className={classes.skillsContent}>
+            <h2>#Developper</h2>
+            <div className={classes.skills}>
+              <DevSkills />
+            </div>
+          </div>
+        </Zoom>
         <div className={classes.skillsContent}>
           <h2>#Background</h2>
           <div className={classes.skills}>
