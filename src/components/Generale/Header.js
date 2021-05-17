@@ -69,18 +69,11 @@ const useStyles = makeStyles({
 });
 
 glide({
-  name: 'glide-left',
-});
-glide({
-  name: 'glide-right',
-  direction: 'right',
+  name: 'glide-left'
 });
 
 export default function Header() {
   const classes = useStyles();
-  const { handleScroll } = useContext(ScrollHandlerContext);
-
-  window.addEventListener('scroll', handleScroll);
 
   return (
     <>

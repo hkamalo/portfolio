@@ -5,7 +5,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import HomePage from '../../screens/HomePage';
 import ContactPage from '../../screens/ContactPage';
 import ProjectsPage from '../../screens/ProjectsPage';
-import './Style.css';
 
 export default function Main() {
   const location = useLocation();

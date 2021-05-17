@@ -1,8 +1,8 @@
 /* eslint-disable import/no-named-as-default */
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Button, Collapse, Slide, Zoom } from '@material-ui/core';
+import { Button, Collapse, Slide, Zoom, Grow } from '@material-ui/core';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
 import ScrollHandlerContext from '../contexts/ScrollHandler';
@@ -78,37 +78,36 @@ const useStyles = makeStyles({
 
 export default function HomePage() {
   const classes = useStyles();
-  const { checked, checked2, checked3 } = useContext(ScrollHandlerContext);
-  const [showBgInfos, setShowBgInfos] = useState(false);
 
-  const handleClick = () => {
-    setShowBgInfos(true);
-  };
+
+  
+
+
 
   return (
     <>
       <div className={classes.home}>
-        <Slide direction="left" in={checked} mountOnEnter timeout={1700}>
+        <Grow in timeout={1900} style={{ transitionDelay: '300ms' }}>
           <div className={classes.content}>
             <About />
           </div>
-        </Slide>
-        <Zoom in={checked2} timeout={1300} style={{ transitionDelay: '300ms' }}>
+        </Grow>
+        <Grow in timeout={2000} style={{ transitionDelay: '800ms' }}>
           <div className={classes.skillsContent}>
             <h2>#Developper</h2>
             <div className={classes.skills}>
               <DevSkills />
             </div>
           </div>
-        </Zoom>
-        <Zoom in={checked3} timeout={1300} style={{ transitionDelay: '500ms' }}>
+        </Grow>
+        <Grow in timeout={2100} style={{ transitionDelay: '800ms' }}>
           <div className={classes.skillsContent}>
             <h2>#Background</h2>
             <div className={classes.skills}>
               <Background />
             </div>
           </div>
-        </Zoom>
+        </Grow>
       </div>
     </>
   );

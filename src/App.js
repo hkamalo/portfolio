@@ -19,14 +19,12 @@ export default function App() {
   const classes = useStyles();
 
   return (
-    <ScrollHandlerContextProvider>
-      <Navigation>
-        <div className={classes.root}>
-          <Header />
-          <Main />
-          <Footer />
-        </div>
-      </Navigation>
-    </ScrollHandlerContextProvider>
+    <Navigation>
+      <div className={classes.root}>
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    </Navigation>
   );
 }
