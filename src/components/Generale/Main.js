@@ -7,7 +7,6 @@ import ProjectsPage from '../../screens/ProjectsPage';
 import './Style.css';
 
 export default function Main() {
-
   const location = useLocation();
 
   return (
