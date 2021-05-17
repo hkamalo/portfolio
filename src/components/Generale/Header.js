@@ -7,7 +7,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import {
   makeStyles,
@@ -44,12 +44,15 @@ const useStyles = makeStyles({
     background: 'rgba(0, 0, 0, 0.81)',
   },
   menu: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    height: 50,
     width: 'auto',
-    margin: 5,
-    padding: 2,
+    height: '50px',
+    margin: '5px',
+    display: 'flex',
+    padding: '0px',
+    justifyContent: 'flex-end',
+    position: 'absolute',
+    bottom: '-30px',
+    right: 0,
   },
   title: {
     display: 'flex',
@@ -75,6 +78,19 @@ glide({
 
 export default function Header() {
   const classes = useStyles();
+  const [showMenu, setShowMenu] = useState(false); 
+
+ 
+
+  window.addEventListener('scroll', () => {
+    console.log(window.scrollY); 
+    if (window.scrollY > 809) {
+      setShowMenu(true);
+    }
+    if (window.scrollY < 809) {
+      setShowMenu(false);
+    }
+  });
 
   return (
     <>
@@ -83,7 +99,7 @@ export default function Header() {
           <img className={classes.image} src={logo} alt="" />
           <h1>Développeur Web</h1>
         </div>
-        <div className={classes.menu}>
+        <div className={classes.menu} style={{ opacity: showMenu ? 1 : 0 }}>
           <MuiThemeProvider theme={theme}>
             <Link exact to="/" transition="glide-left">
               <Button>Home</Button>
