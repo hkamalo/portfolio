@@ -11,7 +11,6 @@ const useStyles = makeStyles({
   main: {
     background: '#f5f5f5',
   },
-
 });
 export default function Main() {
   const location = useLocation();
