@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './components/Generale/Header';
 import Main from './components/Generale/Main';
@@ -12,16 +13,20 @@ const useStyles = makeStyles({
   },
 });
 
+document.getElementById("root").style.height = "100vh";
+
 export default function App() {
   const classes = useStyles();
 
   return (
     <ScrollHandlerContextProvider>
-      <div className={classes.root}>
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+      <Navigation>
+        <div className={classes.root}>
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+      </Navigation>
     </ScrollHandlerContextProvider>
   );
 }

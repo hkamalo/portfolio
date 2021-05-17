@@ -6,7 +6,7 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { Link } from 'react-router-dom';
+import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
 import React, { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import {
@@ -68,6 +68,14 @@ const useStyles = makeStyles({
   },
 });
 
+glide({
+  name: 'glide-left',
+});
+glide({
+  name: 'glide-right',
+  direction: 'right',
+});
+
 export default function Header() {
   const classes = useStyles();
   const { handleScroll } = useContext(ScrollHandlerContext);
@@ -83,13 +91,13 @@ export default function Header() {
         </div>
         <div className={classes.menu}>
           <MuiThemeProvider theme={theme}>
-            <Link exact to="/">
+            <Link exact to="/" transition="glide-left">
               <Button>Home</Button>
             </Link>
-            <Link exact to="/projects">
+            <Link exact to="/projects" transition="glide-left">
               <Button>Projects</Button>
             </Link>
-            <Link exact to="/contact">
+            <Link exact to="/contact" transition="glide-left">
               <Button color="primary">Contact</Button>
             </Link>
           </MuiThemeProvider>
