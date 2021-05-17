@@ -6,7 +6,7 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React, { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import {
@@ -83,15 +83,15 @@ export default function Header() {
         </div>
         <div className={classes.menu}>
           <MuiThemeProvider theme={theme}>
-            <NavLink exact to="/">
+            <Link exact to="/">
               <Button>Home</Button>
-            </NavLink>
-            <NavLink exact to="/projects">
+            </Link>
+            <Link exact to="/projects">
               <Button>Projects</Button>
-            </NavLink>
-            <NavLink exact to="/contact">
+            </Link>
+            <Link exact to="/contact">
               <Button color="primary">Contact</Button>
-            </NavLink>
+            </Link>
           </MuiThemeProvider>
         </div>
       </div>
