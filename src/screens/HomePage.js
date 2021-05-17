@@ -79,11 +79,6 @@ const useStyles = makeStyles({
 export default function HomePage() {
   const classes = useStyles();
 
-
-  
-
-
-
   return (
     <>
       <div className={classes.home}>

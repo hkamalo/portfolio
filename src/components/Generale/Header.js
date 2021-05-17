@@ -69,7 +69,7 @@ const useStyles = makeStyles({
 });
 
 glide({
-  name: 'glide-left'
+  name: 'glide-left',
 });
 
 export default function Header() {

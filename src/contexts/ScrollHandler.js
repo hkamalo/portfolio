@@ -11,13 +11,11 @@ export const ScrollHandlerContextProvider = ({ children }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    setChecked(!!checked)
+    setChecked(!!checked);
   };
 
   return (
-    <ScrollHandlerContext.Provider
-      value={{ handleClick, checked }}
-    >
+    <ScrollHandlerContext.Provider value={{ handleClick, checked }}>
       {children}
     </ScrollHandlerContext.Provider>
   );
