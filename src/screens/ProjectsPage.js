@@ -78,7 +78,7 @@ export default function ProjectsPage() {
     },
   };
   return (
-    <Grow in timeout={1900} style={{ transitionDelay: '800ms' }}>
+    <Grow in timeout={1900} style={{ transitionDelay: '700ms' }}>
       <div className={classes.projetBackground}>
         <div className={classes.backgroundProjet}>
           <div className={classes.projectsHeader}>
