@@ -44,7 +44,7 @@ const useStyles = makeStyles({
     background: 'rgba(0, 0, 0, 0.81)',
   },
   menu: {
-    width: 'auto',
+    width: '100%',
     height: '50px',
     margin: '5px',
     display: 'flex',
@@ -81,8 +81,7 @@ export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   window.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-    if (window.scrollY > 809) {
+    if (window.scrollY > 789) {
       setShowMenu(true);
     }
     if (window.scrollY < 809) {
