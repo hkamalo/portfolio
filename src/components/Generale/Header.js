@@ -78,12 +78,10 @@ glide({
 
 export default function Header() {
   const classes = useStyles();
-  const [showMenu, setShowMenu] = useState(false); 
-
- 
+  const [showMenu, setShowMenu] = useState(false);
 
   window.addEventListener('scroll', () => {
-    console.log(window.scrollY); 
+    console.log(window.scrollY);
     if (window.scrollY > 809) {
       setShowMenu(true);
     }
