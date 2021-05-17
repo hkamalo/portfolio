@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   },
 });
 
-document.getElementById("root").style.height = "100vh";
+document.getElementById('root').style.height = '100vh';
 
 export default function App() {
   const classes = useStyles();
