@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import Grow from '@material-ui/core/Grow';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -88,38 +89,46 @@ export default function ProjectsDisplay() {
       <div className={classes.projectsDisplay}>
         <div className={classes.projects}>
           <div className={classes.projectCardA}>
-            <Card className={classes.cards}>
-              <Box className={classes.content}>
-                <p className={classes.text}>P2 - projets Dolly</p>
-              </Box>
-              <CardMedia className={classes.media} image={p1Screenshoot} />
-            </Card>
+            <Grow in timeout={1900} style={{ transitionDelay: '850ms' }}>
+              <Card className={classes.cards}>
+                <Box className={classes.content}>
+                  <p className={classes.text}>P2 - projets Dolly</p>
+                </Box>
+                <CardMedia className={classes.media} image={p1Screenshoot} />
+              </Card>
+            </Grow>
           </div>
           <div className={classes.projectCardB}>
-            <Card className={classes.cards}>
-              <Box className={classes.content}>
-                <p className={classes.text}>Projets 2</p>
-              </Box>
-              <CardMedia className={classes.media} />
-            </Card>
+            <Grow in timeout={1900} style={{ transitionDelay: '950ms' }}>
+              <Card className={classes.cards}>
+                <Box className={classes.content}>
+                  <p className={classes.text}>Projets 2</p>
+                </Box>
+                <CardMedia className={classes.media} />
+              </Card>
+            </Grow>
           </div>
         </div>
         <div className={classes.projects}>
           <div className={classes.projectCardB}>
-            <Card className={classes.cards}>
-              <CardMedia className={classes.media} />
-              <Box className={classes.content}>
-                <p className={classes.text}>Projets 2</p>
-              </Box>
-            </Card>
+            <Grow in timeout={1900} style={{ transitionDelay: '1050ms' }}>
+              <Card className={classes.cards}>
+                <CardMedia className={classes.media} />
+                <Box className={classes.content}>
+                  <p className={classes.text}>Projets 2</p>
+                </Box>
+              </Card>
+            </Grow>
           </div>
           <div className={classes.projectCardA}>
-            <Card className={classes.cards}>
-              <CardMedia className={classes.media} image={p1Screenshoot} />
-              <Box className={classes.content}>
-                <p className={classes.text}>P2 - projets Dolly</p>
-              </Box>
-            </Card>
+            <Grow in timeout={1900} style={{ transitionDelay: '1250ms' }}>
+              <Card className={classes.cards}>
+                <CardMedia className={classes.media} image={p1Screenshoot} />
+                <Box className={classes.content}>
+                  <p className={classes.text}>P2 - projets Dolly</p>
+                </Box>
+              </Card>
+            </Grow>
           </div>
         </div>
       </div>
