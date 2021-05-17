@@ -6,12 +6,14 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import HomePage from '../../screens/HomePage';
 import ContactPage from '../../screens/ContactPage';
 import ProjectsPage from '../../screens/ProjectsPage';
+import logo from '../../logo_all/logo-proto-2/v1/logo_small_icon_only.png';
 
 const useStyles = makeStyles({
   main: {
-    background: '#f5f5f5',
+    // eslint-disable-next-line prefer-template
   },
 });
+
 export default function Main() {
   const location = useLocation();
   const classes = useStyles();
