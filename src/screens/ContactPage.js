@@ -1,13 +1,14 @@
 // ------------------ IMPORT COMPONENTS & STYLES -------------//
 import Backdrop from '@material-ui/core/Backdrop';
 import {
-  Button,
+  IconButton,
   Fade,
   Modal,
   Grow,
   TextField,
   InputBase,
 } from '@material-ui/core';
+import SendRoundedIcon from '@material-ui/icons/SendRounded';
 import { makeStyles } from '@material-ui/core/styles';
 // import axios from 'axios';
 import React from 'react';
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   message: {
     textAlign: 'center',
     marginBottom: '1em',
+    color: '#1ba098',
   },
   form: {
     padding: '2em',
@@ -58,14 +60,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     padding: 14,
-    width: '35ch',
-    maxWidth: '100%',
     marginTop: 22,
     margin: 'auto',
     display: 'flex',
     marginBottom: 12,
     alignItems: 'center',
     justifyContent: 'center',
+    color: '#1ba098',
   },
   modal: {
     display: 'flex',
@@ -172,15 +173,14 @@ export default function ContactPage() {
             // {...register('text')}
           />
           <div>
-            <Button
+            <IconButton
               className={button}
               variant="contained"
-              color="primary"
               type="submit"
               onClick={handleOpen}
             >
-              Envoyer
-            </Button>
+              <SendRoundedIcon />
+            </IconButton>
             <Modal
               aria-labelledby="transition-modal-title"
               aria-describedby="transition-modal-description"
