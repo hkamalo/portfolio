@@ -42,7 +42,6 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
     background: '#051622',
-
   },
   menu: {
     width: '100%',
@@ -85,7 +84,8 @@ export default function Header() {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 789) {
       return setShowMenu(true);
-    } return setShowMenu(false);
+    }
+    return setShowMenu(false);
   });
 
   return (

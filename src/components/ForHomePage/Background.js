@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: '35px',
     background: '#051622',
     color: '#deb992',
-    border: '2px outset #deb992 '
+    border: '2px outset #deb992 ',
   },
   content: {
     display: 'flex',
