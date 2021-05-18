@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     right: 0,
     color: '#deb992',
     background: '#051622',
-    zIndex: '1'
+    zIndex: '1',
   },
   title: {
     display: 'flex',
