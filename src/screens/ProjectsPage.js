@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
   },
   backgroundProjet: {
-    backgroundColor: '#F7EEFF',
+    color: '#deb992',
     width: '50%',
     height: '20%',
     display: 'flex',
