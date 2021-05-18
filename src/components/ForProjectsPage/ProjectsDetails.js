@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   backDetailsProjet: {
     color: '#deb992',
-    borderTop: '2px solid #deb992 ',
+    borderTop: '1px solid #deb992',
     width: '100%',
     display: 'flex',
     justifyContent: 'space-around',
