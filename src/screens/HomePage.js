@@ -62,6 +62,7 @@ const useStyles = makeStyles({
     maxWidth: '100%',
     width: '100%',
     height: '100%',
+    marginTop: 20,
   },
   image: {
     width: 300,
