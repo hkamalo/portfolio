@@ -1,8 +1,14 @@
 // ------------------ IMPORT COMPONENTS & STYLES -------------//
 import Backdrop from '@material-ui/core/Backdrop';
-import { Button, Fade, Modal, Grow } from '@material-ui/core';
+import {
+  Button,
+  Fade,
+  Modal,
+  Grow,
+  TextField,
+  InputBase,
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 // import axios from 'axios';
 import React from 'react';
 // import { useForm } from 'react-hook-form';
@@ -15,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '1em',
     },
   },
+  contact: {
+height: '100vh',
+width: '100%',
+  },
   message: {
     textAlign: 'center',
     marginBottom: '1em',
@@ -24,15 +34,27 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '60ch',
     margin: '2em auto',
     borderRadius: '1rem',
-    background: 'var(--lighter-grey)',
+    borderLeft: '1px solid #1ba098',
+    borderRight: '1px solid #1ba098',
   },
   textField: {
-    maxWidth: '100%',
-    width: '35ch',
-    marginTop: 9,
-    margin: 'auto',
-    paddingTop: 14,
     display: 'flex',
+    height: '7vh',
+    padding: theme.spacing(2),
+    color: '#1ba098',
+    '&:hover': {
+      borderBottom: '1px solid #1ba098',
+    },
+  },
+  messageField: {
+    display: 'flex',
+    height: '10vh',
+    padding: theme.spacing(2),
+    color: '#1ba098',
+    borderRadius: theme.shape.borderRadius,
+    '&:hover': {
+      border: '1px solid #1ba098',
+    },
   },
   button: {
     padding: 14,
@@ -56,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+  input: {
+    color: '#1ba098',
+  },
 }));
 // --------------------------- FONCTION CONTACT --------------------------//
 
@@ -69,7 +94,7 @@ export default function ContactPage() {
     setOpen(false);
   };
   // const { register, handleSubmit, reset } = useForm();
-  const { message, form, textField, button, modal, paper } = useStyles();
+  const { message, form, textField, button, modal, paper, input, messageField, contact} = useStyles();
   // const onSubmit = (form) => {
   //   axios
   //     .post(`${apiBase}/contact`, form)
@@ -79,7 +104,7 @@ export default function ContactPage() {
 
   return (
     <Grow in timeout={1900} style={{ transitionDelay: '700ms' }}>
-      <div>
+      <div className={contact}>
         <h2 className={message}>Contact</h2>
         <p className={message}>(mettre photo + descriptif personnel)</p>
         <form
@@ -88,15 +113,19 @@ export default function ContactPage() {
           method="POST"
           action="send"
         >
-          <TextField
+          <InputBase
             className={textField}
             id="outlined-basic"
             placeholder="Entreprise"
             variant="outlined"
             required
+            color="#1ba098"
+            InputProps={{
+              className: input,
+            }}
             // {...register('firstName')}
           />
-          <TextField
+          <InputBase
             className={textField}
             id="outlined-basic"
             placeholder="Nom"
@@ -104,7 +133,7 @@ export default function ContactPage() {
             required
             // {...register('firstName')}
           />
-          <TextField
+          <InputBase
             className={textField}
             id="outlined-basic"
             placeholder="Prénom"
@@ -112,7 +141,7 @@ export default function ContactPage() {
             required
             // {...register('lastName')}
           />
-          <TextField
+          <InputBase
             className={textField}
             id="outlined-basic"
             name="email"
@@ -122,12 +151,11 @@ export default function ContactPage() {
             required
             // {...register('email')}
           />
-          <TextField
-            className={textField}
+          <InputBase
+            className={messageField}
             id="outlined-multiline-basic"
             multiline
             placeholder="Votre message"
-            rows={6}
             defaultValue=""
             variant="outlined"
             required
