@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     height: 100,
     width: '100%',
-    backgroundColor: 'rgba(51, 51, 51, 1)',
+    backgroundColor: '#1ba098',
     position: 'relative',
     bottom: 0,
     margin: 0,

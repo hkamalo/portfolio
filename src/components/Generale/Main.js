@@ -10,6 +10,8 @@ import logo from '../../logo_all/logo-proto-2/v1/logo_small_icon_only.png';
 
 const useStyles = makeStyles({
   main: {
+    background: '#051622',
+    color: '#deb992',
     // eslint-disable-next-line prefer-template
   },
 });

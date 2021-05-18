@@ -41,7 +41,8 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgba(0, 0, 0, 0.81)',
+    background: '#051622',
+
   },
   menu: {
     width: '100%',
@@ -53,13 +54,14 @@ const useStyles = makeStyles({
     position: 'absolute',
     bottom: '-30px',
     right: 0,
+    color: '#deb992',
   },
   title: {
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
     alignItems: 'center',
-    color: 'white',
+    color: '#deb992',
     fontSize: 50,
     margin: 0,
   },
@@ -82,11 +84,8 @@ export default function Header() {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 789) {
-      setShowMenu(true);
-    }
-    if (window.scrollY < 809) {
-      setShowMenu(false);
-    }
+      return setShowMenu(true);
+    } return setShowMenu(false);
   });
 
   return (
