@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   contact: {
-height: '100vh',
-width: '100%',
+    height: '100vh',
+    width: '100%',
   },
   message: {
     textAlign: 'center',
@@ -94,7 +94,17 @@ export default function ContactPage() {
     setOpen(false);
   };
   // const { register, handleSubmit, reset } = useForm();
-  const { message, form, textField, button, modal, paper, input, messageField, contact} = useStyles();
+  const {
+    message,
+    form,
+    textField,
+    button,
+    modal,
+    paper,
+    input,
+    messageField,
+    contact,
+  } = useStyles();
   // const onSubmit = (form) => {
   //   axios
   //     .post(`${apiBase}/contact`, form)
