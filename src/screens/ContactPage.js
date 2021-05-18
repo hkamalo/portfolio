@@ -114,7 +114,7 @@ export default function ContactPage() {
   // };
 
   return (
-    <Grow in timeout={1900} style={{ transitionDelay: '700ms' }}>
+    <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
       <div className={contact}>
         <h2 className={message}>Contact</h2>
         <p className={message}>(mettre photo + descriptif personnel)</p>

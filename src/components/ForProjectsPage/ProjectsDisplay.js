@@ -43,7 +43,9 @@ const useStyles = makeStyles({
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     borderRadius: 0,
-    border: '1px solid #deb992',
+    '&:hover': {
+      border: '1px solid #deb992',
+    },
   },
   projectCardB: {
     flexGrow: '0.4',
@@ -90,7 +92,7 @@ export default function ProjectsDisplay() {
       <div className={classes.projectsDisplay}>
         <div className={classes.projects}>
           <div className={classes.projectCardA}>
-            <Grow in timeout={1900} style={{ transitionDelay: '850ms' }}>
+            <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
                 <Box className={classes.content}>
                   <p className={classes.text}>P2 - projets Dolly</p>
@@ -100,7 +102,7 @@ export default function ProjectsDisplay() {
             </Grow>
           </div>
           <div className={classes.projectCardB}>
-            <Grow in timeout={1900} style={{ transitionDelay: '950ms' }}>
+            <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
                 <Box className={classes.content}>
                   <p className={classes.text}>Projets 2</p>
@@ -112,7 +114,7 @@ export default function ProjectsDisplay() {
         </div>
         <div className={classes.projects}>
           <div className={classes.projectCardB}>
-            <Grow in timeout={1900} style={{ transitionDelay: '1050ms' }}>
+            <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
                 <CardMedia className={classes.media} />
                 <Box className={classes.content}>
@@ -122,7 +124,7 @@ export default function ProjectsDisplay() {
             </Grow>
           </div>
           <div className={classes.projectCardA}>
-            <Grow in timeout={1900} style={{ transitionDelay: '1250ms' }}>
+            <Grow in timeout={1900} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
                 <CardMedia className={classes.media} image={p1Screenshoot} />
                 <Box className={classes.content}>

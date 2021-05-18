@@ -81,12 +81,12 @@ export default function HomePage() {
   return (
     <>
       <div className={classes.home}>
-        <Grow in timeout={1900} style={{ transitionDelay: '700ms' }}>
+        <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
           <div className={classes.content}>
             <About />
           </div>
         </Grow>
-        <Grow in timeout={2000} style={{ transitionDelay: '750ms' }}>
+        <Grow in timeout={2100} style={{ transitionDelay: '750ms' }}>
           <div className={classes.skillsContent}>
             <h2>#Developper</h2>
             <div className={classes.skills}>
