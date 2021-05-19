@@ -29,33 +29,33 @@ const useStyles = makeStyles((theme) => ({
   message: {
     textAlign: 'center',
     marginBottom: '1em',
-    color: '#1ba098',
+    color: '#A3B4C8',
   },
   form: {
     padding: '2em',
     maxWidth: '60ch',
     margin: '2em auto',
     borderRadius: '1rem',
-    borderLeft: '1px solid #1ba098',
-    borderRight: '1px solid #1ba098',
+    borderLeft: '1px solid #A3B4C8',
+    borderRight: '1px solid #A3B4C8',
   },
-  textField: {
+  inputBase: {
     display: 'flex',
     height: '7vh',
     padding: theme.spacing(2),
-    color: '#1ba098',
+    color: '#A3B4C8',
     '&:hover': {
-      borderBottom: '1px solid #1ba098',
+      borderBottom: '1px solid #A3B4C8',
     },
   },
   messageField: {
     display: 'flex',
     height: '10vh',
     padding: theme.spacing(2),
-    color: '#1ba098',
+    color: '#A3B4C8',
     borderRadius: theme.shape.borderRadius,
     '&:hover': {
-      border: '1px solid #1ba098',
+      border: '1px solid #A3B4C8',
     },
   },
   button: {
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#1ba098',
+    color: '#A3B4C8',
   },
   modal: {
     display: 'flex',
@@ -75,12 +75,13 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid var(--darker-grey)',
+    border: '2px solid #A3B4C8',
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-  input: {
-    color: '#1ba098',
+    padding: theme.spacing(2, 2, 2),
+    borderRadius: theme.shape.borderRadius,
+    fontFamily: 'Poppins',
+    width: '40vh',
+    textAlign: 'center',
   },
 }));
 // --------------------------- FONCTION CONTACT --------------------------//
@@ -98,11 +99,10 @@ export default function ContactPage() {
   const {
     message,
     form,
-    textField,
+    inputBase,
     button,
     modal,
     paper,
-    input,
     messageField,
     contact,
   } = useStyles();
@@ -114,7 +114,7 @@ export default function ContactPage() {
   // };
 
   return (
-    <Grow in timeout={1900} style={{ transitionDelay: '700ms' }}>
+    <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
       <div className={contact}>
         <h2 className={message}>Contact</h2>
         <p className={message}>(mettre photo + descriptif personnel)</p>
@@ -125,19 +125,16 @@ export default function ContactPage() {
           action="send"
         >
           <InputBase
-            className={textField}
+            className={inputBase}
             id="outlined-basic"
             placeholder="Entreprise"
             variant="outlined"
             required
             color="#1ba098"
-            InputProps={{
-              className: input,
-            }}
             // {...register('firstName')}
           />
           <InputBase
-            className={textField}
+            className={inputBase}
             id="outlined-basic"
             placeholder="Nom"
             variant="outlined"
@@ -145,7 +142,7 @@ export default function ContactPage() {
             // {...register('firstName')}
           />
           <InputBase
-            className={textField}
+            className={inputBase}
             id="outlined-basic"
             placeholder="Prénom"
             variant="outlined"
@@ -153,7 +150,7 @@ export default function ContactPage() {
             // {...register('lastName')}
           />
           <InputBase
-            className={textField}
+            className={inputBase}
             id="outlined-basic"
             name="email"
             placeholder="email@email.com"

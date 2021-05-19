@@ -44,16 +44,18 @@ const useStyles = makeStyles({
     background: '#051622',
   },
   menu: {
-    width: '100%',
+    width: '100vw',
     height: '50px',
-    margin: '5px',
+    margin: '0px',
     display: 'flex',
     padding: '0px',
     justifyContent: 'flex-end',
-    position: 'absolute',
-    bottom: '-30px',
+    position: 'fixed',
+    top: '0px',
     right: 0,
     color: '#deb992',
+    background: '#051622',
+    zIndex: '1',
   },
   title: {
     display: 'flex',
@@ -79,14 +81,14 @@ glide({
 
 export default function Header() {
   const classes = useStyles();
-  const [showMenu, setShowMenu] = useState(false);
+  // const [showMenu, setShowMenu] = useState(false);
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 789) {
-      return setShowMenu(true);
-    }
-    return setShowMenu(false);
-  });
+  // window.addEventListener('scroll', () => {
+  //   if (window.scrollY > 789) {
+  //     return setShowMenu(true);
+  //   }
+  //   return setShowMenu(false);
+  // });
 
   return (
     <>
@@ -95,19 +97,19 @@ export default function Header() {
           <img className={classes.image} src={logo} alt="" />
           <h1>Développeur Web</h1>
         </div>
-        <div className={classes.menu} style={{ opacity: showMenu ? 1 : 0 }}>
-          <MuiThemeProvider theme={theme}>
-            <Link exact to="/" transition="glide-left">
-              <Button>Home</Button>
-            </Link>
-            <Link exact to="/projects" transition="glide-left">
-              <Button>Projects</Button>
-            </Link>
-            <Link exact to="/contact" transition="glide-left">
-              <Button color="primary">Contact</Button>
-            </Link>
-          </MuiThemeProvider>
-        </div>
+      </div>
+      <div className={classes.menu}>
+        <MuiThemeProvider theme={theme}>
+          <Link exact to="/" transition="glide-left">
+            <Button>Home</Button>
+          </Link>
+          <Link exact to="/projects" transition="glide-left">
+            <Button>Projects</Button>
+          </Link>
+          <Link exact to="/contact" transition="glide-left">
+            <Button color="primary">Contact</Button>
+          </Link>
+        </MuiThemeProvider>
       </div>
     </>
   );
