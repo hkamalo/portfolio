@@ -11,8 +11,8 @@ const useStyles = makeStyles({
     alignItems: 'flex-start',
     '&:hover': {
       borderTop: '1px solid #deb992',
-      transition: 'border-top 1s'
-    }
+      transition: 'border-top 1s',
+    },
   },
   stacks: {
     display: 'flex',
@@ -34,7 +34,7 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
   const { html, css, react, node } = stacks;
   return (
     <>
-      <Zoom in timeout={1000} style={{ transitionDelay: '300ms'}}>
+      <Zoom in timeout={1000} style={{ transitionDelay: '300ms' }}>
         <div className={classes.backDetailsProjet}>
           <h4>{projectName}</h4>
           <p>{projectText}</p>

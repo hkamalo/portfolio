@@ -86,7 +86,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProjectsDisplay({handleClick}) {
+export default function ProjectsDisplay({ handleClick }) {
   const classes = useStyles();
   return (
     <>
