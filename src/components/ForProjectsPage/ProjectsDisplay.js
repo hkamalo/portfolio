@@ -12,6 +12,7 @@ import {
 import Box from '@material-ui/core/Box';
 import TextInfoContent from '@mui-treasury/components/content/textInfo';
 import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
+import incomingProject from '../../images/coming-soon-hour-glass-4721933_640.png'
 
 const useStyles = makeStyles({
   projectsDisplay: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles({
     marginTop: 5,
   },
   projectCardA: {
-    flexGrow: '0.6',
+    flexGrow: '0.75',
     margin: 2,
     height: '100%',
   },
@@ -48,12 +49,12 @@ const useStyles = makeStyles({
     },
   },
   projectCardB: {
-    flexGrow: '0.4',
+    flexGrow: '0.25',
     transition: 'flex-grow 0.5s',
     margin: 2,
     height: '100%',
     '&:hover': {
-      flexGrow: '2.8',
+      flexGrow: '0.75',
       transition: 'flex-grow 1s',
     },
   },
@@ -95,7 +96,7 @@ export default function ProjectsDisplay() {
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
                 <Box className={classes.content}>
-                  <p className={classes.text}>P2 - projets Dolly</p>
+                  <p className={classes.text}>Dolly</p>
                 </Box>
                 <CardMedia className={classes.media} image={p1Screenshoot} />
               </Card>
@@ -105,9 +106,9 @@ export default function ProjectsDisplay() {
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
                 <Box className={classes.content}>
-                  <p className={classes.text}>Projets 2</p>
+                  <p className={classes.text}>Projet</p>
                 </Box>
-                <CardMedia className={classes.media} />
+                <CardMedia className={classes.media} image={incomingProject} />
               </Card>
             </Grow>
           </div>
@@ -116,9 +117,9 @@ export default function ProjectsDisplay() {
           <div className={classes.projectCardB}>
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
-                <CardMedia className={classes.media} />
+                <CardMedia className={classes.media} image={incomingProject} />
                 <Box className={classes.content}>
-                  <p className={classes.text}>Projets 2</p>
+                  <p className={classes.text}>Projet</p>
                 </Box>
               </Card>
             </Grow>
@@ -126,9 +127,9 @@ export default function ProjectsDisplay() {
           <div className={classes.projectCardA}>
             <Grow in timeout={1900} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards}>
-                <CardMedia className={classes.media} image={p1Screenshoot} />
+                <CardMedia className={classes.media} image={incomingProject} />
                 <Box className={classes.content}>
-                  <p className={classes.text}>P2 - projets Dolly</p>
+                  <p className={classes.text}>Projet</p>
                 </Box>
               </Card>
             </Grow>
