@@ -3,15 +3,16 @@ import { Collapse, Zoom } from '@material-ui/core';
 
 const useStyles = makeStyles({
   backDetailsProjet: {
+    position: 'relative',
     color: '#deb992',
     width: '100%',
     display: 'flex',
     justifyContent: 'space-around',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    borderSize: '10%',
     '&:hover': {
       borderTop: '1px solid #deb992',
-      transition: 'border-top 1s',
     },
   },
   stacks: {
