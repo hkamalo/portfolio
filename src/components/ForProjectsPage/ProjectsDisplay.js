@@ -12,7 +12,7 @@ import {
 import Box from '@material-ui/core/Box';
 import TextInfoContent from '@mui-treasury/components/content/textInfo';
 import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
-import incomingProject from '../../images/coming-soon-hour-glass-4721933_640.png'
+import incomingProject from '../../images/coming-soon-hour-glass-4721933_640.png';
 
 const useStyles = makeStyles({
   projectsDisplay: {
@@ -86,7 +86,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProjectsDisplay() {
+export default function ProjectsDisplay({handleClick}) {
   const classes = useStyles();
   return (
     <>
@@ -94,7 +94,7 @@ export default function ProjectsDisplay() {
         <div className={classes.projects}>
           <div className={classes.projectCardA}>
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
-              <Card className={classes.cards}>
+              <Card className={classes.cards} onClick={handleClick}>
                 <Box className={classes.content}>
                   <p className={classes.text}>Dolly</p>
                 </Box>

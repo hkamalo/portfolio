@@ -1,14 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { Collapse, Zoom } from '@material-ui/core';
 
 const useStyles = makeStyles({
   backDetailsProjet: {
     color: '#deb992',
-    borderTop: '1px solid #deb992',
     width: '100%',
     display: 'flex',
     justifyContent: 'space-around',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    '&:hover': {
+      borderTop: '1px solid #deb992',
+      transition: 'border-top 1s'
+    }
   },
   stacks: {
     display: 'flex',
@@ -30,19 +34,21 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
   const { html, css, react, node } = stacks;
   return (
     <>
-      <div className={classes.backDetailsProjet}>
-        <h4>{projectName}</h4>
-        <p>{projectText}</p>
-        <div className={classes.stacks}>
-          <p>Stack :</p>
-          <ul className={classes.stacksList}>
-            <li>{html}</li>
-            <li>{css}</li>
-            <li>{react}</li>
-            <li>{node}</li>
-          </ul>
+      <Zoom in timeout={1000} style={{ transitionDelay: '300ms'}}>
+        <div className={classes.backDetailsProjet}>
+          <h4>{projectName}</h4>
+          <p>{projectText}</p>
+          <div className={classes.stacks}>
+            <p>Stack :</p>
+            <ul className={classes.stacksList}>
+              <li>{html}</li>
+              <li>{css}</li>
+              <li>{react}</li>
+              <li>{node}</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </Zoom>
     </>
   );
 }

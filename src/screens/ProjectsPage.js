@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/self-closing-comp */
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -66,6 +66,12 @@ export default function ProjectsPage() {
   );
   const iconNode = <FontAwesomeIcon icon={faNode} size="3x" color="#4CAF50" />;
 
+  const [showProjectDetails, setShowProjectDetails] = useState(false);
+
+  const handleClick = () => {
+    setShowProjectDetails(true);
+  };
+
   const project = {
     name: 'Dolly',
     text:
@@ -77,6 +83,7 @@ export default function ProjectsPage() {
       node: iconNode,
     },
   };
+
   return (
     <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
       <div className={classes.projetBackground}>
@@ -84,15 +91,19 @@ export default function ProjectsPage() {
           <div className={classes.projectsHeader}>
             <h2>Projets</h2>
           </div>
-          <ProjectsDisplay />
+          <ProjectsDisplay handleClick={handleClick} />
         </div>
-        <div className={classes.details}>
-          <ProjectsDetails
-            projectName={project.name}
-            projectText={project.text}
-            stacks={project.stack}
-          />
-        </div>
+        {showProjectDetails ? (
+          <div className={classes.details}>
+            <ProjectsDetails
+              projectName={project.name}
+              projectText={project.text}
+              stacks={project.stack}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </Grow>
   );
