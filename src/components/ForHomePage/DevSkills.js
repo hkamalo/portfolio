@@ -16,6 +16,10 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'space-around',
     borderRadius: '35px',
+    background: '#051622',
+    color: '#deb992',
+    borderLeft: '2px outset #deb992 ',
+    borderRight: '2px outset #deb992 ',
   },
   front: {
     display: 'flex',
@@ -51,12 +55,12 @@ export default function DevSkills() {
     <FontAwesomeIcon icon={faServer} size="3x" color="#FFD700" />
   );
   const iconGenerale = (
-    <FontAwesomeIcon icon={faUncharted} size="3x" color="rgba(0, 0, 0, 0.81)" />
+    <FontAwesomeIcon icon={faUncharted} size="3x" color="white" />
   );
 
   return (
     <>
-      <Paper elevation={3} className={classes.skillsElements}>
+      <Paper elevation={0} className={classes.skillsElements}>
         <div className={classes.front}>
           <div className={classes.picture}>{iconFront}</div>
           <h4>Interface</h4>

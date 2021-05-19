@@ -2,6 +2,7 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Grow from '@material-ui/core/Grow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
   },
   backgroundProjet: {
-    backgroundColor: '#F7EEFF',
+    color: '#deb992',
     width: '50%',
     height: '20%',
     display: 'flex',
@@ -77,20 +78,22 @@ export default function ProjectsPage() {
     },
   };
   return (
-    <div className={classes.projetBackground}>
-      <div className={classes.backgroundProjet}>
-        <div className={classes.projectsHeader}>
-          <h2>Projets</h2>
+    <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
+      <div className={classes.projetBackground}>
+        <div className={classes.backgroundProjet}>
+          <div className={classes.projectsHeader}>
+            <h2>Projets</h2>
+          </div>
+          <ProjectsDisplay />
         </div>
-        <ProjectsDisplay />
+        <div className={classes.details}>
+          <ProjectsDetails
+            projectName={project.name}
+            projectText={project.text}
+            stacks={project.stack}
+          />
+        </div>
       </div>
-      <div className={classes.details}>
-        <ProjectsDetails
-          projectName={project.name}
-          projectText={project.text}
-          stacks={project.stack}
-        />
-      </div>
-    </div>
+    </Grow>
   );
 }

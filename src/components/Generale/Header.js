@@ -6,8 +6,8 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { NavLink } from 'react-router-dom';
-import React, { useContext } from 'react';
+import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
+import React, { useContext, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import {
   makeStyles,
@@ -15,7 +15,6 @@ import {
   MuiThemeProvider,
 } from '@material-ui/core/styles';
 import logo from '../../logo_all/logo-proto-2/v2/logo_white_large.png';
-import ScrollHandlerContext from '../../contexts/ScrollHandler';
 
 const theme = createMuiTheme({
   overrides: {
@@ -41,22 +40,28 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgba(0, 0, 0, 0.81)',
+    background: '#051622',
   },
   menu: {
+    width: '100vw',
+    height: '50px',
+    margin: '0px',
     display: 'flex',
+    padding: '0px',
     justifyContent: 'flex-end',
-    height: 50,
-    width: 'auto',
-    margin: 5,
-    padding: 2,
+    position: 'fixed',
+    top: '0px',
+    right: 0,
+    color: '#deb992',
+    background: '#051622',
+    zIndex: '1',
   },
   title: {
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
     alignItems: 'center',
-    color: 'white',
+    color: '#deb992',
     fontSize: 50,
     margin: 0,
   },
@@ -68,11 +73,21 @@ const useStyles = makeStyles({
   },
 });
 
+glide({
+  name: 'glide-left',
+  duration: 800,
+});
+
 export default function Header() {
   const classes = useStyles();
-  const { handleScroll } = useContext(ScrollHandlerContext);
+  // const [showMenu, setShowMenu] = useState(false);
 
-  window.addEventListener('scroll', handleScroll);
+  // window.addEventListener('scroll', () => {
+  //   if (window.scrollY > 789) {
+  //     return setShowMenu(true);
+  //   }
+  //   return setShowMenu(false);
+  // });
 
   return (
     <>
@@ -81,19 +96,19 @@ export default function Header() {
           <img className={classes.image} src={logo} alt="" />
           <h1>Développeur Web</h1>
         </div>
-        <div className={classes.menu}>
-          <MuiThemeProvider theme={theme}>
-            <NavLink exact to="/">
-              <Button>Home</Button>
-            </NavLink>
-            <NavLink exact to="/projects">
-              <Button>Projects</Button>
-            </NavLink>
-            <NavLink exact to="/contact">
-              <Button color="primary">Contact</Button>
-            </NavLink>
-          </MuiThemeProvider>
-        </div>
+      </div>
+      <div className={classes.menu}>
+        <MuiThemeProvider theme={theme}>
+          <Link exact to="/" transition="glide-left">
+            <Button>Home</Button>
+          </Link>
+          <Link exact to="/projects" transition="glide-left">
+            <Button>Projects</Button>
+          </Link>
+          <Link exact to="/contact" transition="glide-left">
+            <Button color="primary">Contact</Button>
+          </Link>
+        </MuiThemeProvider>
       </div>
     </>
   );
