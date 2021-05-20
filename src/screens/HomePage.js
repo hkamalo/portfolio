@@ -75,7 +75,7 @@ const useStyles = makeStyles({
   dev: {
     margin: 10,
     color: '#deb992',
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
 });
 
@@ -87,7 +87,12 @@ export default function HomePage() {
       <div className={classes.header}>
         <div className={classes.title}>
           <img className={classes.image} src={logo} alt="" />
-          <Link className={classes.dev} exact to="/informations" transition="glide-left">
+          <Link
+            className={classes.dev}
+            exact
+            to="/informations"
+            transition="glide-left"
+          >
             <h1 className={classes.dev}>Développeur Web</h1>
           </Link>
         </div>

@@ -39,9 +39,8 @@ const useStyles = makeStyles({
   link: {
     display: 'flex',
     padding: 20,
-
   },
-button: {},
+  button: {},
 });
 
 glide({
@@ -58,8 +57,20 @@ export default function MenuBar() {
       <AppBar>
         <Toolbar className={classes.menu}>
           <div className={classes.links}>
-            <IconButton variant="link" href="https://www.linkedin.com/in/heran%C3%A7a-kamalo-5075bb124/" target="_blank">{iconLinkedin}</IconButton>
-            <IconButton variant="link" href="https://github.com/hkamalo" target="_blank">{iconGithub}</IconButton>
+            <IconButton
+              variant="link"
+              href="https://www.linkedin.com/in/heran%C3%A7a-kamalo-5075bb124/"
+              target="_blank"
+            >
+              {iconLinkedin}
+            </IconButton>
+            <IconButton
+              variant="link"
+              href="https://github.com/hkamalo"
+              target="_blank"
+            >
+              {iconGithub}
+            </IconButton>
           </div>
           <div>
             <MuiThemeProvider theme={theme}>

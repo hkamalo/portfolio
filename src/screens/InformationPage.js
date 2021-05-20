@@ -8,7 +8,6 @@ import Background from '../components/ForHomePage/Background';
 import About from '../components/ForHomePage/About';
 import ProjectsPage from './ProjectsPage';
 
-
 const useStyles = makeStyles({
   root: {
     '& > *': {

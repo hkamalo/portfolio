@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     marginBottom: '3em',
     color: '#87CEFA',
-    
   },
   form: {
     padding: '5em',
