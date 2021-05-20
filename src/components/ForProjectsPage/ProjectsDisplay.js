@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    margin: 50
+    margin: 50,
   },
   projects: {
     display: 'flex',

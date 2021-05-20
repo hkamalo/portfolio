@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'space-around',
     flexDirection: 'column',
-    height: '70vh'
+    height: '70vh',
   },
   content: {
     display: 'flex',
