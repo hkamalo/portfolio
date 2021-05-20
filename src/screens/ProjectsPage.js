@@ -24,11 +24,13 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    margin: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
   },
   backgroundProjet: {
     color: '#deb992',
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'space-between',
     margin: 20,
     paddingTop: 50,
@@ -50,9 +52,16 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
   },
   details: {
-    width: '50%',
     height: '20%',
     marginBottom: 50,
+    width: '40vw',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
   },
 });
 
@@ -87,9 +96,7 @@ export default function ProjectsPage() {
     <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
       <div className={classes.projetBackground}>
         <div className={classes.backgroundProjet}>
-          <div className={classes.projectsHeader}>
-            <h2>Projets</h2>
-          </div>
+          <h2>Projets</h2>
           <ProjectsDisplay handleClick={handleClick} />
         </div>
         {showProjectDetails ? (

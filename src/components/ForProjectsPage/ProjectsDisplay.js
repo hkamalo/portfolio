@@ -20,14 +20,12 @@ const useStyles = makeStyles({
     width: '100%',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    alignItems: 'center',
-    margin: 50,
+    marginLeft: 80
   },
   projects: {
     display: 'flex',
-    paddingLeft: 20,
-    paddingRight: 20,
-    width: 'calc(35vw - 40px)',
+    paddingLeft: 80,
+    Maxwidth: '100%',
     height: 200,
     justifyContent: 'center',
     marginTop: 5,
@@ -45,9 +43,6 @@ const useStyles = makeStyles({
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     borderRadius: 0,
-    '&:hover': {
-      border: '1px solid #deb992',
-    },
   },
   projectCardB: {
     flexGrow: '0.25',
@@ -79,7 +74,6 @@ const useStyles = makeStyles({
     width: '50%',
     padding: 5,
     textAlign: 'end',
-    height: 'calc(100% - 90%)',
     transition: 'opacity 0.5s ease',
   },
   text: {

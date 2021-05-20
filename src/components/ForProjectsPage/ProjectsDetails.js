@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Collapse, Zoom } from '@material-ui/core';
+import { Collapse, Zoom, Slide, Fade } from '@material-ui/core';
 
 const useStyles = makeStyles({
   backDetailsProjet: {
@@ -35,7 +35,7 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
   const { html, css, react, node } = stacks;
   return (
     <>
-      <Zoom in timeout={1000} style={{ transitionDelay: '300ms' }}>
+      <Fade in timeout={1000} style={{ transitionDelay: '200ms' }}>
         <div className={classes.backDetailsProjet}>
           <h4>{projectName}</h4>
           <p>{projectText}</p>
@@ -49,7 +49,7 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
             </ul>
           </div>
         </div>
-      </Zoom>
+      </Fade>
     </>
   );
 }

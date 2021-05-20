@@ -85,9 +85,6 @@ export default function MenuBar() {
             <Link exact to="/informations" transition="glide-left">
               <Button>Informations</Button>
             </Link>
-            <Link exact to="/projects" transition="glide-left">
-              <Button>Projets</Button>
-            </Link>
             <Link exact to="/contact" transition="glide-left">
               <Button color="primary">Contact</Button>
             </Link>
