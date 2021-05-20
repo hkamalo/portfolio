@@ -1,12 +1,14 @@
 /* eslint-disable import/no-named-as-default */
 import React, { useContext, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
 import { Button, Collapse, Slide, Zoom, Grow } from '@material-ui/core';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
 import ScrollHandlerContext from '../contexts/ScrollHandler';
 import About from '../components/ForHomePage/About';
+import ProjectsPage from './ProjectsPage';
+import ContactPage from './ContactPage';
 
 const useStyles = makeStyles({
   root: {
@@ -45,10 +47,8 @@ const useStyles = makeStyles({
   },
   skillsContent: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    width: '50%',
-    height: 'auto',
+    alignItems: 'baseline',
+    height: '70vh',
     maxHeight: '100%',
     margin: 20,
     paddingTop: 20,
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
     maxWidth: '100%',
     width: '100%',
     height: '100%',
-    marginTop: 20,
+    margin: 50,
   },
   image: {
     width: 300,
@@ -103,6 +103,9 @@ export default function InformationPage() {
             </div>
           </div>
         </Grow>
+        <Screen>
+          <ProjectsPage />
+        </Screen>
       </div>
     </>
   );

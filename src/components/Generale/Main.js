@@ -34,7 +34,12 @@ export default function Main() {
             <InformationPage />
           </Screen>
         </Route>
-        <Route exact path="/projects">
+        <Route exact path="/contact">
+          <Screen>
+            <ContactPage />
+          </Screen>
+        </Route>
+        {/* <Route exact path="/projects">
           <Screen>
             <ProjectsPage />
           </Screen>
@@ -43,7 +48,7 @@ export default function Main() {
           <Screen>
             <ContactPage />
           </Screen>
-        </Route>
+        </Route> */}
       </main>
     </>
   );

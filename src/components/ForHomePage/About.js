@@ -8,15 +8,22 @@ const useStyles = makeStyles({
   aboutSection: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-around',
+    flexDirection: 'column',
+    height: '70vh'
+  },
+  content: {
+    display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    textAlign: 'justify',
+    margin: 20,
+    paddingBottom: 20,
+    flexDirection: 'column',
   },
   text: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    width: '50%',
-    MaxWidth: '100%',
-    textAlign: 'justify',
+    margin: 50,
   },
   image: {
     margin: 10,
@@ -32,9 +39,9 @@ export default function About() {
 
   return (
     <div className={classes.aboutSection}>
-      <div className={classes.text}>
+      <div className={classes.content}>
         <h2>About</h2>
-        <p>
+        <p className={classes.text}>
           Après un parcours en centré sur le business et le management j’ai
           décidé d’évoluer dans le numérique, poussé par l'envie d'entreprendre
           et la liberté de création du métier de développeur.
