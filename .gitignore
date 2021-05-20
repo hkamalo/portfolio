@@ -5,11 +5,11 @@
 /.pnp
 .pnp.js
 
-# logo
-/src/logo_all
+# # logo
+# /src/logo_all
 
-# images
-/src/images
+# # images
+# /src/images
 
 # testing
 /coverage
