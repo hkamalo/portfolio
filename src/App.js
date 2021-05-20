@@ -1,12 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-undef */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
 import { makeStyles } from '@material-ui/core/styles';
 import { Toolbar, CssBaseline, useScrollTrigger } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
 import Main from './components/Generale/Main';
 import Footer from './components/Generale/Footer';
 import MenuBar from './components/Generale/MenuBar';
@@ -56,7 +55,6 @@ export default function App(props) {
         </ElevationScroll>
         <Toolbar />
         <Main />
-        <Footer />
       </div>
     </Navigation>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-fragments */
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable consistent-return */
@@ -8,12 +9,14 @@
 /* eslint-disable no-unused-vars */
 
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-tiger-transition';
 import Button from '@material-ui/core/Button';
 import {
   makeStyles,
   createMuiTheme,
   MuiThemeProvider,
 } from '@material-ui/core/styles';
+import { Fade, Slide, Zoom } from '@material-ui/core';
 import logo from '../logo_all/logo-proto-2/v2/logo_white_large.png';
 
 const theme = createMuiTheme({
@@ -35,7 +38,7 @@ const useStyles = makeStyles({
   header: {
     margin: 0,
     height: '100vh',
-    width: '100vw',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -57,6 +60,23 @@ const useStyles = makeStyles({
     width: 150,
     height: 18.2,
   },
+  stack: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '60vh',
+  },
+  text: {
+    borderRight: '1px solid',
+    paddingRight: 20,
+    marginRight: 10,
+    paddingLeft: 10,
+    marginLeft: 10,
+  },
+  dev: {
+    margin: 10,
+    color: '#deb992',
+    textDecoration: 'none'
+  },
 });
 
 export default function HomePage() {
@@ -67,8 +87,23 @@ export default function HomePage() {
       <div className={classes.header}>
         <div className={classes.title}>
           <img className={classes.image} src={logo} alt="" />
-          <h1>Développeur Web</h1>
+          <Link className={classes.dev} exact to="/informations" transition="glide-left">
+            <h1 className={classes.dev}>Développeur Web</h1>
+          </Link>
         </div>
+        <Fade
+          in
+          direction="right"
+          timeout={2100}
+          style={{ transitionDelay: '800ms' }}
+        >
+          <div className={classes.stack}>
+            <p className={classes.text}>Html / CSS</p>
+            <p className={classes.text}>Javascript</p>
+            <p className={classes.text}>React</p>
+            <p className={classes.text}>Node</p>
+          </div>
+        </Fade>
       </div>
     </>
   );

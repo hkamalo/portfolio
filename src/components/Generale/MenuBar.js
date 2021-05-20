@@ -2,14 +2,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Link, glide } from 'react-tiger-transition';
-import PropTypes from 'prop-types';
-import {
-  AppBar,
-  Toolbar,
-  CssBaseline,
-  useScrollTrigger,
-  Button,
-} from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { AppBar, Toolbar, Button, IconButton } from '@material-ui/core';
 import {
   makeStyles,
   createMuiTheme,
@@ -20,7 +15,8 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       label: {
-        color: '#f1f1f1',
+        color: '#87CEFA',
+        fontFamily: 'Poppins, sans-serif',
       },
     },
   },
@@ -30,10 +26,9 @@ const useStyles = makeStyles({
   menu: {
     width: '100vw',
     height: '50px',
-    margin: '0px',
     display: 'flex',
-    padding: '0px',
-    justifyContent: 'flex-end',
+    padding: 20,
+    justifyContent: 'space-between',
     position: 'fixed',
     top: '0px',
     right: 0,
@@ -41,30 +36,13 @@ const useStyles = makeStyles({
     background: '#051622',
     zIndex: '1',
   },
+  link: {
+    display: 'flex',
+    padding: 20,
+
+  },
+button: {},
 });
-
-// function ElevationScroll(props) {
-//   const { children, window } = props;
-//   // Note that you normally won't need to set the window ref as useScrollTrigger
-//   // will default to window.
-//   // This is only being set here because the demo is in an iframe.
-//   const trigger = useScrollTrigger({
-//     disableHysteresis: true,
-//     threshold: 0,
-//     target: window ? window() : undefined,
-//   });
-
-//   return React.cloneElement(children, {
-//     elevation: trigger ? 4 : 0,
-//   });
-// };
-
-// ElevationScroll.propTypes = {
-//   children: PropTypes.element.isRequired,
-//   /**
-
-//   window: PropTypes.func,
-// };
 
 glide({
   name: 'glide-left',
@@ -73,22 +51,29 @@ glide({
 
 export default function MenuBar() {
   const classes = useStyles();
-
+  const iconLinkedin = <FontAwesomeIcon icon={faLinkedin} color="#87CEFA" />;
+  const iconGithub = <FontAwesomeIcon icon={faGithubSquare} color="#87CEFA" />;
   return (
     <>
       <AppBar>
         <Toolbar className={classes.menu}>
-          <MuiThemeProvider theme={theme}>
-            <Link exact to="/" transition="glide-left">
-              <Button>Accueil</Button>
-            </Link>
-            <Link exact to="/informations" transition="glide-left">
-              <Button>Informations</Button>
-            </Link>
-            <Link exact to="/contact" transition="glide-left">
-              <Button color="primary">Contact</Button>
-            </Link>
-          </MuiThemeProvider>
+          <div className={classes.links}>
+            <IconButton variant="link" href="https://www.linkedin.com/in/heran%C3%A7a-kamalo-5075bb124/" target="_blank">{iconLinkedin}</IconButton>
+            <IconButton variant="link" href="https://github.com/hkamalo" target="_blank">{iconGithub}</IconButton>
+          </div>
+          <div>
+            <MuiThemeProvider theme={theme}>
+              <Link exact to="/" transition="glide-left">
+                <Button>Accueil</Button>
+              </Link>
+              <Link exact to="/informations" transition="glide-left">
+                <Button>Informations</Button>
+              </Link>
+              <Link exact to="/contact" transition="glide-left">
+                <Button color="primary">Contact</Button>
+              </Link>
+            </MuiThemeProvider>
+          </div>
         </Toolbar>
       </AppBar>
     </>

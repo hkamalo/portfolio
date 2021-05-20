@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // ------------------ IMPORT COMPONENTS & STYLES -------------//
 import Backdrop from '@material-ui/core/Backdrop';
 import {
@@ -20,53 +21,57 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiTextField-root': {
       display: 'flex',
       paddingTop: '1em',
+      color: '#87CEFA',
     },
   },
   contact: {
     height: '100vh',
     width: '100%',
+    paddingTop: 50,
   },
   message: {
     textAlign: 'center',
-    marginBottom: '1em',
-    color: '#A3B4C8',
+    marginBottom: '3em',
+    color: '#87CEFA',
+    
   },
   form: {
-    padding: '2em',
+    padding: '5em',
     maxWidth: '60ch',
     margin: '2em auto',
     borderRadius: '1rem',
-    borderLeft: '1px solid #A3B4C8',
-    borderRight: '1px solid #A3B4C8',
+    borderLeft: '1px solid #87CEFA',
+    borderRight: '1px solid #87CEFA',
   },
   inputBase: {
     display: 'flex',
     height: '7vh',
     padding: theme.spacing(2),
-    color: '#A3B4C8',
+    color: '#87CEFA',
     '&:hover': {
-      borderBottom: '1px solid #A3B4C8',
+      borderBottom: '1px solid #87CEFA',
     },
   },
   messageField: {
     display: 'flex',
     height: '10vh',
     padding: theme.spacing(2),
-    color: '#A3B4C8',
+    color: '#87CEFA',
     borderRadius: theme.shape.borderRadius,
     '&:hover': {
-      border: '1px solid #A3B4C8',
+      border: '1px solid #87CEFA',
     },
   },
   button: {
     padding: 14,
     marginTop: 22,
+    paddingTop: 20,
     margin: 'auto',
     display: 'flex',
     marginBottom: 12,
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'center',
-    color: '#A3B4C8',
+    color: '#87CEFA',
   },
   modal: {
     display: 'flex',
@@ -75,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #A3B4C8',
+    border: '2px solid #87CEFA',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 2, 2),
     borderRadius: theme.shape.borderRadius,
@@ -117,7 +122,6 @@ export default function ContactPage() {
     <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
       <div className={contact}>
         <h2 className={message}>Contact</h2>
-        <p className={message}>(mettre photo + descriptif personnel)</p>
         <form
           className={form}
           // onSubmit={handleSubmit(onSubmit)}

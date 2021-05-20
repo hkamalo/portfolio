@@ -1,5 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import {
   makeStyles,
   createMuiTheme,
@@ -14,8 +17,9 @@ const useStyles = makeStyles({
   },
   footer: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
     height: 100,
     width: '100%',
     backgroundColor: '#051622',
@@ -23,27 +27,24 @@ const useStyles = makeStyles({
     bottom: 0,
     margin: 0,
   },
-  menu: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    height: 50,
-    width: 'auto',
-    margin: 5,
-    padding: 2,
-  },
   component: {
-    display: 'flex',
-    justifyContent: 'center',
     color: 'white',
   },
 });
 
 export default function Footer() {
   const classes = useStyles();
+  const iconLinkedin = (
+    <FontAwesomeIcon icon={faLinkedin} size="2x" color="#87CEFA" />
+  );
+  const iconGithub = (
+    <FontAwesomeIcon icon={faGithubSquare} size="2x" color="#87CEFA" />
+  );
 
   return (
     <footer className={classes.footer}>
-      <div className={classes.component}>footer</div>
+      <div className={classes.component}>{iconLinkedin}</div>
+      <div className={classes.component}>{iconGithub}</div>
     </footer>
   );
 }

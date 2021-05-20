@@ -1,14 +1,13 @@
 /* eslint-disable import/no-named-as-default */
 import React, { useContext, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
+import { Screen } from 'react-tiger-transition';
 import { Button, Collapse, Slide, Zoom, Grow } from '@material-ui/core';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
-import ScrollHandlerContext from '../contexts/ScrollHandler';
 import About from '../components/ForHomePage/About';
 import ProjectsPage from './ProjectsPage';
-import ContactPage from './ContactPage';
+
 
 const useStyles = makeStyles({
   root: {
@@ -89,7 +88,7 @@ export default function InformationPage() {
         </Grow>
         <Grow in timeout={2100} style={{ transitionDelay: '750ms' }}>
           <div className={classes.skillsContent}>
-            <h2>#Developper</h2>
+            <h2>#Developpeur</h2>
             <div className={classes.skills}>
               <DevSkills />
             </div>

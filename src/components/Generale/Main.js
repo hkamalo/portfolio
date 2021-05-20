@@ -39,16 +39,6 @@ export default function Main() {
             <ContactPage />
           </Screen>
         </Route>
-        {/* <Route exact path="/projects">
-          <Screen>
-            <ProjectsPage />
-          </Screen>
-        </Route>
-        <Route exact path="/contact">
-          <Screen>
-            <ContactPage />
-          </Screen>
-        </Route> */}
       </main>
     </>
   );
