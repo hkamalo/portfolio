@@ -1,12 +1,30 @@
-/* eslint-disable import/no-named-as-default */
-import React, { useContext, useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
+/* eslint-disable consistent-return */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 
-import { Button, Collapse, Slide, Zoom, Grow } from '@material-ui/core';
-import DevSkills from '../components/ForHomePage/DevSkills';
-import Background from '../components/ForHomePage/Background';
-import ScrollHandlerContext from '../contexts/ScrollHandler';
-import About from '../components/ForHomePage/About';
+import React, { useContext, useState } from 'react';
+import Button from '@material-ui/core/Button';
+import {
+  makeStyles,
+  createMuiTheme,
+  MuiThemeProvider,
+} from '@material-ui/core/styles';
+import logo from '../logo_all/logo-proto-2/v2/logo_white_large.png'
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiButton: {
+      label: {
+        color: '#f1f1f1',
+      },
+    },
+  },
+});
 
 const useStyles = makeStyles({
   root: {
@@ -14,95 +32,45 @@ const useStyles = makeStyles({
       margin: 10,
     },
   },
-  home: {
+  header: {
+    margin: 0,
+    height: '100vh',
     width: '100vw',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  menu: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    height: 50,
-    width: 'auto',
-    margin: 5,
-    padding: 2,
+    alignItems: 'center',
+    background: '#051622',
   },
   title: {
     display: 'flex',
     justifyContent: 'center',
-    color: 'white',
-  },
-  content: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '50%',
-    height: '20%',
-    margin: 20,
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-  skillsContent: {
-    display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    width: '50%',
-    height: 'auto',
-    maxHeight: '100%',
-    margin: 20,
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-  skills: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    maxHeight: '100%',
-    maxWidth: '100%',
-    width: '100%',
-    height: '100%',
-    marginTop: 20,
+    alignItems: 'center',
+    color: '#deb992',
+    fontSize: 50,
+    margin: 0,
   },
   image: {
-    width: 300,
-    height: 170,
-  },
-  skillsElements: {
-    width: '70%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    margin: 0,
+    padding: 0,
+    width: 150,
+    height: 18.2,
   },
 });
+
+
 
 export default function HomePage() {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.home}>
-        <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
-          <div className={classes.content}>
-            <About />
-          </div>
-        </Grow>
-        <Grow in timeout={2100} style={{ transitionDelay: '750ms' }}>
-          <div className={classes.skillsContent}>
-            <h2>#Developper</h2>
-            <div className={classes.skills}>
-              <DevSkills />
-            </div>
-          </div>
-        </Grow>
-        <Grow in timeout={2100} style={{ transitionDelay: '800ms' }}>
-          <div className={classes.skillsContent}>
-            <h2>#Background</h2>
-            <div className={classes.skills}>
-              <Background />
-            </div>
-          </div>
-        </Grow>
+      <div className={classes.header}>
+        <div className={classes.title}>
+          <img className={classes.image} src={logo} alt="" />
+          <h1>Développeur Web</h1>
+        </div>
       </div>
     </>
   );

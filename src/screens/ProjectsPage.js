@@ -19,17 +19,15 @@ const useStyles = makeStyles({
     backgroundColor:
       'radial-gradient(52.52% 39.17% at 50% 66.95%, #F3F3F3 0%, #FFFFFF 100%)',
     position: 'relative',
-    height: 'auto',
+    height: '100vh',
     width: 'auto',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
   },
   backgroundProjet: {
     color: '#deb992',
     width: '50%',
-    height: '20%',
     display: 'flex',
     flexDirection: 'column',
     margin: 20,
