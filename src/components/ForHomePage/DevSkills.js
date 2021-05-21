@@ -84,7 +84,7 @@ export default function DevSkills() {
         </div>
         <div className={classes.front}>
           <div className={classes.picture}>{iconGenerale}</div>
-          <h4>Generale</h4>
+          <h4>General</h4>
           <ul className={classes.skillsList}>
             <li>Git</li>
             <li>Git hub</li>
