@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   link: {
     color: '#deb992',
     textDecoration: 'none',
-  }
+  },
 });
 
 export default function ProjectsDetails({ projectName, projectText, stacks }) {
@@ -41,7 +41,11 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
     <>
       <Fade in timeout={1000} style={{ transitionDelay: '200ms' }}>
         <div className={classes.backDetailsProjet}>
-          <Link className={classes.link} href="https://dolly-the-sheep.netlify.app/" target="_blank">
+          <Link
+            className={classes.link}
+            href="https://dolly-the-sheep.netlify.app/"
+            target="_blank"
+          >
             <h4>{projectName}</h4>
           </Link>
           <p>{projectText}</p>
