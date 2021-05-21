@@ -6,9 +6,8 @@ import PropTypes from 'prop-types';
 import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
 import { makeStyles } from '@material-ui/core/styles';
 import { Toolbar, CssBaseline, useScrollTrigger } from '@material-ui/core';
-import Main from './components/Generale/Main';
-import Footer from './components/Generale/Footer';
-import MenuBar from './components/Generale/MenuBar';
+import Main from './components/General/Main';
+import MenuBar from './components/General/MenuBar';
 
 const useStyles = makeStyles({
   root: {

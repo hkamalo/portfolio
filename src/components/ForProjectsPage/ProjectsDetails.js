@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Collapse, Zoom, Slide, Fade } from '@material-ui/core';
+import { Collapse, Zoom, Slide, Fade, Link } from '@material-ui/core';
 
 const useStyles = makeStyles({
   backDetailsProjet: {
@@ -28,6 +28,10 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     padding: 0,
   },
+  link: {
+    color: '#deb992',
+    textDecoration: 'none',
+  }
 });
 
 export default function ProjectsDetails({ projectName, projectText, stacks }) {
@@ -37,7 +41,9 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
     <>
       <Fade in timeout={1000} style={{ transitionDelay: '200ms' }}>
         <div className={classes.backDetailsProjet}>
-          <h4>{projectName}</h4>
+          <Link className={classes.link} href="https://dolly-the-sheep.netlify.app/" target="_blank">
+            <h4>{projectName}</h4>
+          </Link>
           <p>{projectText}</p>
           <div className={classes.stacks}>
             <p>Stack :</p>
