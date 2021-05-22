@@ -1,15 +1,51 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, glide } from 'react-tiger-transition';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { AppBar, Toolbar, Button, IconButton } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  IconButton,
+  Slide,
+  Collapse,
+  Zoom,
+  Fade,
+  Grow,
+} from '@material-ui/core';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import {
   makeStyles,
   createMuiTheme,
   MuiThemeProvider,
 } from '@material-ui/core/styles';
+
+function HideOnScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+
+  return (
+    <Grow appear={false} in={!trigger} timeout={800}>
+      {children}
+    </Grow>
+  );
+}
+
+HideOnScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
 
 const theme = createMuiTheme({
   overrides: {
@@ -25,7 +61,7 @@ const theme = createMuiTheme({
 const useStyles = makeStyles({
   menu: {
     width: '100vw',
-    height: '50px',
+    height: '30px',
     display: 'flex',
     padding: 20,
     justifyContent: 'space-between',
@@ -48,45 +84,47 @@ glide({
   duration: 800,
 });
 
-export default function MenuBar() {
+export default function MenuBar(props) {
   const classes = useStyles();
   const iconLinkedin = <FontAwesomeIcon icon={faLinkedin} color="#87CEFA" />;
   const iconGithub = <FontAwesomeIcon icon={faGithubSquare} color="#87CEFA" />;
   return (
     <>
-      <AppBar>
-        <Toolbar className={classes.menu}>
-          <div className={classes.links}>
-            <IconButton
-              variant="link"
-              href="https://www.linkedin.com/in/heran%C3%A7a-kamalo-5075bb124/"
-              target="_blank"
-            >
-              {iconLinkedin}
-            </IconButton>
-            <IconButton
-              variant="link"
-              href="https://github.com/hkamalo"
-              target="_blank"
-            >
-              {iconGithub}
-            </IconButton>
-          </div>
-          <div>
-            <MuiThemeProvider theme={theme}>
-              <Link exact to="/" transition="glide-left">
-                <Button>Accueil</Button>
-              </Link>
-              <Link exact to="/informations" transition="glide-left">
-                <Button>Informations</Button>
-              </Link>
-              <Link exact to="/contact" transition="glide-left">
-                <Button color="primary">Contact</Button>
-              </Link>
-            </MuiThemeProvider>
-          </div>
-        </Toolbar>
-      </AppBar>
+      <HideOnScroll {...props}>
+        <AppBar>
+          <Toolbar className={classes.menu}>
+            <div className={classes.links}>
+              <IconButton
+                variant="link"
+                href="https://www.linkedin.com/in/heran%C3%A7a-kamalo-5075bb124/"
+                target="_blank"
+              >
+                {iconLinkedin}
+              </IconButton>
+              <IconButton
+                variant="link"
+                href="https://github.com/hkamalo"
+                target="_blank"
+              >
+                {iconGithub}
+              </IconButton>
+            </div>
+            <div>
+              <MuiThemeProvider theme={theme}>
+                <Link exact to="/" transition="glide-left">
+                  <Button>Accueil</Button>
+                </Link>
+                <Link exact to="/informations" transition="glide-left">
+                  <Button>Informations</Button>
+                </Link>
+                <Link exact to="/contact" transition="glide-left">
+                  <Button color="primary">Contact</Button>
+                </Link>
+              </MuiThemeProvider>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
     </>
   );
 }
