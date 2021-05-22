@@ -38,7 +38,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     overflow: 'hidden',
     textAlign: 'center',
-    width: '100%'
+    width: '100%',
   },
   unstyle: {
     marginLeft: 20,
@@ -77,7 +77,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     fontSize: '12px',
-    textAlign: 'ceter'
+    textAlign: 'ceter',
   },
   proTitle: {
     padding: 0,
