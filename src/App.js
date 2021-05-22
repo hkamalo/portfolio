@@ -46,7 +46,6 @@ const useStyles = makeStyles({
 //   window: PropTypes.func,
 // };
 
-
 export default function App() {
   const classes = useStyles();
 
