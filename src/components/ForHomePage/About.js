@@ -10,9 +10,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     height: '50vh',
-    [theme.breakpoints.down('sm')]: {
-
-    },
+    [theme.breakpoints.down('sm')]: {},
   },
   content: {
     display: 'flex',
@@ -23,9 +21,8 @@ const useStyles = makeStyles({
     margin: 20,
     paddingBottom: 20,
     [theme.breakpoints.down('sm')]: {
-     display: 'flex',
-     flexDirection: 'column',
-
+      display: 'flex',
+      flexDirection: 'column',
     },
   },
   text: {
