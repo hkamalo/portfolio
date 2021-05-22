@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    marginLeft: 45
   },
   stacks: {
     display: 'flex',
@@ -30,7 +31,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProjectsDetails({ projectName, projectText, stacks }) {
+export default function ProjectsDetails({ projectName, projectTeam, projectText, stacks }) {
   const classes = useStyles();
   const { html, css, react, node } = stacks;
   return (
@@ -44,7 +45,8 @@ export default function ProjectsDetails({ projectName, projectText, stacks }) {
           >
             <h4>{projectName}</h4>
           </Link>
-          <p>{projectText}</p>
+          <>{projectText}</>
+          <p>{projectTeam}</p>
           <div className={classes.stacks}>
             <p>Stack :</p>
             <ul className={classes.stacksList}>

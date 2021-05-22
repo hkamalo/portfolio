@@ -82,6 +82,7 @@ export default function ProjectsPage() {
 
   const project = {
     name: 'Dolly',
+    team: '5 développeurs en méthode AGILE/SCRUM',
     text:
       'Dolly est une application web qui offre au client de pouvoir consulter les informations concernants ses films favoris',
     stack: {
@@ -96,13 +97,14 @@ export default function ProjectsPage() {
     <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
       <div className={classes.projetBackground}>
         <div className={classes.backgroundProjet}>
-          <h2>Projets</h2>
+          <h2>#Projets</h2>
           <ProjectsDisplay handleClick={handleClick} />
         </div>
         {showProjectDetails ? (
           <div className={classes.details}>
             <ProjectsDetails
               projectName={project.name}
+              projectTeam={project.team}
               projectText={project.text}
               stacks={project.stack}
             />

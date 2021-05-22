@@ -4,10 +4,12 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Toolbar, CssBaseline, useScrollTrigger } from '@material-ui/core';
 import Main from './components/General/Main';
 import MenuBar from './components/General/MenuBar';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   root: {
@@ -40,7 +42,6 @@ ElevationScroll.propTypes = {
   window: PropTypes.func,
 };
 
-document.getElementById('root').style.height = '100vh';
 
 export default function App(props) {
   const classes = useStyles();
