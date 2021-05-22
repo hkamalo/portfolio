@@ -63,10 +63,7 @@ const useStyles = makeStyles({
     zIndex: 0,
     backgroundPosition: 'center',
     paddingBottom: 0,
-    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
-    transition: 'clip-path 0.5s',
     '&:hover': {
-      clipPath: 'polygon(0 0, 100% 0%, 100% 75%, 0% 100%)',
       cursor: 'pointer',
     },
   },

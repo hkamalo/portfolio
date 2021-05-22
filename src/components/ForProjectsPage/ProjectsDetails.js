@@ -10,10 +10,6 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    borderSize: '10%',
-    '&:hover': {
-      borderTop: '1px solid #deb992',
-    },
   },
   stacks: {
     display: 'flex',

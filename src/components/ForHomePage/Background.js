@@ -35,10 +35,10 @@ const useStyles = makeStyles(() => ({
   proBackground: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
-    MaxHeight: '100%',
+    alignItems: 'center',
     overflow: 'hidden',
     textAlign: 'center',
+    width: '100%'
   },
   unstyle: {
     marginLeft: 20,
@@ -62,23 +62,24 @@ const useStyles = makeStyles(() => ({
     width: 'calc(100% / 2)',
   },
   proDetail: {
-    textAlign: 'start',
-    marginLeft: 10,
+    textAlign: 'center',
+    margin: 0,
     display: 'flex',
     justifyContent: 'space-between',
     width: 'calc(100% - 10px)',
     alignItems: 'center',
+    flexDirection: 'column',
   },
   proUnstyle: {
-    marginLeft: 10,
+    margin: 0,
     padding: 0,
     display: 'flex',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'flex-end',
     fontSize: '12px',
+    textAlign: 'ceter'
   },
   proTitle: {
-    marginLeft: 10,
     padding: 0,
     display: 'flex',
     alignItems: 'flex-start',
@@ -93,7 +94,7 @@ export default function Background() {
     <>
       <Paper elevation={0} className={classes.skillsElements}>
         <div className={classes.content}>
-          <h4>Diplome</h4>
+          <h4>Diplôme</h4>
           <div className={classes.proDetail}>
             <p className={classes.proTitle}>Master</p>
             <p className={classes.proUnstyle}>
@@ -102,15 +103,17 @@ export default function Background() {
           </div>
         </div>
         <div className={classes.content}>
-          <h4>Professional</h4>
+          <h4>Professionel</h4>
           <div className={classes.proBackground}>
             <div className={classes.proDetail}>
-              <p className={classes.proTitle}>Business Developer </p>
+              <p className={classes.proTitle}>Business Developer</p>
               <p className={classes.proUnstyle}>2 ans</p>
+              <p className={classes.proUnstyle}>Ingénierie Industrielle</p>
             </div>
             <div className={classes.proDetail}>
               <p className={classes.proTitle}>Commercial Itinérant</p>
               <p className={classes.proUnstyle}>1 an</p>
+              <p className={classes.proUnstyle}>Service aux entreprises</p>
             </div>
           </div>
         </div>
