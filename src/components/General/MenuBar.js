@@ -6,13 +6,7 @@ import PropTypes from 'prop-types';
 import { Link, glide } from 'react-tiger-transition';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import {
-  AppBar,
-  Toolbar,
-  Button,
-  IconButton,
-  Grow,
-} from '@material-ui/core';
+import { AppBar, Toolbar, Button, IconButton, Grow } from '@material-ui/core';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import {
   makeStyles,
@@ -29,8 +23,7 @@ function HideOnScroll(props) {
       {children}
     </Grow>
   );
-};
-
+}
 
 const theme = createMuiTheme({
   overrides: {
@@ -60,7 +53,7 @@ const useStyles = makeStyles({
       diplay: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 0
+      padding: 0,
     },
   },
   link: {
@@ -68,7 +61,7 @@ const useStyles = makeStyles({
     padding: 20,
     [theme.breakpoints.down('sm')]: {
       diplay: 'flex',
-      padding: 0
+      padding: 0,
     },
   },
 });
