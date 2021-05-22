@@ -53,12 +53,12 @@ const useStyles = makeStyles({
     color: '#deb992',
     fontSize: 50,
     margin: 0,
-    [theme.breakpoints.down('sm')] : {
-     fontSize: 20,
-     diplay: 'flex',
-     alignItems: 'center',
-     justifyContent: 'center',
-     textAlign: 'center'
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 20,
+      diplay: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
     },
   },
   image: {
@@ -71,12 +71,12 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     width: '60vh',
-    [theme.breakpoints.down('sm')] : {
+    [theme.breakpoints.down('sm')]: {
       fontSize: 20,
       diplay: 'flex',
       flexWrap: 'wrap',
-      width: '50vh'
-     },
+      width: '50vh',
+    },
   },
   text: {
     borderRight: '1px solid',
@@ -84,10 +84,10 @@ const useStyles = makeStyles({
     marginRight: 10,
     paddingLeft: 10,
     marginLeft: 10,
-    [theme.breakpoints.down('sm')] : {
-     borderRight: 'none',
-     fontSize: '10px'
-     },
+    [theme.breakpoints.down('sm')]: {
+      borderRight: 'none',
+      fontSize: '10px',
+    },
   },
   dev: {
     margin: 10,

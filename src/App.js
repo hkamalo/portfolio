@@ -42,7 +42,6 @@ ElevationScroll.propTypes = {
   window: PropTypes.func,
 };
 
-
 export default function App(props) {
   const classes = useStyles();
 
