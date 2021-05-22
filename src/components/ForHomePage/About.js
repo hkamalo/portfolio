@@ -1,14 +1,18 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
-import { Slide } from '@material-ui/core';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   aboutSection: {
     display: 'flex',
     alignItems: 'center',
     height: '50vh',
+    [theme.breakpoints.down('sm')]: {
+
+    },
   },
   content: {
     display: 'flex',
@@ -18,9 +22,17 @@ const useStyles = makeStyles({
     textAlign: 'justify',
     margin: 20,
     paddingBottom: 20,
+    [theme.breakpoints.down('sm')]: {
+     display: 'flex',
+     flexDirection: 'column',
+
+    },
   },
   text: {
     margin: 50,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '14px',
+    },
   },
   infoIcon: {
     margin: 10,

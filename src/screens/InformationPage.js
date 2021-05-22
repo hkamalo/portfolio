@@ -1,12 +1,14 @@
 /* eslint-disable import/no-named-as-default */
 import React, { useContext, useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Screen } from 'react-tiger-transition';
 import { Button, Collapse, Slide, Zoom, Grow } from '@material-ui/core';
 import DevSkills from '../components/ForHomePage/DevSkills';
 import Background from '../components/ForHomePage/Background';
 import About from '../components/ForHomePage/About';
 import ProjectsPage from './ProjectsPage';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   root: {
@@ -20,6 +22,11 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+    },
   },
   menu: {
     display: 'flex',
@@ -42,6 +49,12 @@ const useStyles = makeStyles({
     margin: 20,
     paddingTop: 20,
     paddingBottom: 20,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
   },
   skillsContent: {
     display: 'flex',
@@ -51,6 +64,15 @@ const useStyles = makeStyles({
     margin: 20,
     paddingTop: 20,
     paddingBottom: 20,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 0,
+      margin: 0,
+    },
   },
   skills: {
     display: 'flex',
