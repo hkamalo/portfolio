@@ -89,7 +89,7 @@ export default function ProjectsDetails({
             href="https://github.com/WildCodeSchool/lyon-js-react-march21-g2-p2"
             target="_blank"
           >
-            <p>Voir le code</p>
+            <p>Détails du code</p>
           </Link>
         </div>
       </Fade>
