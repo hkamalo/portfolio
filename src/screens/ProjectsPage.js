@@ -32,7 +32,8 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       flexDirection: 'column',
-      width: '100%'
+      Maxwidth: '100%',
+      height: 'auto'
     },
   },
   backgroundProjet: {
@@ -48,7 +49,10 @@ const useStyles = makeStyles({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      width: '100%'
+      Maxwidth: '100%',
+      height: '100%',
+      margin: 0,
+      padding: 0
     },
   },
   projectsDisplay: {
@@ -57,6 +61,12 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     alignItems: 'center',
     height: 300,
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      maxWidth: '100%',
+    },
   },
   backDetailsProjet: {
     background: '#FFFFFF',
@@ -75,6 +85,12 @@ const useStyles = makeStyles({
     marginLeft: 20,
     paddingTop: 20,
     paddingBottom: 20,
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      width: '100%',
+      maxWidth: '100%',
+      height: 'auto'
+    },
   },
 });
 

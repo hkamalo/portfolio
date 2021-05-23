@@ -1,5 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Collapse, Zoom, Slide, Fade, Link } from '@material-ui/core';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   backDetailsProjet: {
@@ -11,11 +13,21 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'flex-start',
     marginLeft: 45,
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      maxWidth: '100%',
+      margin: 0
+     },
   },
   stacks: {
     display: 'flex',
     width: 400,
     justifyContent: 'space-between',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      maxWidth: '100%',
+      flexWrap: 'wrap',
+     },
   },
   stacksList: {
     width: '80%',

@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -14,6 +14,8 @@ import TextInfoContent from '@mui-treasury/components/content/textInfo';
 import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
 import incomingProject from '../../images/coming-soon-hour-glass-4721933_640.png';
 
+const theme = createMuiTheme();
+
 const useStyles = makeStyles({
   projectsDisplay: {
     display: 'flex',
@@ -21,6 +23,9 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-around',
     marginLeft: 80,
+    [theme.breakpoints.down('sm')]: {
+     margin: 0,
+    },
   },
   projects: {
     display: 'flex',
@@ -29,6 +34,9 @@ const useStyles = makeStyles({
     height: 200,
     justifyContent: 'center',
     marginTop: 5,
+    [theme.breakpoints.down('sm')]: {
+      padding: 0,
+     },
   },
   projectCardA: {
     flexGrow: '0.75',
