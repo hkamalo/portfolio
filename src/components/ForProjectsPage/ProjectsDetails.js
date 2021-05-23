@@ -1,5 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Fade, Link } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
 const theme = createMuiTheme();
 
@@ -41,6 +44,10 @@ const useStyles = makeStyles({
     color: '#deb992',
     textDecoration: 'none',
   },
+  linkGithub: {
+    color: '#87CEFA',
+    textDecoration: 'none',
+  },
 });
 
 export default function ProjectsDetails({
@@ -51,6 +58,10 @@ export default function ProjectsDetails({
 }) {
   const classes = useStyles();
   const { html, css, react, node } = stacks;
+  const iconGithub = (
+    <FontAwesomeIcon icon={faGithubSquare} size="2x" color="#87CEFA" />
+  );
+
   return (
     <>
       <Fade in timeout={1000} style={{ transitionDelay: '200ms' }}>
@@ -73,6 +84,13 @@ export default function ProjectsDetails({
               <li>{node}</li>
             </ul>
           </div>
+          <Link
+            className={classes.linkGithub}
+            href="https://github.com/WildCodeSchool/lyon-js-react-march21-g2-p2"
+            target="_blank"
+          >
+            <p>Voir le code</p>
+          </Link>
         </div>
       </Fade>
     </>

@@ -6,7 +6,6 @@ import {
   Fade,
   Modal,
   Grow,
-  TextField,
   InputBase,
 } from '@material-ui/core';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
