@@ -1,5 +1,5 @@
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
-import { Collapse, Zoom, Slide, Fade, Link } from '@material-ui/core';
+import { Fade, Link } from '@material-ui/core';
 
 const theme = createMuiTheme();
 

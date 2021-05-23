@@ -1,11 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useLocation } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
-import { Navigation, Route, Screen, Link, glide } from 'react-tiger-transition';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Route, Screen } from 'react-tiger-transition';
 import ContactPage from '../../screens/ContactPage';
-import ProjectsPage from '../../screens/ProjectsPage';
-import logo from '../../logo_all/logo-proto-2/v1/logo_small_icon_only.png';
 import InformationPage from '../../screens/InformationPage';
 import HomePage from '../../screens/HomePage';
 

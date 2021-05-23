@@ -10,13 +10,15 @@ import {
   InputBase,
 } from '@material-ui/core';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 // import axios from 'axios';
 import React from 'react';
 // import { useForm } from 'react-hook-form';
 // ---------------------- STYLE CSS -------------------------//
 
-const useStyles = makeStyles((theme) => ({
+const theme = createMuiTheme();
+
+const useStyles = makeStyles({
   root: {
     '& .MuiTextField-root': {
       display: 'flex',
@@ -28,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     width: '100%',
     paddingTop: 50,
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: 30,
+    },
   },
   message: {
     textAlign: 'center',
@@ -41,6 +46,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '1rem',
     borderLeft: '1px solid #87CEFA',
     borderRight: '1px solid #87CEFA',
+    [theme.breakpoints.down('sm')]: {
+      padding: 20,
+      width: '20em',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    },
   },
   inputBase: {
     display: 'flex',
@@ -49,6 +61,14 @@ const useStyles = makeStyles((theme) => ({
     color: '#87CEFA',
     '&:hover': {
       borderBottom: '1px solid #87CEFA',
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: 0,
+      padding: 0,
+      textAlign: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   },
   messageField: {
@@ -59,6 +79,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     '&:hover': {
       border: '1px solid #87CEFA',
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
     },
   },
   button: {
@@ -87,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     width: '40vh',
     textAlign: 'center',
   },
-}));
+});
 // --------------------------- FONCTION CONTACT --------------------------//
 
 export default function ContactPage() {

@@ -2,7 +2,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link, glide } from 'react-tiger-transition';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
@@ -49,6 +48,7 @@ const useStyles = makeStyles({
     color: '#deb992',
     background: '#051622',
     zIndex: '1',
+    marginBottom: 20,
     [theme.breakpoints.down('sm')]: {
       diplay: 'flex',
       alignItems: 'center',

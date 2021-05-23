@@ -2,15 +2,7 @@ import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import {
-  Info,
-  InfoCaption,
-  InfoSubtitle,
-  InfoTitle,
-} from '@mui-treasury/components/info';
 import Box from '@material-ui/core/Box';
-import TextInfoContent from '@mui-treasury/components/content/textInfo';
 import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
 import incomingProject from '../../images/coming-soon-hour-glass-4721933_640.png';
 

@@ -13,7 +13,6 @@ import { Link } from 'react-tiger-transition';
 import {
   makeStyles,
   createMuiTheme,
-  MuiThemeProvider,
 } from '@material-ui/core/styles';
 import { Fade, Slide, Zoom } from '@material-ui/core';
 import logo from '../logo_all/logo-proto-2/v2/logo_white_large.png';
