@@ -24,7 +24,8 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     marginLeft: 80,
     [theme.breakpoints.down('sm')]: {
-      margin: 0,
+      margin: 40,
+      marginBottom: 10
     },
   },
   projects: {

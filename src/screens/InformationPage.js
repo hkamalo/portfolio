@@ -84,6 +84,9 @@ const useStyles = makeStyles({
     width: '100%',
     height: '100%',
     margin: 50,
+    [theme.breakpoints.down('sm')]: {
+      margin: 20,
+    },
   },
   image: {
     width: 300,
@@ -94,6 +97,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+   
   },
 });
 

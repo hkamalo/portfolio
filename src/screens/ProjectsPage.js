@@ -90,6 +90,8 @@ const useStyles = makeStyles({
       width: '100%',
       maxWidth: '100%',
       height: 'auto',
+      margin: 0,
+      padding: 0
     },
   },
 });

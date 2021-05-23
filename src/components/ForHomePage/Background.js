@@ -33,6 +33,8 @@ const useStyles = makeStyles(() => ({
     margin: 20,
     [theme.breakpoints.down('sm')]: {
       height: 'auto',
+      paddingTop: 0,
+      margin: 0
     },
   },
   backgroundSkills: {

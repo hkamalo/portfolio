@@ -63,7 +63,7 @@ export default function ProjectsDetails({
             <h4>{projectName}</h4>
           </Link>
           <>{projectText}</>
-          <p>{projectTeam}</p>
+          <p>Équipe : {projectTeam}</p>
           <div className={classes.stacks}>
             <p>Stack :</p>
             <ul className={classes.stacksList}>
