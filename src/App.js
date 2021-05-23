@@ -5,10 +5,7 @@
 import React from 'react';
 import { Navigation } from 'react-tiger-transition';
 import { makeStyles } from '@material-ui/core/styles';
-import {
-  Toolbar,
-  CssBaseline,
-} from '@material-ui/core';
+import { Toolbar, CssBaseline } from '@material-ui/core';
 import Main from './components/General/Main';
 import MenuBar from './components/General/MenuBar';
 
@@ -18,7 +15,6 @@ const useStyles = makeStyles({
     flexDirection: 'column',
   },
 });
-
 
 export default function App() {
   const classes = useStyles();

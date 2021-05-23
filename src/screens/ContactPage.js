@@ -51,7 +51,7 @@ const useStyles = makeStyles({
       width: '20em',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
     },
   },
   inputBase: {
@@ -83,7 +83,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     },
   },
   button: {
