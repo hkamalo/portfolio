@@ -1,11 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUncharted } from '@fortawesome/free-brands-svg-icons';
 import { faServer, faWindowRestore } from '@fortawesome/free-solid-svg-icons';
+
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   skillsElements: {
@@ -19,6 +22,10 @@ const useStyles = makeStyles({
     background: '#051622',
     color: '#deb992',
     borderLeft: '5px outset #deb992 ',
+    [theme.breakpoints.down('sm')]: {
+      borderLeft: 'none',
+      borderRadius: 0
+    },
   },
   front: {
     display: 'flex',

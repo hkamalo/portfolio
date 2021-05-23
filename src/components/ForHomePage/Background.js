@@ -1,6 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles(() => ({
   skillsElements: {
@@ -14,6 +16,12 @@ const useStyles = makeStyles(() => ({
     background: '#051622',
     color: '#deb992',
     borderLeft: '5px outset #deb992 ',
+    [theme.breakpoints.down('sm')]: {
+      borderLeft: 'none',
+      borderRadius: 0, 
+      flexWrap: 'wrap',
+
+    },
   },
   content: {
     display: 'flex',
@@ -24,6 +32,9 @@ const useStyles = makeStyles(() => ({
     paddingTop: 10,
     paddingBottom: 10,
     margin: 20,
+    [theme.breakpoints.down('sm')]: {
+      height: 'auto'
+    },
   },
   backgroundSkills: {
     display: 'flex',

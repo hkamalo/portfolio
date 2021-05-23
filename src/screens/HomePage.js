@@ -8,9 +8,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-tiger-transition';
-import Button from '@material-ui/core/Button';
 import {
   makeStyles,
   createMuiTheme,
