@@ -24,6 +24,8 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('sm')]: {
       borderLeft: 'none',
       borderRadius: 0,
+      paddingLeft: 20,
+      paddingRight: 20
     },
   },
   front: {
@@ -35,6 +37,10 @@ const useStyles = makeStyles({
     paddingTop: 10,
     paddingBottom: 10,
     margin: 20,
+    [theme.breakpoints.down('sm')]: {
+      margin: 0,
+      padding: 0
+    },
   },
   picture: {
     marginTop: '20px',
