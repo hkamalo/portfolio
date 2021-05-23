@@ -16,8 +16,8 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       maxWidth: '100%',
-      margin: 0
-     },
+      margin: 0,
+    },
   },
   stacks: {
     display: 'flex',
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
       display: 'flex',
       maxWidth: '100%',
       flexWrap: 'wrap',
-     },
+    },
   },
   stacksList: {
     width: '80%',

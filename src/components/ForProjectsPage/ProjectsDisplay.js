@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     marginLeft: 80,
     [theme.breakpoints.down('sm')]: {
-     margin: 0,
+      margin: 0,
     },
   },
   projects: {
@@ -36,7 +36,7 @@ const useStyles = makeStyles({
     marginTop: 5,
     [theme.breakpoints.down('sm')]: {
       padding: 0,
-     },
+    },
   },
   projectCardA: {
     flexGrow: '0.75',

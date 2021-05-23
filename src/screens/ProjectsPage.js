@@ -33,7 +33,7 @@ const useStyles = makeStyles({
       display: 'flex',
       flexDirection: 'column',
       Maxwidth: '100%',
-      height: 'auto'
+      height: 'auto',
     },
   },
   backgroundProjet: {
@@ -52,7 +52,7 @@ const useStyles = makeStyles({
       Maxwidth: '100%',
       height: '100%',
       margin: 0,
-      padding: 0
+      padding: 0,
     },
   },
   projectsDisplay: {
@@ -89,7 +89,7 @@ const useStyles = makeStyles({
       display: 'flex',
       width: '100%',
       maxWidth: '100%',
-      height: 'auto'
+      height: 'auto',
     },
   },
 });
