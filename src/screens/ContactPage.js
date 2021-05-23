@@ -1,13 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 // ------------------ IMPORT COMPONENTS & STYLES -------------//
 import Backdrop from '@material-ui/core/Backdrop';
-import {
-  IconButton,
-  Fade,
-  Modal,
-  Grow,
-  InputBase,
-} from '@material-ui/core';
+import { IconButton, Fade, Modal, Grow, InputBase } from '@material-ui/core';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 // import axios from 'axios';
