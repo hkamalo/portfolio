@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('sm')]: {
       fontSize: '14px',
       borderBottom: '1px solid',
-      paddingBottom: 100
+      paddingBottom: 100,
     },
   },
   infoIcon: {

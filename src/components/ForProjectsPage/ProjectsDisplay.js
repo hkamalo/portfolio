@@ -62,7 +62,6 @@ const useStyles = makeStyles({
       flexGrow: '0.75',
       transition: 'flex-grow 1s',
     },
-    
   },
   media: {
     position: 'absolute',
