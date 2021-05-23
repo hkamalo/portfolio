@@ -66,6 +66,7 @@ const useStyles = makeStyles({
     paddingBottom: 20,
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      height: 'auto',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,6 +13,8 @@ import {
 import ProjectsDisplay from '../components/ForProjectsPage/ProjectsDisplay';
 import ProjectsDetails from '../components/ForProjectsPage/ProjectsDetails';
 // import { faServer, faWindowRestore } from '@fortawesome/free-solid-svg-icons';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   projetBackground: {
@@ -27,6 +29,11 @@ const useStyles = makeStyles({
     margin: 20,
     paddingTop: 20,
     paddingBottom: 20,
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%'
+    },
   },
   backgroundProjet: {
     color: '#deb992',
@@ -37,6 +44,12 @@ const useStyles = makeStyles({
     paddingBottom: 50,
     borderRadius: 10,
     width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100%'
+    },
   },
   projectsDisplay: {
     display: 'flex',
