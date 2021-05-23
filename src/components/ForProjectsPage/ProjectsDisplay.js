@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     marginLeft: 80,
     [theme.breakpoints.down('sm')]: {
       margin: 40,
-      marginBottom: 10
+      marginBottom: 10,
     },
   },
   projects: {

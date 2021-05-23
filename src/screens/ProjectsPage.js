@@ -91,7 +91,7 @@ const useStyles = makeStyles({
       maxWidth: '100%',
       height: 'auto',
       margin: 0,
-      padding: 0
+      padding: 0,
     },
   },
 });
