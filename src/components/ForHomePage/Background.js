@@ -18,9 +18,8 @@ const useStyles = makeStyles(() => ({
     borderLeft: '5px outset #deb992 ',
     [theme.breakpoints.down('sm')]: {
       borderLeft: 'none',
-      borderRadius: 0, 
+      borderRadius: 0,
       flexWrap: 'wrap',
-
     },
   },
   content: {
@@ -33,7 +32,7 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 10,
     margin: 20,
     [theme.breakpoints.down('sm')]: {
-      height: 'auto'
+      height: 'auto',
     },
   },
   backgroundSkills: {

@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUncharted } from '@fortawesome/free-brands-svg-icons';
 import { faServer, faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
-
 const theme = createMuiTheme();
 
 const useStyles = makeStyles({
@@ -24,7 +23,7 @@ const useStyles = makeStyles({
     borderLeft: '5px outset #deb992 ',
     [theme.breakpoints.down('sm')]: {
       borderLeft: 'none',
-      borderRadius: 0
+      borderRadius: 0,
     },
   },
   front: {
