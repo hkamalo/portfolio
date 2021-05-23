@@ -2,7 +2,6 @@
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Fade, Link } from '@material-ui/core';
 
-
 const theme = createMuiTheme();
 
 const useStyles = makeStyles({
