@@ -1,12 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable no-console */
+
+
+
 // ------------------ IMPORT COMPONENTS & STYLES -------------//
 import Backdrop from '@material-ui/core/Backdrop';
 import { IconButton, Fade, Modal, Grow, InputBase } from '@material-ui/core';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
-// import axios from 'axios';
+import axios from 'axios';
 import React from 'react';
-// import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+
+require('dotenv').config();
+
 // ---------------------- STYLE CSS -------------------------//
 
 const theme = createMuiTheme();
@@ -27,12 +34,12 @@ const useStyles = makeStyles({
       paddingTop: 30,
     },
   },
-  message: {
+  title: {
     textAlign: 'center',
     marginBottom: '3em',
     color: '#87CEFA',
   },
-  form: {
+  formulaire: {
     padding: '5em',
     maxWidth: '60ch',
     margin: '2em auto',
@@ -109,7 +116,7 @@ const useStyles = makeStyles({
 // --------------------------- FONCTION CONTACT --------------------------//
 
 export default function ContactPage() {
-  // const apiBase = process.env.REACT_APP_API_BASE_URL;
+  const apiBack = process.env.API_BACK_URL;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -117,10 +124,10 @@ export default function ContactPage() {
   const handleClose = () => {
     setOpen(false);
   };
-  // const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const {
-    message,
-    form,
+    title,
+    formulaire,
     inputBase,
     button,
     modal,
@@ -128,20 +135,22 @@ export default function ContactPage() {
     messageField,
     contact,
   } = useStyles();
-  // const onSubmit = (form) => {
-  //   axios
-  //     .post(`${apiBase}/contact`, form)
-  //     .then((res) => reset())
-  //     .catch((err) => console.log(err));
-  // };
+
+  const onSubmit = (form) => {
+    console.log(form);
+    axios
+      .post('http://localhost:5000/contact', form)
+      .then((res) => reset())
+      .catch((err) => console.log(err));
+  };
 
   return (
     <Grow in timeout={2100} style={{ transitionDelay: '700ms' }}>
       <div className={contact}>
-        <h2 className={message}>Contact</h2>
+        <h2 className={title}>Contact</h2>
         <form
-          className={form}
-          // onSubmit={handleSubmit(onSubmit)}
+          className={formulaire}
+          onSubmit={handleSubmit(onSubmit)}
           method="POST"
           action="send"
         >
@@ -152,15 +161,7 @@ export default function ContactPage() {
             variant="outlined"
             required
             color="#1ba098"
-            // {...register('firstName')}
-          />
-          <InputBase
-            className={inputBase}
-            id="outlined-basic"
-            placeholder="Nom"
-            variant="outlined"
-            required
-            // {...register('firstName')}
+            {...register('company')}
           />
           <InputBase
             className={inputBase}
@@ -168,27 +169,35 @@ export default function ContactPage() {
             placeholder="Prénom"
             variant="outlined"
             required
-            // {...register('lastName')}
+            {...register('firstname')}
           />
           <InputBase
             className={inputBase}
             id="outlined-basic"
-            name="email"
-            placeholder="email@email.com"
+            placeholder="Nom"
+            variant="outlined"
+            required
+            {...register('lastname')}
+          />
+          <InputBase
+            className={inputBase}
+            id="outlined-basic"
+            placeholder="votre@email.com"
             variant="outlined"
             type="email"
             required
-            // {...register('email')}
+            {...register('email')}
           />
           <InputBase
             className={messageField}
             id="outlined-multiline-basic"
             multiline
             placeholder="Votre message"
+            name="message"
             defaultValue=""
             variant="outlined"
             required
-            // {...register('text')}
+            {...register('message')}
           />
           <div>
             <IconButton
