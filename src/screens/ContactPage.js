@@ -1,8 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-console */
 
-
-
 // ------------------ IMPORT COMPONENTS & STYLES -------------//
 import Backdrop from '@material-ui/core/Backdrop';
 import { IconButton, Fade, Modal, Grow, InputBase } from '@material-ui/core';
