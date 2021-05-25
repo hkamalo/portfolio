@@ -137,7 +137,7 @@ export default function ContactPage() {
   const onSubmit = (form) => {
     console.log(form);
     axios
-      .post('http://localhost:5000/contact', form)
+      .post('http://localhost:5001/contact', form)
       .then((res) => reset())
       .catch((err) => console.log(err));
   };
