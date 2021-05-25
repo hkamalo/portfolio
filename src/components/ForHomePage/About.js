@@ -1,19 +1,41 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
-  text: {
+  aboutSection: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    border: '1px solid',
-    width: '50%',
-    MaxWidth: '100%',
-    textAlign: 'justify',
+    alignItems: 'center',
+    height: '50vh',
+    [theme.breakpoints.down('sm')]: {},
   },
-  image: {
-    width: 300,
-    height: 170,
+  content: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    textAlign: 'justify',
+    margin: 20,
+    paddingBottom: 20,
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  },
+  text: {
+    margin: 50,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '14px',
+      borderBottom: '1px solid',
+      paddingBottom: 100,
+    },
+  },
+  infoIcon: {
+    margin: 10,
+    padding: 10,
   },
 });
 
@@ -21,23 +43,19 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <>
-      <div className={classes.text}>
-        <h2>About</h2>
-        <p>
-          J’ai décidé d’évoluer dans l’univers tech après un parcours axé sur le
-          business et le management.
-        </p>
-        <p>
-          Ce qui m’a motivé dans cette décision est la liberté de création
-          offert par le métier de développeur.
+    <div className={classes.aboutSection}>
+      <div className={classes.content}>
+        <ContactSupportIcon
+          className={classes.infoIcon}
+          style={{ fontSize: 100 }}
+          outlined
+        />
+        <p className={classes.text}>
+          Après un parcours en centré sur le business et le management j’ai
+          décidé d’évoluer dans le numérique, poussé par l'envie d'entreprendre
+          et la liberté de création du métier de développeur.
         </p>
       </div>
-      <img
-        className={classes.image}
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2F438112d08852a5cf64fb668899b62a1c6abcfadb%2Fc%3D0-104-5312-3105%26r%3Dx1683%26c%3D3200x1680%2Flocal%2F-%2Fmedia%2F2017%2F05%2F23%2FWIGroup%2FAppleton%2F636311326049773956-UC.jpg&f=1&nofb=1"
-        alt=""
-      />
-    </>
+    </div>
   );
 }

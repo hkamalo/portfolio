@@ -1,8 +1,28 @@
+/* eslint-disable react/jsx-fragments */
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
+/* eslint-disable consistent-return */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import About from '../components/ForHomePage/About';
-import DevSkills from '../components/ForHomePage/DevSkills';
-import Background from '../components/ForHomePage/Background';
+import { Link } from 'react-tiger-transition';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import { Fade, Slide, Zoom } from '@material-ui/core';
+import logo from '../logo_all/logo-proto-2/v2/logo_white_large.png';
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiButton: {
+      label: {
+        color: '#f1f1f1',
+      },
+    },
+  },
+});
 
 const useStyles = makeStyles({
   root: {
@@ -10,75 +30,64 @@ const useStyles = makeStyles({
       margin: 10,
     },
   },
-  home: {
-    position: 'relative',
-    height: 'auto',
-    width: 'auto',
-    background:
-      'radial-gradient(52.52% 39.17% at 50% 66.95%, #F3F3F3 0%, #FFFFFF 100%)',
+  header: {
+    margin: 0,
+    height: '100vh',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
     justifyContent: 'center',
-    border: 'solid 1px red',
-  },
-  menu: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    height: 50,
-    width: 'auto',
-    margin: 5,
-    padding: 2,
+    alignItems: 'center',
+    background: '#051622',
   },
   title: {
     display: 'flex',
     justifyContent: 'center',
-    color: 'white',
-  },
-  content: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '50%',
-    height: '20%',
-    border: 'solid 1px',
-    margin: 20,
-    paddingTop: 50,
-    paddingBottom: 50,
-  },
-  skillsContent: {
-    display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    width: '50%',
-    height: 'auto',
-    maxHeight: '100%',
-    border: 'solid 1px yellow',
-    margin: 20,
-    paddingTop: 50,
-    paddingBottom: 50,
-  },
-  skills: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    maxHeight: '100%',
-    maxWidth: '100%',
-    width: '100%',
-    height: '100%',
-    background: '#FFFFFF',
-    boxShadow:
-      '0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05)',
-    borderRadius: 20,
+    alignItems: 'center',
+    color: '#deb992',
+    fontSize: 50,
+    margin: 0,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 20,
+      diplay: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+    },
   },
   image: {
-    width: 300,
-    height: 170,
+    margin: 0,
+    padding: 0,
+    width: 150,
+    height: 18.2,
   },
-  skillsElements: {
-    width: '70%',
+  stack: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    width: '60vh',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 20,
+      diplay: 'flex',
+      flexWrap: 'wrap',
+      width: '50vh',
+    },
+  },
+  text: {
+    borderRight: '1px solid',
+    paddingRight: 20,
+    marginRight: 10,
+    paddingLeft: 10,
+    marginLeft: 10,
+    [theme.breakpoints.down('sm')]: {
+      borderRight: 'none',
+      fontSize: '10px',
+    },
+  },
+  dev: {
+    margin: 10,
+    color: '#deb992',
+    textDecoration: 'none',
   },
 });
 
@@ -87,22 +96,31 @@ export default function HomePage() {
 
   return (
     <>
-      <div className={classes.home}>
-        <div className={classes.content}>
-          <About />
+      <div className={classes.header}>
+        <div className={classes.title}>
+          <img className={classes.image} src={logo} alt="" />
+          <Link
+            className={classes.dev}
+            exact
+            to="/informations"
+            transition="glide-left"
+          >
+            <h1 className={classes.dev}>Développeur Web</h1>
+          </Link>
         </div>
-        <div className={classes.skillsContent}>
-          <h2>#Developper</h2>
-          <div className={classes.skills}>
-            <DevSkills />
+        <Fade
+          in
+          direction="right"
+          timeout={2100}
+          style={{ transitionDelay: '800ms' }}
+        >
+          <div className={classes.stack}>
+            <p className={classes.text}>Html / CSS</p>
+            <p className={classes.text}>Javascript</p>
+            <p className={classes.text}>React</p>
+            <p className={classes.text}>Node</p>
           </div>
-        </div>
-        <div className={classes.skillsContent}>
-          <h2>#Background</h2>
-          <div className={classes.skills}>
-            <Background />
-          </div>
-        </div>
+        </Fade>
       </div>
     </>
   );

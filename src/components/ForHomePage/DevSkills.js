@@ -1,48 +1,81 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUncharted } from '@fortawesome/free-brands-svg-icons';
+import { faServer, faWindowRestore } from '@fortawesome/free-solid-svg-icons';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   skillsElements: {
     MaxWidth: '100%',
     maxHeight: '100%',
-    height: '100%',
     width: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    border: '1px solid green',
+    borderRadius: '35px',
+    background: '#051622',
+    color: '#deb992',
+    borderLeft: '5px outset #deb992 ',
+    [theme.breakpoints.down('sm')]: {
+      borderLeft: 'none',
+      borderRadius: 0,
+      paddingLeft: 20,
+      paddingRight: 20,
+    },
   },
   front: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    mawHeight: '100%',
-    border: '1px solid blue',
-    width: 180,
-    height: 250,
+    width: 230,
+    height: 300,
     paddingTop: 10,
     paddingBottom: 10,
+    margin: 20,
+    [theme.breakpoints.down('sm')]: {
+      margin: 0,
+      padding: 0,
+    },
   },
   picture: {
-    widht: 50,
-    height: 50,
+    marginTop: '20px',
+  },
+  skillsList: {
+    margin: 0,
+    listStyle: 'none',
+    padding: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
   },
 });
 
 export default function DevSkills() {
   const classes = useStyles();
+  const iconFront = (
+    <FontAwesomeIcon icon={faWindowRestore} size="3x" color="#87CEFA" />
+  );
+  const iconServer = (
+    <FontAwesomeIcon icon={faServer} size="3x" color="#FFD700" />
+  );
+  const iconGenerale = (
+    <FontAwesomeIcon icon={faUncharted} size="3x" color="white" />
+  );
 
   return (
     <>
-      <div className={classes.skillsElements}>
+      <Paper elevation={0} className={classes.skillsElements}>
         <div className={classes.front}>
-          <img
-            className={classes.picture}
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fillustricon-tech%2F512%2Fbrowser.development-512.png&f=1&nofb=1"
-            alt="front end"
-          />
+          <div className={classes.picture}>{iconFront}</div>
           <h4>Interface</h4>
-          <ul>
+          <ul className={classes.skillsList}>
             <li>Html</li>
             <li>CSS</li>
             <li>Material UI</li>
@@ -51,29 +84,20 @@ export default function DevSkills() {
           </ul>
         </div>
         <div className={classes.front}>
-          <img
-            className={classes.picture}
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fskill_page%2Fcontent%2Flogo_file%2Flogo%2F6268%2Fback_end-dc36d1943fb2722f56f960c424c423d1.png&f=1&nofb=1"
-            alt="back end"
-          />
+          <div className={classes.picture}>{iconServer}</div>
           <h4>Serveur</h4>
-          <ul>
+          <ul className={classes.skillsList}>
             <li>Node</li>
             <li>Express</li>
             <li>SQL</li>
             <li>MySQL</li>
             <li>Netlify</li>
-            <li>Heroku</li>
           </ul>
         </div>
         <div className={classes.front}>
-          <img
-            className={classes.picture}
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.favpng.com%2F19%2F21%2F5%2Fengineering-logo-png-favpng-7hgGnrvd3ur7EqhjtBDJMC9qZ.jpg&f=1&nofb=1"
-            alt="generale skills"
-          />
-          <h4>Generale</h4>
-          <ul>
+          <div className={classes.picture}>{iconGenerale}</div>
+          <h4>General</h4>
+          <ul className={classes.skillsList}>
             <li>Git</li>
             <li>Git hub</li>
             <li>Figma</li>
@@ -81,7 +105,7 @@ export default function DevSkills() {
             <li>TDD</li>
           </ul>
         </div>
-      </div>
+      </Paper>
     </>
   );
 }

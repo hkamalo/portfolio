@@ -4,6 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
+
+
+# # logo
+# /src/logo_all
+
+# # images
+# /src/images
 
 # testing
 /coverage
@@ -11,6 +19,7 @@
 # production
 /build
 
+/README.md
 # misc
 .DS_Store
 .env.local
