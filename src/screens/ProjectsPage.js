@@ -115,7 +115,7 @@ export default function ProjectsPage() {
     name: 'Dolly',
     team: '5 développeurs en méthode AGILE/SCRUM',
     text:
-      'Dolly est une application web qui offre au client de pouvoir consulter les informations concernants ses films favoris',
+      'Dolly est une application web qui permet aux visiteurs de consulter toutes les informations concernants leurs films favoris',
     stack: {
       html: iconHtml,
       css: iconCss,
