@@ -78,7 +78,7 @@ const useStyles = makeStyles({
     borderLeft: '1px solid',
     paddingRight: 20,
     marginRight: 10,
-    paddingLeft: 10,
+    paddingLeft: 20,
     marginLeft: 10,
     [theme.breakpoints.down('sm')]: {
       borderRight: 'none',
