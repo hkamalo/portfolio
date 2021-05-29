@@ -51,9 +51,9 @@ export default function About() {
           outlined
         />
         <p className={classes.text}>
-          Après un parcours en centré sur le business et le management j’ai
-          décidé d’évoluer dans le numérique, poussé par l'envie d'entreprendre
-          et la liberté de création du métier de développeur.
+          Après un parcours centré sur le business et le management j’ai décidé
+          d’évoluer dans le numérique, poussé par l'envie d'entreprendre et la
+          liberté de création du métier de développeur.
         </p>
       </div>
     </div>

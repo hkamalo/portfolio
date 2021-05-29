@@ -75,6 +75,7 @@ const useStyles = makeStyles({
   },
   text: {
     borderRight: '1px solid',
+    borderLeft: '1px solid',
     paddingRight: 20,
     marginRight: 10,
     paddingLeft: 10,

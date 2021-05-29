@@ -136,7 +136,7 @@ export default function Background() {
               <p>Savoir faire</p>
               <ul className={classes.unstyle}>
                 <li>Pilotage d’un projet</li>
-                <li>Relationnelle client</li>
+                <li>Relation client</li>
                 <li>Travail en équipe</li>
                 <li>Maîtrise de l’anglais</li>
               </ul>
