@@ -137,7 +137,7 @@ export default function ContactPage() {
   const onSubmit = (form) => {
     console.log(form);
     axios
-      .post('http://localhost:5001/contact', form)
+      .post('https://portfolio-kamalo-back.herokuapp.com/contact', form)
       .then((res) => reset())
       .catch((err) => console.log(err));
   };
