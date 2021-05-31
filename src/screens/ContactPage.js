@@ -114,7 +114,7 @@ const useStyles = makeStyles({
 // --------------------------- FONCTION CONTACT --------------------------//
 
 export default function ContactPage() {
-  const apiBack = process.env.API_BACK_URL;
+  const apiMail = process.env.API_MAIL_HANDLING;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -137,7 +137,7 @@ export default function ContactPage() {
   const onSubmit = (form) => {
     console.log(form);
     axios
-      .post(`${process.env.API_MAIL_HANDLING}`, form)
+      .post(`${apiMail}/contact`, form)
       .then((res) => reset())
       .catch((err) => console.log(err));
   };
