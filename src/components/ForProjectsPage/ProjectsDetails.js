@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable import/no-extraneous-dependencies */
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Fade, Link } from '@material-ui/core';
@@ -48,15 +49,10 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProjectsDetails({
-  projectName,
-  projectTeam,
-  projectText,
-  stacks,
-}) {
+export default function ProjectsDetails({ projectSelected }) {
   const classes = useStyles();
-  const { html, css, react, node } = stacks;
-
+  const [project] = projectSelected;
+  const { name, team, text, stack, deployment } = project;
   return (
     <>
       <Fade in timeout={1000} style={{ transitionDelay: '200ms' }}>
@@ -66,10 +62,10 @@ export default function ProjectsDetails({
             href="https://dolly-the-sheep.netlify.app/"
             target="_blank"
           >
-            <h4>{projectName}</h4>
+            <h4>{name}</h4>
           </Link>
-          <>{projectText}</>
-          <p>Équipe : {projectTeam}</p>
+          <>{text}</>
+          <p>Équipe : {team}</p>
           <div className={classes.stacks}>
             <p>Stack :</p>
             <ul className={classes.stacksList}>

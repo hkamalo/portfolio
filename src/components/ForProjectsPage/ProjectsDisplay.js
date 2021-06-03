@@ -88,17 +88,18 @@ export default function ProjectsDisplay({ handleClick }) {
         <div className={classes.projects}>
           <div className={classes.projectCardA}>
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
-              <Card className={classes.cards} onClick={handleClick}>
-                <Box className={classes.content}>
-                  <p className={classes.text}>Dolly</p>
-                </Box>
+              <Card className={classes.cards} id="Dolly" onClick={handleClick}>
                 <CardMedia className={classes.media} image={p1Screenshoot} />
               </Card>
             </Grow>
           </div>
           <div className={classes.projectCardB}>
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
-              <Card className={classes.cards}>
+              <Card
+                className={classes.cards}
+                id="Paper Rock Scissors"
+                onClick={handleClick}
+              >
                 <Box className={classes.content}>
                   <p className={classes.text}>Projet</p>
                 </Box>
@@ -110,21 +111,23 @@ export default function ProjectsDisplay({ handleClick }) {
         <div className={classes.projects}>
           <div className={classes.projectCardB}>
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
-              <Card className={classes.cards}>
+              <Card
+                className={classes.cards}
+                id="Portfolio"
+                onClick={handleClick}
+              >
                 <CardMedia className={classes.media} image={incomingProject} />
-                <Box className={classes.content}>
-                  <p className={classes.text}>Projet</p>
-                </Box>
               </Card>
             </Grow>
           </div>
           <div className={classes.projectCardA}>
             <Grow in timeout={1900} style={{ transitionDelay: '950ms' }}>
-              <Card className={classes.cards}>
+              <Card
+                className={classes.cards}
+                id="HD Rain"
+                onClick={handleClick}
+              >
                 <CardMedia className={classes.media} image={incomingProject} />
-                <Box className={classes.content}>
-                  <p className={classes.text}>Projet</p>
-                </Box>
               </Card>
             </Grow>
           </div>

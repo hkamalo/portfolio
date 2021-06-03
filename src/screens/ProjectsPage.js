@@ -12,7 +12,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import ProjectsDisplay from '../components/ForProjectsPage/ProjectsDisplay';
 import ProjectsDetails from '../components/ForProjectsPage/ProjectsDetails';
-// import { faServer, faWindowRestore } from '@fortawesome/free-solid-svg-icons';
+import mysqlLogo from '../images/mysql-logo.png';
+import herokuLogo from '../images/heroku-logo.png';
+import netlifyLogo from '../images/netlify-logo.png';
+import expressLogo from '../images/expressjs.png';
+import apacheLogo from '../images/apache-logo.png';
+import mongoLogo from '../images/mongodb-logo.png';
 
 const theme = createMuiTheme();
 
@@ -106,22 +111,44 @@ export default function ProjectsPage() {
   const iconNode = <FontAwesomeIcon icon={faNode} size="3x" color="#4CAF50" />;
 
   const [showProjectDetails, setShowProjectDetails] = useState(false);
+  const [projectSelected, setProjetSelected] = useState([]);
 
-  const handleClick = () => {
-    setShowProjectDetails(true);
-  };
-
-  const project = {
-    name: 'Dolly',
-    team: '5 développeurs en méthode AGILE/SCRUM',
-    text:
-      'Dolly est une application web qui permet aux visiteurs de consulter toutes les informations concernants leurs films favoris',
-    stack: {
-      html: iconHtml,
-      css: iconCss,
-      react: iconReact,
-      node: iconNode,
+  const projects = [
+    {
+      name: 'Paper Rock Scissors',
+      team: '3 développeurs en méthode AGILE/SCRUM',
+      text: 'Jeux pierre papier ciseaux',
+      stack: [iconHtml, iconCss],
+      deployment: [netlifyLogo],
     },
+    {
+      name: 'Dolly',
+      team: '5 développeurs en méthode AGILE/SCRUM',
+      text:
+        'Dolly est une application web qui permet aux visiteurs de consulter toutes les informations concernants leurs films favoris',
+      stack: [iconHtml, iconCss, iconReact, iconNode, expressLogo, mysqlLogo],
+      deployment: [netlifyLogo, herokuLogo],
+    },
+    {
+      name: 'Portfolio',
+      team: 'Non',
+      text: 'Présentation de mon profil',
+      stack: [iconHtml, iconCss, iconReact, iconNode, expressLogo],
+      deployment: [apacheLogo, herokuLogo],
+    },
+    {
+      name: 'HD Rain',
+      team: '5 développeurs en méthode AGILE/SCRUM',
+      text:
+        'Intranet pour la visualisation de données météorologiques (en cours)',
+      stack: [iconHtml, iconCss, iconReact, iconNode, expressLogo, mongoLogo],
+      deployment: ['??', '??'],
+    },
+  ];
+
+  const handleClick = (event) => {
+    setProjetSelected(projects.filter(({ name }) => name === event.target.key));
+    setShowProjectDetails(true);
   };
 
   return (
@@ -133,12 +160,7 @@ export default function ProjectsPage() {
         </div>
         {showProjectDetails ? (
           <div className={classes.details}>
-            <ProjectsDetails
-              projectName={project.name}
-              projectTeam={project.team}
-              projectText={project.text}
-              stacks={project.stack}
-            />
+            <ProjectsDetails projectSelected={projectSelected} />
           </div>
         ) : (
           <></>
