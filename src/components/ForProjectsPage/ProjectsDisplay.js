@@ -88,7 +88,7 @@ export default function ProjectsDisplay({ handleClick }) {
         <div className={classes.projects}>
           <div className={classes.projectCardA}>
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
-              <Card className={classes.cards} id='Dolly' onClick={handleClick}>
+              <Card className={classes.cards} id="Dolly" onClick={handleClick}>
                 <CardMedia className={classes.media} image={p1Screenshoot} />
               </Card>
             </Grow>

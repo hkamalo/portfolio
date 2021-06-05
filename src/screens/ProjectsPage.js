@@ -119,7 +119,7 @@ export default function ProjectsPage() {
       name: 'Paper Rock Scissors',
       team: '3 développeurs en méthode AGILE/SCRUM',
       text: 'Jeux pierre papier ciseaux',
-      stack: {iconHtml, iconCss},
+      stack: { iconHtml, iconCss },
       deployment: [netlifyLogo],
     },
     {
@@ -148,7 +148,9 @@ export default function ProjectsPage() {
   ];
 
   const handleClick = (event) => {
-    setProjetSelected(projects.filter(({ name }) => name === event.currentTarget.id));
+    setProjetSelected(
+      projects.filter(({ name }) => name === event.currentTarget.id)
+    );
     setShowProjectDetails(true);
   };
 

@@ -69,7 +69,7 @@ export default function ProjectsDetails({ projectSelected }) {
           <div className={classes.stacks}>
             <p>Stack :</p>
             <ul className={classes.stacksList}>
-              {stack.map(element => (
+              {stack.map((element) => (
                 <li>{element}</li>
               ))}
             </ul>
@@ -77,7 +77,7 @@ export default function ProjectsDetails({ projectSelected }) {
           <div className={classes.stacks}>
             <p>Deploiement :</p>
             <ul className={classes.stacksList}>
-              {deployment.map(element => (
+              {deployment.map((element) => (
                 <li>{element}</li>
               ))}
             </ul>
