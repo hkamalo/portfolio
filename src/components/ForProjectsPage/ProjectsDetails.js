@@ -25,6 +25,7 @@ const useStyles = makeStyles({
     width: '50em',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    margin: '20px 0 20px',
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       maxWidth: '100%',
@@ -82,47 +83,37 @@ export default function ProjectsDetails({ projectSelected }) {
           <div className={classes.projectStacks}>
             <div className={classes.stacks}>
               <p>Interface :</p>
-              <ul className={classes.stacksList}>
-                {Object.values(front).map((element) => (
-                  <li>{element}</li>
-                ))}
-              </ul>
+              {Object.values(front).map((element) => (
+                <div className={classes.stacksList}>{element}</div>
+              ))}
             </div>
             {back && (
               <div className={classes.stacks}>
                 <p>Serveur :</p>
-                <ul className={classes.stacksList}>
-                  {Object.values(back).map((element) => (
-                    <li>{element}</li>
-                  ))}
-                </ul>
+                {Object.values(back).map((element) => (
+                  <div className={classes.stacksList}>{element}</div>
+                ))}
               </div>
             )}
             {database && (
               <div className={classes.stacks}>
                 <p>Base de données:</p>
-                <ul className={classes.stacksList}>
-                  {Object.values(database).map((element) => (
-                    <li>{element}</li>
-                  ))}
-                </ul>
+                {Object.values(database).map((element) => (
+                  <div className={classes.stacksList}>{element}</div>
+                ))}
               </div>
             )}
             <div className={classes.stacks}>
               <p>Gestion des versions :</p>
-              <ul className={classes.stacksList}>
-                {Object.values(versionning).map((element) => (
-                  <li>{element}</li>
-                ))}
-              </ul>
+              {Object.values(versionning).map((element) => (
+                <div className={classes.stacksList}>{element}</div>
+              ))}
             </div>
             <div className={classes.stacks}>
               <p>Déploiement :</p>
-              <ul className={classes.stacksList}>
-                {Object.values(deployment).map((element) => (
-                  <li>{element}</li>
-                ))}
-              </ul>
+              {Object.values(deployment).map((element) => (
+                <div className={classes.stacksList}>{element}</div>
+              ))}
             </div>
           </div>
           <Link

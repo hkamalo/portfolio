@@ -114,7 +114,7 @@ export default function ProjectsPage() {
   );
   const iconNode = <FontAwesomeIcon icon={faNode} size="3x" color="#4CAF50" />;
   const iconGithub = (
-    <FontAwesomeIcon icon={faGithubSquare} size="3x" color="black" />
+    <FontAwesomeIcon icon={faGithubSquare} size="3x" color="white" />
   );
   const iconExpress = (
     <img src={expressSrc} width="144" height="48" alt="expressLogo" />
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
     <img src={apacheSrc} width="48" height="48" alt="apacheLogo" />
   );
   const iconMongo = (
-    <img src={mongoSrc} width="48" height="48" alt="mongoLogo" />
+    <img src={mongoSrc} width="70" height="48" alt="mongoLogo" />
   );
   const iconMaterialUi = (
     <img src={materialUiSrc} width="48" height="48" alt="materialUiLogo" />
