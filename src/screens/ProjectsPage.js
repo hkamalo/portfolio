@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
@@ -118,7 +119,7 @@ export default function ProjectsPage() {
       name: 'Paper Rock Scissors',
       team: '3 développeurs en méthode AGILE/SCRUM',
       text: 'Jeux pierre papier ciseaux',
-      stack: [iconHtml, iconCss],
+      stack: {iconHtml, iconCss},
       deployment: [netlifyLogo],
     },
     {
@@ -147,7 +148,7 @@ export default function ProjectsPage() {
   ];
 
   const handleClick = (event) => {
-    setProjetSelected(projects.filter(({ name }) => name === event.target.key));
+    setProjetSelected(projects.filter(({ name }) => name === event.currentTarget.id));
     setShowProjectDetails(true);
   };
 

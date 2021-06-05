@@ -69,10 +69,17 @@ export default function ProjectsDetails({ projectSelected }) {
           <div className={classes.stacks}>
             <p>Stack :</p>
             <ul className={classes.stacksList}>
-              <li>{html}</li>
-              <li>{css}</li>
-              <li>{react}</li>
-              <li>{node}</li>
+              {stack.map(element => (
+                <li>{element}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={classes.stacks}>
+            <p>Deploiement :</p>
+            <ul className={classes.stacksList}>
+              {deployment.map(element => (
+                <li>{element}</li>
+              ))}
             </ul>
           </div>
           <Link
