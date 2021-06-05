@@ -137,7 +137,7 @@ export default function ContactPage() {
   const onSubmit = (form) => {
     console.log(form);
     axios
-      .post(`${apiMail}/contact`, form)
+      .post(`${apiMail}`, form)
       .then((res) => reset())
       .catch((err) => console.log(err));
   };
