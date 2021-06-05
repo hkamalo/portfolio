@@ -144,7 +144,7 @@ export default function ProjectsPage() {
       versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify },
       webLink: 'https://prs-game.netlify.app/',
-      githubLink: 'https://github.com/Herelius/Wilders'
+      githubLink: 'https://github.com/Herelius/Wilders',
     },
     {
       name: 'Dolly',
@@ -167,7 +167,8 @@ export default function ProjectsPage() {
       versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify, heroku: iconHeroku },
       weblink: 'https://dolly-the-sheep.netlify.app/',
-      githubLink: 'https://github.com/WildCodeSchool/lyon-js-react-march21-g2-p2'
+      githubLink:
+        'https://github.com/WildCodeSchool/lyon-js-react-march21-g2-p2',
     },
     {
       name: 'Portfolio',
@@ -185,7 +186,7 @@ export default function ProjectsPage() {
       versionning: { github: iconGithub },
       deployment: { apache: iconApache, heroku: iconHeroku },
       weblink: 'https://www.hkamalo.com',
-      githubLink: 'https://github.com/hkamalo/portfolio'
+      githubLink: 'https://github.com/hkamalo/portfolio',
     },
     {
       name: 'HD Rain',
