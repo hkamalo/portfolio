@@ -10,6 +10,7 @@ import {
   faCss3,
   faReact,
   faNode,
+  faGithubSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import ProjectsDisplay from '../components/ForProjectsPage/ProjectsDisplay';
 import ProjectsDetails from '../components/ForProjectsPage/ProjectsDetails';
@@ -27,8 +28,6 @@ const useStyles = makeStyles({
   projetBackground: {
     backgroundColor:
       'radial-gradient(52.52% 39.17% at 50% 66.95%, #F3F3F3 0%, #FFFFFF 100%)',
-    position: 'relative',
-    height: '100vh',
     width: '70vw',
     display: 'flex',
     flexDirection: 'column',
@@ -82,7 +81,6 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
   },
   details: {
-    height: '20%',
     marginBottom: 50,
     width: '40vw',
     display: 'flex',
@@ -105,30 +103,48 @@ const useStyles = makeStyles({
 
 export default function ProjectsPage() {
   const classes = useStyles();
+
+  const [showProjectDetails, setShowProjectDetails] = useState(false);
+  const [projectSelected, setProjetSelected] = useState([]);
+
   const iconHtml = <FontAwesomeIcon icon={faHtml5} size="3x" color="#FF5722" />;
   const iconCss = <FontAwesomeIcon icon={faCss3} size="3x" color="#2979FF" />;
   const iconReact = (
     <FontAwesomeIcon icon={faReact} size="3x" color="#00E5FF" />
   );
   const iconNode = <FontAwesomeIcon icon={faNode} size="3x" color="#4CAF50" />;
-
-  const [showProjectDetails, setShowProjectDetails] = useState(false);
-  const [projectSelected, setProjetSelected] = useState([]);
-
-  const iconExpress = <img src={expressSrc} width="48" height="48" alt="expressLogo" />;
-  const iconMysql = <img src={mysqlSrc} width="48" height="48" alt="mysqlLogo" />;
-  const iconHeroku = <img src={herokuSrc} width="48" height="48" alt="herokuLogo" />;
-  const iconNetlify = <img src={netlifySrc} width="48" height="48" alt="netflifyLogo" />;
-  const iconApache = <img src={apacheSrc} width="48" height="48" alt="apacheLogo" />;
-  const iconMongo = <img src={mongoSrc} width="48" height="48" alt="mongoLogo" />;
-  const iconMaterialUi = <img src={materialUiSrc} width="48" height="48" alt="materialUiLogo" />;
+  const iconGithub = (
+    <FontAwesomeIcon icon={faGithubSquare} size="3x" color="black" />
+  );
+  const iconExpress = (
+    <img src={expressSrc} width="144" height="48" alt="expressLogo" />
+  );
+  const iconMysql = (
+    <img src={mysqlSrc} width="72" height="48" alt="mysqlLogo" />
+  );
+  const iconHeroku = (
+    <img src={herokuSrc} width="48" height="48" alt="herokuLogo" />
+  );
+  const iconNetlify = (
+    <img src={netlifySrc} width="140" height="48" alt="netflifyLogo" />
+  );
+  const iconApache = (
+    <img src={apacheSrc} width="48" height="48" alt="apacheLogo" />
+  );
+  const iconMongo = (
+    <img src={mongoSrc} width="48" height="48" alt="mongoLogo" />
+  );
+  const iconMaterialUi = (
+    <img src={materialUiSrc} width="48" height="48" alt="materialUiLogo" />
+  );
 
   const projects = [
     {
       name: 'Paper Rock Scissors',
       team: '3 développeurs en méthode AGILE/SCRUM',
       text: 'Jeux pierre papier ciseaux',
-      stack: { html: iconHtml, css: iconCss },
+      front: { html: iconHtml, css: iconCss },
+      versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify },
     },
     {
@@ -136,29 +152,36 @@ export default function ProjectsPage() {
       team: '5 développeurs en méthode AGILE/SCRUM',
       text:
         'Dolly est une application web qui permet aux visiteurs de consulter toutes les informations concernants leurs films favoris',
-      stack: {
+      front: {
         html: iconHtml,
         css: iconCss,
         react: iconReact,
         material: iconMaterialUi,
+      },
+      back: {
         node: iconNode,
         express: iconExpress,
-        mysql: iconMysql
       },
+      database: {
+        mysql: iconMysql,
+      },
+      versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify, heroku: iconHeroku },
     },
     {
       name: 'Portfolio',
-      team: 'Non',
       text: 'Présentation de mon profil',
-      stack: {
+      front: {
         html: iconHtml,
         css: iconCss,
         react: iconReact,
         material: iconMaterialUi,
+      },
+      back: {
         node: iconNode,
         express: iconExpress,
       },
+      versionning: { github: iconGithub },
       deployment: { apache: iconApache, heroku: iconHeroku },
     },
     {
@@ -166,16 +189,20 @@ export default function ProjectsPage() {
       team: '5 développeurs en méthode AGILE/SCRUM',
       text:
         'Intranet pour la visualisation de données météorologiques (en cours)',
-      stack:  {
+      front: {
         html: iconHtml,
         css: iconCss,
         react: iconReact,
-        material: iconMaterialUi,
+      },
+      back: {
         node: iconNode,
         express: iconExpress,
-        mongo: iconMongo
       },
-      deployment: {general: 'à venir'},
+      database: {
+        mongo: iconMongo,
+      },
+      versionning: { github: iconGithub },
+      deployment: { general: 'à venir' },
     },
   ];
 

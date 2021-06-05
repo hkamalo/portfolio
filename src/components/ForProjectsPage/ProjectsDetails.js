@@ -7,7 +7,6 @@ const theme = createMuiTheme();
 
 const useStyles = makeStyles({
   backDetailsProjet: {
-    position: 'relative',
     color: '#deb992',
     width: '100%',
     display: 'flex',
@@ -23,8 +22,9 @@ const useStyles = makeStyles({
   },
   stacks: {
     display: 'flex',
-    width: 400,
-    justifyContent: 'space-between',
+    width: '50em',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       maxWidth: '100%',
@@ -32,11 +32,11 @@ const useStyles = makeStyles({
     },
   },
   stacksList: {
-    width: '80%',
+    width: 'auto',
     marginLeft: 20,
     display: 'flex',
     listStyle: 'none',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     padding: 0,
   },
   link: {
@@ -47,12 +47,26 @@ const useStyles = makeStyles({
     color: '#87CEFA',
     textDecoration: 'none',
   },
+  projectStacks: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    width: '100%',
+  }
 });
 
 export default function ProjectsDetails({ projectSelected }) {
   const classes = useStyles();
   const [project] = projectSelected;
-  const { name, team, text, stack, deployment } = project;
+  const {
+    name,
+    team,
+    text,
+    front,
+    back,
+    database,
+    versionning,
+    deployment,
+  } = project;
   return (
     <>
       <Fade in timeout={1000} style={{ transitionDelay: '200ms' }}>
@@ -64,21 +78,53 @@ export default function ProjectsDetails({ projectSelected }) {
           >
             <h4>{name}</h4>
           </Link>
-          <>{text}</>
-          <p>Équipe : {team}</p>
-          <div className={classes.stacks}>
-            <p>Stack :</p>
-            <div className={classes.stacksList}>
-              {Object.values(stack).map((element) => (
-                <div>{element}</div>
-              ))}
+          <i><strong>{text}</strong></i>
+          {team && <p>Équipe : {team}</p>}
+          <div className={classes.projectStacks}>
+            <div className={classes.stacks}>
+              <p>Interface :</p>
+              <ul className={classes.stacksList}>
+                {Object.values(front).map((element) => (
+                  <li>{element}</li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className={classes.stacks}>
-            <p>Deploiement :</p>
-            {Object.values(deployment).map((element) => (
-              <div>{element}</div>
-            ))}
+            {back && (
+              <div className={classes.stacks}>
+                <p>Serveur :</p>
+                <ul className={classes.stacksList}>
+                  {Object.values(back).map((element) => (
+                    <li>{element}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {database && (
+              <div className={classes.stacks}>
+                <p>Base de données:</p>
+                <ul className={classes.stacksList}>
+                  {Object.values(database).map((element) => (
+                    <li>{element}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className={classes.stacks}>
+              <p>Gestion des versions :</p>
+              <ul className={classes.stacksList}>
+                {Object.values(versionning).map((element) => (
+                  <li>{element}</li>
+                ))}
+              </ul>
+            </div>
+            <div className={classes.stacks}>
+              <p>Déploiement :</p>
+              <ul className={classes.stacksList}>
+                {Object.values(deployment).map((element) => (
+                  <li>{element}</li>
+                ))}
+              </ul>
+            </div>
           </div>
           <Link
             className={classes.linkGithub}
