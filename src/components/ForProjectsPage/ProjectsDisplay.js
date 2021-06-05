@@ -49,12 +49,12 @@ const useStyles = makeStyles({
   },
   projectCardB: {
     flexGrow: '0.25',
-    transition: 'flex-grow 0.8s ease-in-out',
+    transition: 'flex-grow 1s ease-in-out',
     margin: 2,
     height: '100%',
     '&:hover': {
       flexGrow: '0.75',
-      transition: 'flex-grow 1s',
+      transition: 'flex-grow 1.3s',
     },
   },
   media: {

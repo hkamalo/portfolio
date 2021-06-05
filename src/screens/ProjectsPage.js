@@ -104,9 +104,6 @@ const useStyles = makeStyles({
 export default function ProjectsPage() {
   const classes = useStyles();
 
-  const [showProjectDetails, setShowProjectDetails] = useState(false);
-  const [projectSelected, setProjetSelected] = useState([]);
-
   const iconHtml = <FontAwesomeIcon icon={faHtml5} size="3x" color="#FF5722" />;
   const iconCss = <FontAwesomeIcon icon={faCss3} size="3x" color="#2979FF" />;
   const iconReact = (
@@ -123,7 +120,7 @@ export default function ProjectsPage() {
     <img src={mysqlSrc} width="72" height="48" alt="mysqlLogo" />
   );
   const iconHeroku = (
-    <img src={herokuSrc} width="48" height="48" alt="herokuLogo" />
+    <img src={herokuSrc} width="31" height="48" alt="herokuLogo" />
   );
   const iconNetlify = (
     <img src={netlifySrc} width="140" height="48" alt="netflifyLogo" />
@@ -146,7 +143,8 @@ export default function ProjectsPage() {
       front: { html: iconHtml, css: iconCss },
       versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify },
-      link: 'https://prs-game.netlify.app/',
+      webLink: 'https://prs-game.netlify.app/',
+      githubLink: 'https://github.com/Herelius/Wilders'
     },
     {
       name: 'Dolly',
@@ -168,7 +166,8 @@ export default function ProjectsPage() {
       },
       versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify, heroku: iconHeroku },
-      link: 'https://dolly-the-sheep.netlify.app/',
+      weblink: 'https://dolly-the-sheep.netlify.app/',
+      githubLink: 'https://github.com/WildCodeSchool/lyon-js-react-march21-g2-p2'
     },
     {
       name: 'Portfolio',
@@ -185,7 +184,8 @@ export default function ProjectsPage() {
       },
       versionning: { github: iconGithub },
       deployment: { apache: iconApache, heroku: iconHeroku },
-      link: 'https://www.hkamalo.com',
+      weblink: 'https://www.hkamalo.com',
+      githubLink: 'https://github.com/hkamalo/portfolio'
     },
     {
       name: 'HD Rain',
@@ -208,6 +208,9 @@ export default function ProjectsPage() {
       deployment: { general: 'à venir' },
     },
   ];
+
+  const [showProjectDetails, setShowProjectDetails] = useState(false);
+  const [projectSelected, setProjetSelected] = useState([]);
 
   const handleClick = (event) => {
     setProjetSelected(

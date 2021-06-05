@@ -67,13 +67,14 @@ export default function ProjectsDetails({ projectSelected }) {
     database,
     versionning,
     deployment,
-    link,
+    webLink,
+    githubLink,
   } = project;
   return (
     <>
       <Fade in timeout={1000} style={{ transitionDelay: '200ms' }}>
         <div className={classes.backDetailsProjet}>
-          <Link className={classes.link} href={link || ''} target="_blank">
+          <Link className={classes.link} href={webLink || ''} target="_blank">
             <h4>{name}</h4>
           </Link>
           <i>
@@ -116,13 +117,15 @@ export default function ProjectsDetails({ projectSelected }) {
               ))}
             </div>
           </div>
-          <Link
-            className={classes.linkGithub}
-            href="https://github.com/WildCodeSchool/lyon-js-react-march21-g2-p2"
-            target="_blank"
-          >
-            <p>Détails du code</p>
-          </Link>
+          {githubLink && (
+            <Link
+              className={classes.linkGithub}
+              href={githubLink}
+              target="_blank"
+            >
+              <p>Détails du code</p>
+            </Link>
+          )}
         </div>
       </Fade>
     </>
