@@ -33,7 +33,7 @@ const useStyles = makeStyles({
       alignItems: 'center',
       justifyContent: 'flex-start',
       maxWidth: '100%',
-      flexWrap: 'wrap'
+      flexWrap: 'wrap',
     },
   },
   stacksList: {
