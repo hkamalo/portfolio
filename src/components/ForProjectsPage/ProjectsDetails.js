@@ -51,7 +51,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexWrap: 'wrap',
     width: '100%',
-  }
+  },
 });
 
 export default function ProjectsDetails({ projectSelected }) {
@@ -66,6 +66,7 @@ export default function ProjectsDetails({ projectSelected }) {
     database,
     versionning,
     deployment,
+    link
   } = project;
   return (
     <>
@@ -73,13 +74,15 @@ export default function ProjectsDetails({ projectSelected }) {
         <div className={classes.backDetailsProjet}>
           <Link
             className={classes.link}
-            href="https://dolly-the-sheep.netlify.app/"
+            href={link || ''}
             target="_blank"
           >
             <h4>{name}</h4>
           </Link>
-          <i><strong>{text}</strong></i>
-          {team && <p>Équipe : {team}</p>}
+          <i>
+            <strong>{text}</strong>
+          </i>
+          {team && (<p>Équipe : {team}</p>)}
           <div className={classes.projectStacks}>
             <div className={classes.stacks}>
               <p>Interface :</p>

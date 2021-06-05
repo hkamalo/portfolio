@@ -3,7 +3,9 @@ import Grow from '@material-ui/core/Grow';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Box from '@material-ui/core/Box';
-import p1Screenshoot from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
+import rpsScreen from '../../images/prs-game-screen.png';
+import dollyScreen from '../../images/Screenshot_2021-05-14 🍿 Dolly 🍿.jpg';
+import portfolioScreen from '../../images/portfolio_screen.png';
 import incomingProject from '../../images/coming-soon-hour-glass-4721933_640.png';
 
 const theme = createMuiTheme();
@@ -89,7 +91,7 @@ export default function ProjectsDisplay({ handleClick }) {
           <div className={classes.projectCardA}>
             <Grow in timeout={2100} style={{ transitionDelay: '950ms' }}>
               <Card className={classes.cards} id="Dolly" onClick={handleClick}>
-                <CardMedia className={classes.media} image={p1Screenshoot} />
+                <CardMedia className={classes.media} image={dollyScreen} />
               </Card>
             </Grow>
           </div>
@@ -103,7 +105,7 @@ export default function ProjectsDisplay({ handleClick }) {
                 <Box className={classes.content}>
                   <p className={classes.text}>Projet</p>
                 </Box>
-                <CardMedia className={classes.media} image={incomingProject} />
+                <CardMedia className={classes.media} image={rpsScreen} />
               </Card>
             </Grow>
           </div>
@@ -116,7 +118,7 @@ export default function ProjectsDisplay({ handleClick }) {
                 id="Portfolio"
                 onClick={handleClick}
               >
-                <CardMedia className={classes.media} image={incomingProject} />
+                <CardMedia className={classes.media} image={portfolioScreen} />
               </Card>
             </Grow>
           </div>

@@ -146,6 +146,7 @@ export default function ProjectsPage() {
       front: { html: iconHtml, css: iconCss },
       versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify },
+      link: "https://prs-game.netlify.app/"
     },
     {
       name: 'Dolly',
@@ -167,6 +168,7 @@ export default function ProjectsPage() {
       },
       versionning: { github: iconGithub },
       deployment: { netlify: iconNetlify, heroku: iconHeroku },
+      link: "https://dolly-the-sheep.netlify.app/"
     },
     {
       name: 'Portfolio',
@@ -183,6 +185,7 @@ export default function ProjectsPage() {
       },
       versionning: { github: iconGithub },
       deployment: { apache: iconApache, heroku: iconHeroku },
+      link: "https://www.hkamalo.com",
     },
     {
       name: 'HD Rain',
