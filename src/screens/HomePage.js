@@ -76,13 +76,18 @@ const useStyles = makeStyles({
   text: {
     borderRight: '1px solid',
     borderLeft: '1px solid',
-    paddingRight: 20,
+    paddingRight: 10,
     marginRight: 10,
-    paddingLeft: 20,
+    paddingLeft: 10,
     marginLeft: 10,
     [theme.breakpoints.down('sm')]: {
       borderRight: 'none',
+      borderLeft: 'none',
       fontSize: '10px',
+      paddingRight: 10,
+      marginRight: 0,
+      paddingLeft: 10,
+      marginLeft: 0,
     },
   },
   dev: {

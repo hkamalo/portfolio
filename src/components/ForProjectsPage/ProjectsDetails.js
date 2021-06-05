@@ -16,6 +16,8 @@ const useStyles = makeStyles({
     marginLeft: 45,
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start',
       maxWidth: '100%',
       margin: 0,
     },
@@ -28,8 +30,10 @@ const useStyles = makeStyles({
     margin: '20px 0 20px',
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
       maxWidth: '100%',
-      flexWrap: 'wrap',
+      flexWrap: 'wrap'
     },
   },
   stacksList: {
