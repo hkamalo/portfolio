@@ -13,12 +13,13 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import ProjectsDisplay from '../components/ForProjectsPage/ProjectsDisplay';
 import ProjectsDetails from '../components/ForProjectsPage/ProjectsDetails';
-import mysqlLogo from '../images/mysql-logo.png';
-import herokuLogo from '../images/heroku-logo.png';
-import netlifyLogo from '../images/netlify-logo.png';
-import expressLogo from '../images/expressjs.png';
-import apacheLogo from '../images/apache-logo.png';
-import mongoLogo from '../images/mongodb-logo.png';
+import mysqlSrc from '../images/mysql-logo.png';
+import herokuSrc from '../images/heroku-logo.png';
+import netlifySrc from '../images/netlify-logo.png';
+import expressSrc from '../images/expressjs.png';
+import apacheSrc from '../images/apache-logo.png';
+import mongoSrc from '../images/mongodb-logo.png';
+import materialUiSrc from '../images/materialUI.png';
 
 const theme = createMuiTheme();
 
@@ -114,36 +115,67 @@ export default function ProjectsPage() {
   const [showProjectDetails, setShowProjectDetails] = useState(false);
   const [projectSelected, setProjetSelected] = useState([]);
 
+  const iconExpress = <img src={expressSrc} width="48" height="48" alt="expressLogo" />;
+  const iconMysql = <img src={mysqlSrc} width="48" height="48" alt="mysqlLogo" />;
+  const iconHeroku = <img src={herokuSrc} width="48" height="48" alt="herokuLogo" />;
+  const iconNetlify = <img src={netlifySrc} width="48" height="48" alt="netflifyLogo" />;
+  const iconApache = <img src={apacheSrc} width="48" height="48" alt="apacheLogo" />;
+  const iconMongo = <img src={mongoSrc} width="48" height="48" alt="mongoLogo" />;
+  const iconMaterialUi = <img src={materialUiSrc} width="48" height="48" alt="materialUiLogo" />;
+
   const projects = [
     {
       name: 'Paper Rock Scissors',
       team: '3 développeurs en méthode AGILE/SCRUM',
       text: 'Jeux pierre papier ciseaux',
-      stack: { iconHtml, iconCss },
-      deployment: [netlifyLogo],
+      stack: { html: iconHtml, css: iconCss },
+      deployment: { netlify: iconNetlify },
     },
     {
       name: 'Dolly',
       team: '5 développeurs en méthode AGILE/SCRUM',
       text:
         'Dolly est une application web qui permet aux visiteurs de consulter toutes les informations concernants leurs films favoris',
-      stack: [iconHtml, iconCss, iconReact, iconNode, expressLogo, mysqlLogo],
-      deployment: [netlifyLogo, herokuLogo],
+      stack: {
+        html: iconHtml,
+        css: iconCss,
+        react: iconReact,
+        material: iconMaterialUi,
+        node: iconNode,
+        express: iconExpress,
+        mysql: iconMysql
+      },
+      deployment: { netlify: iconNetlify, heroku: iconHeroku },
     },
     {
       name: 'Portfolio',
       team: 'Non',
       text: 'Présentation de mon profil',
-      stack: [iconHtml, iconCss, iconReact, iconNode, expressLogo],
-      deployment: [apacheLogo, herokuLogo],
+      stack: {
+        html: iconHtml,
+        css: iconCss,
+        react: iconReact,
+        material: iconMaterialUi,
+        node: iconNode,
+        express: iconExpress,
+      },
+      deployment: { apache: iconApache, heroku: iconHeroku },
     },
     {
       name: 'HD Rain',
       team: '5 développeurs en méthode AGILE/SCRUM',
       text:
         'Intranet pour la visualisation de données météorologiques (en cours)',
-      stack: [iconHtml, iconCss, iconReact, iconNode, expressLogo, mongoLogo],
-      deployment: ['??', '??'],
+      stack:  {
+        html: iconHtml,
+        css: iconCss,
+        react: iconReact,
+        material: iconMaterialUi,
+        node: iconNode,
+        express: iconExpress,
+        mongo: iconMongo
+      },
+      deployment: {general: 'à venir'},
     },
   ];
 

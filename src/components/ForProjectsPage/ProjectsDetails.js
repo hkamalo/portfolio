@@ -68,19 +68,17 @@ export default function ProjectsDetails({ projectSelected }) {
           <p>Équipe : {team}</p>
           <div className={classes.stacks}>
             <p>Stack :</p>
-            <ul className={classes.stacksList}>
-              {stack.map((element) => (
-                <li>{element}</li>
+            <div className={classes.stacksList}>
+              {Object.values(stack).map((element) => (
+                <div>{element}</div>
               ))}
-            </ul>
+            </div>
           </div>
           <div className={classes.stacks}>
             <p>Deploiement :</p>
-            <ul className={classes.stacksList}>
-              {deployment.map((element) => (
-                <li>{element}</li>
-              ))}
-            </ul>
+            {Object.values(deployment).map((element) => (
+              <div>{element}</div>
+            ))}
           </div>
           <Link
             className={classes.linkGithub}
