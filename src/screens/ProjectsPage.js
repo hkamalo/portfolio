@@ -45,7 +45,8 @@ const useStyles = makeStyles({
   backgroundProjet: {
     color: '#deb992',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
     margin: 20,
     paddingTop: 50,
     paddingBottom: 50,
@@ -59,19 +60,6 @@ const useStyles = makeStyles({
       height: '100%',
       margin: 0,
       padding: 0,
-    },
-  },
-  projectsDisplay: {
-    display: 'flex',
-    width: '100%',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    height: 300,
-    [theme.breakpoints.down('sm')]: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      maxWidth: '100%',
     },
   },
   backDetailsProjet: {

@@ -3,9 +3,9 @@ import React from 'react';
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Screen } from 'react-tiger-transition';
 import { Grow } from '@material-ui/core';
-import DevSkills from '../components/ForHomePage/DevSkills';
-import Background from '../components/ForHomePage/Background';
-import About from '../components/ForHomePage/About';
+import DevSkills from '../components/ForInformationPage/DevSkills';
+import Background from '../components/ForInformationPage/Background';
+import About from '../components/ForInformationPage/About';
 import ProjectsPage from './ProjectsPage';
 
 const theme = createMuiTheme();

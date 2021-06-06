@@ -17,10 +17,10 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    borderRadius: '35px',
+    borderRadius: 0,
     background: '#051622',
     color: '#deb992',
-    borderLeft: '5px outset #deb992 ',
+    borderLeft: '1px solid #deb992',
     [theme.breakpoints.down('sm')]: {
       borderLeft: 'none',
       borderRadius: 0,
