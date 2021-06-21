@@ -105,7 +105,7 @@ export default function MenuBar(props) {
                   <Button>Informations</Button>
                 </Link>
                 <Link exact to="/contact" transition="glide-left">
-                  <Button color="primary">Contact</Button>
+                  <Button>Contact</Button>
                 </Link>
               </MuiThemeProvider>
             </div>
