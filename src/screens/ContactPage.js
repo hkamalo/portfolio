@@ -10,7 +10,6 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-require('dotenv').config();
 
 // ---------------------- STYLE CSS -------------------------//
 
@@ -114,7 +113,7 @@ const useStyles = makeStyles({
 // --------------------------- FONCTION CONTACT --------------------------//
 
 export default function ContactPage() {
-  const apiMail = process.env.API_MAIL_HANDLING;
+  const apiMail = process.env.API_URL;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
